@@ -1,0 +1,38 @@
+  <div class="row d-flex text-center">
+  <div class="signup-box col-sm-12 col-md-8 col-lg-5 col-xl-4">
+    <h1>Welcome to IBDB</h1>
+    <form (submit)="signupUser($event)">
+      <p class="text-left">First name</p>
+      <input
+        type="text"
+        ngModel="firstname"
+        id="firstname"
+        placeholder="First name"
+      />
+      <p class="text-left">Last name</p>
+      <input type="text" ngModel="lastname" id="lastname" placeholder="Last name" />
+      <p class="text-left">Username</p>
+      <input type="text" ngModel="username" id="username" placeholder="Username" />
+      <p class="text-left">Password</p>
+      <input
+        type="password"
+        ngModel="password"
+        id="password"
+        placeholder="Password"
+      />
+      <p class="text-left">Confirm Password</p>
+      <input
+        type="password"
+        ngModel="confirmedPassword"
+        id="confirmedPassword"
+        placeholder="Password"
+      />
+      <p class="text-left">Email</p>
+      <input type="text" ngModel="email" id="email" placeholder="Email@xyz.com" />
+
+      <button (click) = signupUser() class="btn btn-success">
+        Sign Up
+      </button>
+    </form>
+  </div>
+</div>

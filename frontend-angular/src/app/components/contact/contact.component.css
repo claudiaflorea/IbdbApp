@@ -1,0 +1,27 @@
+.contact-form {
+  margin-left: 25%;
+  margin-right:25%;
+  width: 50%;
+}
+#source {
+  height: 75px;
+}
+
+.title{
+  color: #1c8adb;
+}
+.question{
+  color: #1c8adb;
+  font-weight: bold;
+}
+label {
+  color: #1c8adb;
+  font-weight: bold;
+}
+.form-control{
+  border: 1px solid #1261A0;
+}
+.sendButton{
+  color: white;
+  font-weight: bolder;
+}

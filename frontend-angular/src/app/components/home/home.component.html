@@ -1,0 +1,49 @@
+<div class="main-banner">
+  <div class="container welcome-banner-text">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="region region-welcome-banner-text">
+          <div
+            id="block-isbndbsearchblock"
+            class="block block-isbndb block-isbndb-menu-block"
+          >
+            <div id="main-search block--isbndb_search">
+              <div class="input-group">
+                <input
+                  type="hidden"
+                  name="search_param"
+                  value="books"
+                  id="search_param"
+                />
+                <input
+                  id="searchText"
+                  type="text"
+                  class="search_query form-control"
+                  name="x"
+                  placeholder="Search ISBN or Title..."
+                  (ngModel)="searchText"
+                />
+                <button class="search-button font-weight-bold" type="button">
+                  Search
+                </button>
+              </div>
+              <ul>
+                <li *ngFor="let b of books | filter : searchText">
+                  {{b.title}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="carousel-section">
+  <div class="carousel-title mt-5 mb-3 text-center">
+    <h3><u>Top rated books</u></h3>
+  </div>
+  <!-- <app-books-carousel></app-books-carousel> -->
+</div>
+

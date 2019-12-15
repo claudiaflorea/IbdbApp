@@ -1,0 +1,29 @@
+.main-banner {
+    background-image: url('/assets/images/library.jpg');
+    color: #fff;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    background-size: cover;
+    position: relative;
+}
+.main-banner .region {
+  position: relative;
+  z-index: 2;
+}
+.welcome-banner-text {
+  text-align: center;
+  line-height: 160%;
+  max-width: 600px;
+  padding: 70px 0;
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.search-button {
+  width: 65px;
+  color: #1261A0;
+}
+.carousel-title{
+  color: #1261A0;
+}

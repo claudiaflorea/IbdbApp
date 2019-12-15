@@ -1,0 +1,23 @@
+<ngb-carousel
+  class="books-carousel w-100"
+  #carousel
+  interval="1000"
+  [pauseOnHover]="pauseOnHover"
+  (slide)="onSlide($event)"
+>
+  <ng-template ngbSlide *ngFor="let img of images; index as i" class="slider">
+    <div class="carousel-caption pb-5">
+      <h3>My slide {{ i + 1 }} title</h3>
+    </div>
+    <a
+      href="https://www.google.fr/?q=Number+{{ i + 1 }}"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >
+      <div class="picsum-img-wrapper">
+        <img [src]="img" alt="My image {{ i + 1 }} description" />
+      </div>
+    </a>
+  </ng-template>
+</ngb-carousel>
+

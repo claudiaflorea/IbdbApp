@@ -1,0 +1,14 @@
+<div class="row d-flex text-center">
+  <div class="login-box col-sm-12 col-md-8 col-lg-5 col-xl-4">
+    <h1>Welcome to IDBD</h1>
+    <form (submit)="checkLogin($event)">
+      <p class="text-left">Username</p>
+      <input type="text" id="username" placeholder="Username" (ngModel)="username">
+      <p class="text-left">Password</p>
+      <input type="password" id="password" placeholder="Password" (ngModel)="password">
+      <button (click)=checkLogin() class="btn btn-success">
+        Login
+      </button>
+    </form>
+  </div>
+</div>
