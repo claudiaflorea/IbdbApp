@@ -424,60 +424,70 @@ public class DataLoader implements ApplicationListener<ContextRefreshedEvent> {
 		book1.setPublisher(publishers.get(0));
 		book1.setSubcategory(subcategories.get(9));
 		book1.setPublishDate(dateFormat("12/06/2001"));
+		book1.setImage("../Programming/IbdbProj/git/IbdbApp/frontend-angular/src/assets/images/books-images/HarryPotterandtheSorcerersStone.jpg");
 		
 		Book book2 = new Book (10001, "9788700631623", "Harry Potter and the Chamber of Secrets");
 		book2.setAuthor(authors.get(0));
 		book2.setPublisher(publishers.get(0));
 		book2.setSubcategory(subcategories.get(9));
 		book2.setPublishDate(dateFormat("11/07/2002"));
+		book2.setImage("../Programming/IbdbProj/git/IbdbApp/frontend-angular/src/assets/images/books-images/HarryPotterAndTheChamberOfSecrets.jpg");
 		
 		Book book3 = new Book (10002, "9788700631627", "Harry Potter and the Prisoner of Azkaban");
 		book3.setAuthor(authors.get(0));
 		book3.setPublisher(publishers.get(0));
 		book3.setSubcategory(subcategories.get(9));
 		book3.setPublishDate(dateFormat("10/10/2003"));
+		book3.setImage("../Programming/IbdbProj/git/IbdbApp/frontend-angular/src/assets/images/books-images/HarryPotterAndThePrisonerOfAzkaban.jpg");
 		
-		Book book4 = new Book (10003, "9788700631627", "Harry Potter and the Prisoner of Azkaban");
+		Book book4 = new Book (10003, "9788700631627", "Harry Potter and the Prisoner of Azkaban 2");
 		book4.setAuthor(authors.get(0));
 		book4.setPublisher(publishers.get(0));
 		book4.setSubcategory(subcategories.get(9));
 		book4.setPublishDate(dateFormat("17/02/2004"));
+		book4.setImage("../Programming/IbdbProj/git/IbdbApp/frontend-angular/src/assets/images/books-images/HarryPotterAndThePrisonerOfAzkaban2.jpg");
 		
 		Book book5 = new Book (10004, "9788700631622", "Harry Potter and the Half-Blood Prince");
 		book5.setAuthor(authors.get(0));
 		book5.setPublisher(publishers.get(0));
 		book5.setSubcategory(subcategories.get(9));
 		book5.setPublishDate(dateFormat("22/06/2005"));
+		book5.setImage("../Programming/IbdbProj/git/IbdbApp/frontend-angular/src/assets/images/books-images/HarryPotterAnd The Half-BloodPrince.jpg");
 		
 		Book book6 = new Book (10005, "9788700631629", "Harry Potter and the Order of the Phoenix");
 		book6.setAuthor(authors.get(0));
 		book6.setPublisher(publishers.get(0));
 		book6.setSubcategory(subcategories.get(9));
 		book6.setPublishDate(dateFormat("21/06/2006"));
+		book6.setImage("../Programming/IbdbProj/git/IbdbApp/frontend-angular/src/assets/images/books-images/HarryPotterAndTheOrderOfThePhoenix.jpg");
 		
 		Book book7 = new Book (10006, "9788700631620", "Harry Potter and the Goblet of Fire");
 		book7.setAuthor(authors.get(0));
 		book7.setPublisher(publishers.get(0));
 		book7.setSubcategory(subcategories.get(9));
 		book7.setPublishDate(dateFormat("21/02/2007"));
+		book7.setImage("../Programming/IbdbProj/git/IbdbApp/frontend-angular/src/assets/images/books-images/HarryPotterandtheGobletofFire.jpg");
 		
 		Book book8 = new Book (10007, "9788700631672", "Harry Potter and the Deathly Hallows");
 		book8.setAuthor(authors.get(0));
 		book8.setPublisher(publishers.get(0));
 		book8.setSubcategory(subcategories.get(9));
 		book8.setPublishDate(dateFormat("12/09/2007"));
+		book8.setImage("../Programming/IbdbProj/git/IbdbApp/frontend-angular/src/assets/images/books-images/HarryPotterAndtheDeathlyHallows.jpg");
 		
 		Book book9 = new Book (10008, "9780582186552", "The Hobbit");
 		book9.setAuthor(authors.get(4));
 		book9.setPublisher(publishers.get(2));
 		book9.setSubcategory(subcategories.get(9));
 		book9.setPublishDate(dateFormat("21/09/1937"));
+		book9.setImage("../Programming/IbdbProj/git/IbdbApp/frontend-angular/src/assets/images/books-images/TheHobbit.jpg");
 		
 		Book book10 = new Book (10009, "9781328869333", "1984");
 		book10.setAuthor(authors.get(16));
 		book10.setPublisher(publishers.get(2));
 		book10.setSubcategory(subcategories.get(27));
 		book10.setPublishDate(dateFormat("8/06/1949"));
+		book10.setImage("../Programming/IbdbProj/git/IbdbApp/frontend-angular/src/assets/images/books-images/1984.jpg");
 	
 		bookService.insertBook(book1);
 		bookService.insertBook(book2);

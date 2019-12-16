@@ -4,7 +4,7 @@ import { Book } from 'src/app/models/book';
 import { Subscription } from 'rxjs';
 import { FilterPipe} from '../../filter.pipe';
 import { Router } from '@angular/router';
-import { BooksPageComponent } from '../books-page/books-page.component';
+import { BookItemsComponent } from '../book-items/book-items.component';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   books: Book[];
   booksSubscription: Subscription;
-  @Input() book: Book;
 
   constructor(public bookService: BookService, private router: Router) { }
 
@@ -27,8 +26,9 @@ export class HomeComponent implements OnInit, OnDestroy {
    // console.log('**************', this.book.id);
   }
 
-  goToBookPage() {
-    this.router.navigate(['/book' + this.book.id]);
+  goToBookPage(book: Book) {
+    console.log(book.bookId);
+    this.router.navigate(['/book', book.bookId]);
   }
 
   ngOnDestroy() {

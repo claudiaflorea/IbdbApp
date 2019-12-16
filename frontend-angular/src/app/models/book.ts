@@ -1,5 +1,5 @@
 export class Book {
-  id: string;
+  bookId: string;
   isbn: string;
   title: string;
   publishDate: Date;
@@ -7,4 +7,5 @@ export class Book {
   publisher: string;
   category: string;
   subcategory: string;
+  image: string;
 }

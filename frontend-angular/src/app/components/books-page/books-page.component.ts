@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Book } from 'src/app/models/book';
 import { Subscription } from 'rxjs';
 import { BookService } from 'src/app/services/book.service';
-import { ActivatedRoute, Params } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-books-page',
@@ -11,29 +11,19 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class BooksPageComponent implements OnInit {
 
-  currentBook: Book;
-  book: Book;
+  books: Book[];
   booksSubscription: Subscription;
+  book: Book;
 
-  constructor(
-    public bookService: BookService,
-    public route: ActivatedRoute
-    ) { }
+  constructor(public bookService: BookService, private router: Router) { }
 
   ngOnInit() {
-    this.route.params.subscribe(
-      (params: Params) => {
-        this.bookService.getBookById(+params['id']).subscribe( data => {
-          this.book = data;
-        });
-      }
-    );
-
-/*
-    this.booksSubscription = this.bookService.getBookById(this.id).subscribe(data => {
-      this.currentBook = data;
+    this.booksSubscription = this.bookService.getBooks().subscribe(data => {
+      this.books = data;
     });
-    */
   }
 
+  goToBook(book: Book) {
+    this.router.navigate(['/book', book.bookId]);
+  }
 }

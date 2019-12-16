@@ -31,7 +31,7 @@
                   type="button"
                   class="btn btn-basic btn-block"
                   *ngFor="let b of books"
-                  (click)="goToBookPage()"
+                  (click)="goToBookPage(b)"
                   >
                   {{b.title}}
                 </button>

@@ -11,7 +11,9 @@ import { UserFormComponent } from './components/user-form/user-form.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { AuthGaurdService } from './services/auth-guard.service';
+import { BookItemsComponent } from './components/book-items/book-items.component';
 import { BooksPageComponent } from './components/books-page/books-page.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -32,7 +34,8 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'users', component: UserListComponent },
   { path: 'adduser', component: UserFormComponent },
-  { path: 'book/:id', component: BooksPageComponent }
+  { path: 'books', component:  BooksPageComponent },
+  { path: 'book/:id', component: BookItemsComponent }
 ];
 
 @NgModule({

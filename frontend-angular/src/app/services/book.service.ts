@@ -41,7 +41,7 @@ export class BookService {
   }
 
   deleteBook(book: Book) {
-    return this.http.delete(this.BASE_URL + 'delete/' + book.id, this.httpOptions)
+    return this.http.delete(this.BASE_URL + 'delete/' + book.bookId, this.httpOptions)
       .pipe(map((resp: any) => resp ));
   }
 }

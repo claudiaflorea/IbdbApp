@@ -32,6 +32,7 @@ import { HttpClientService } from './services/httpclient.service';
 import { FilterPipe} from './filter.pipe';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { BookItemsComponent } from './components/book-items/book-items.component';
 import { BooksPageComponent } from './components/books-page/books-page.component';
 
 @NgModule({
@@ -50,6 +51,7 @@ import { BooksPageComponent } from './components/books-page/books-page.component
     SignupComponent,
     LogoutComponent,
     FilterPipe,
+    BookItemsComponent,
     BooksPageComponent
   ],
   imports: [
