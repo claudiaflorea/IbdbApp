@@ -27,3 +27,9 @@
 .carousel-title{
   color: #1261A0;
 }
+
+.btn-block {
+  height: 37px;
+  background-color: white;
+  font-style: italic;
+}

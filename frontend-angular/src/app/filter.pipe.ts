@@ -1,16 +1,24 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { Book } from './models/book';
+import { BookService } from './services/book.service';
+import { Subscription } from 'rxjs';
 @Pipe({ name: 'filter'})
 
 export class FilterPipe implements PipeTransform {
-  transform(items: any[], searchText: string): any[] {
-    if (!items) { return []; }
+  books: Book[];
+  booksSubscription: Subscription;
+
+  constructor(public bookService: BookService) { }
+
+  transform(books: any[], searchText: string): any[] {
+    if (!books) { return []; }
     if (!searchText) {
-      return items;
+      return books;
     }
 
-    searchText = searchText.toLowerCase();
-    return items.filter( it => {
-      return it.toLowerCase().includes(searchText);
+    //searchText = searchText.toLowerCase();
+    return books.filter( book => {
+      return book.title.toLowerCase().includes(searchText);
     });
    }
 }

@@ -8,30 +8,34 @@
             class="block block-isbndb block-isbndb-menu-block"
           >
             <div id="main-search block--isbndb_search">
-              <div class="input-group">
-                <input
+              <div class="input-group mb-2">
+                <!-- <input
                   type="hidden"
                   name="search_param"
                   value="books"
                   id="search_param"
-                />
+                /> -->
                 <input
                   id="searchText"
                   type="text"
                   class="search_query form-control"
-                  name="x"
-                  placeholder="Search ISBN or Title..."
-                  (ngModel)="searchText"
+                  placeholder="Search book by title..."
+                  #searchText
                 />
                 <button class="search-button font-weight-bold" type="button">
                   Search
                 </button>
               </div>
-              <ul>
-                <li *ngFor="let b of books | filter : searchText">
+              <div>
+                <button
+                  type="button"
+                  class="btn btn-basic btn-block"
+                  *ngFor="let b of books"
+                  (click)="goToBookPage()"
+                  >
                   {{b.title}}
-                </li>
-              </ul>
+                </button>
+              </div>
             </div>
           </div>
         </div>

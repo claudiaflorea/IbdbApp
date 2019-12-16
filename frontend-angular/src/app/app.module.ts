@@ -30,6 +30,9 @@ import { AuthGaurdService } from './services/auth-guard.service';
 import { AuthenticationService } from './services/authentication.service';
 import { HttpClientService } from './services/httpclient.service';
 import { FilterPipe} from './filter.pipe';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { BooksPageComponent } from './components/books-page/books-page.component';
 
 @NgModule({
   declarations: [
@@ -46,14 +49,17 @@ import { FilterPipe} from './filter.pipe';
     LoginComponent,
     SignupComponent,
     LogoutComponent,
-    FilterPipe
+    FilterPipe,
+    BooksPageComponent
   ],
   imports: [
     AppRoutingModule,
     NgbModule,
     RouterModule,
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    NoopAnimationsModule,
+    MatAutocompleteModule
   ],
   providers: [
     UserService,

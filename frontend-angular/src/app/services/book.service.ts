@@ -25,7 +25,7 @@ export class BookService {
       .pipe(map((res: Book[]) => res ));
   }
 
-  getBookById(bookId: string) {
+  getBookById(bookId: number) {
     return this.http.get(this.BASE_URL + bookId)
       .pipe(map((res: Book) => res ));
   }

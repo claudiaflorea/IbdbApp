@@ -1,7 +1,10 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { BookService } from 'src/app/services/book.service';
 import { Book } from 'src/app/models/book';
 import { Subscription } from 'rxjs';
+import { FilterPipe} from '../../filter.pipe';
+import { Router } from '@angular/router';
+import { BooksPageComponent } from '../books-page/books-page.component';
 
 @Component({
   selector: 'app-home',
@@ -12,13 +15,20 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   books: Book[];
   booksSubscription: Subscription;
+  @Input() book: Book;
 
-  constructor(public bookService: BookService) { }
+  constructor(public bookService: BookService, private router: Router) { }
 
   ngOnInit() {
     this.booksSubscription = this.bookService.getBooks().subscribe(data => {
       this.books = data;
-    })
+    });
+
+   // console.log('**************', this.book.id);
+  }
+
+  goToBookPage() {
+    this.router.navigate(['/book' + this.book.id]);
   }
 
   ngOnDestroy() {
@@ -26,3 +36,4 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
 }
+
