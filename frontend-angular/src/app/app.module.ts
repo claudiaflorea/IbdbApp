@@ -34,6 +34,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { BookItemsComponent } from './components/book-items/book-items.component';
 import { BooksPageComponent } from './components/books-page/books-page.component';
+import { RatingModule } from 'ng-starrating';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { BooksPageComponent } from './components/books-page/books-page.component
     BrowserModule,
     HttpClientModule,
     NoopAnimationsModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    RatingModule
   ],
   providers: [
     UserService,

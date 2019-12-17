@@ -35,6 +35,8 @@ const routes: Routes = [
   { path: 'users', component: UserListComponent },
   { path: 'adduser', component: UserFormComponent },
   { path: 'books', component:  BooksPageComponent },
+  { path: 'books/:category', component:  BooksPageComponent },
+  { path: 'books/:categoryId/:subcategoryId', component:  BooksPageComponent },
   { path: 'book/:id', component: BookItemsComponent }
 ];
 

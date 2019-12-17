@@ -1,27 +1,89 @@
-<div class="container">
-    <div class="row">
-         <div class="col-xs-4 col-lg-5 text-center item-photo">
-              <img src="{{book.image}}" alt="book image"/>
-          </div>
-          <div class="col-xs-4 col-lg-7">
-              <!--Info section -->
-              <h2>Title: {{book.title}}</h2>
-              <h5>ISBN: {{book.isbn}}</h5>
-              <h5>Subcategory: {{book.subcategory}}</h5>
-              <h5>Written by: {{book.author}}</h5>
-              <h5>Published by: {{book.publisher}}</h5>
-              <h5>Published at: {{book.publishDate | date:'mediumDate' }}</h5>
-
-              <!-- Rating section-->
-              <div class="section">
-                  <h2>Rating: </h2>
-
-              </div>
-
-              <!-- Review section-->
-              <div class="section">
-                 <h2>Reviews</h2>
-              </div>
-          </div>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-xs-4 col-lg-5 text-center item-photo">
+      <img src="{{ book.image }}" alt="{{ book.title }}" />
+    </div>
+    <div class="col-xs-4 col-lg-7">
+      <!--Title section -->
+      <div class="title-section mb-4">
+          <h2><b>Book Title:</b> {{ book.title }}</h2>
       </div>
+      <!--Info section -->
+      <div class="info-section">
+        <h5><b>ISBN: </b> {{ book.isbn }}</h5>
+        <h5>
+          <b>Category: </b> {{ book.subcategory.category.categoryName }} -
+          {{ book.subcategory.subcategoryName }}
+        </h5>
+        <h5>
+          <b>Author: </b> {{ book.author.firstName }} {{ book.author.lastName }}
+        </h5>
+        <h5>
+          <b>Publisher: </b>
+          {{ book.publisher.publisherName }}
+        </h5>
+        <h5>
+          <b>Publish date: </b>
+          {{ book.publishDate | date: "mediumDate" }}
+        </h5>
+      </div>
+
+      <!-- Rating section-->
+      <div class="rating-section row mt-4">
+        <h2 class="col-lg-2">Rating:</h2>
+        <div *ngIf="reviewsArray.length == 0">
+          <div class="col-lg-12 ml-md-2 mt-lg-2 pt-lg-1">
+              <h5>No rating yet</h5>
+          </div>
+        </div>
+        <div *ngIf="reviewsArray.length > 0">
+          <div class="col-lg-12" *ngFor="let rev of reviewsArray">
+              <star-rating
+                value="{{ rev.rating }}"
+                totalstars="5"
+                checkedcolor="gold"
+                uncheckedcolor="gray"
+                size="30px"
+                readonly="true"
+              ></star-rating>
+            </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <!-- Review section-->
+  <div class="review-section mt-4">
+    <h2>Reviews:</h2>
+    <div *ngIf="reviewsArray.length > 0">
+        <div *ngFor="let rev of reviewsArray">
+          <div class="card">
+              <div class="card-header">
+                <star-rating
+                  value="{{ rev.rating }}"
+                  totalstars="5"
+                  checkedcolor="gold"
+                  uncheckedcolor="gray"
+                  size="20px"
+                  readonly="true"
+                >
+                </star-rating>
+              </div>
+              <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                  <p>{{ rev.reviewContent }}</p>
+                  <footer class="blockquote-footer">
+                    Review author:
+                    <cite title="Author"
+                      >{{ rev.user.firstName }} {{ rev.user.lastName }}</cite
+                    >
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div *ngIf="reviewsArray.length == 0">
+      <h5>No reviews yet</h5>
+    </div>
+  </div>
+</div>
