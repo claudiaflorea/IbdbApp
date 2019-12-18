@@ -32,5 +32,10 @@ public class BookService implements IBookService {
 		bookRepository.deleteById(bookId);
 	}
 
+	@Override
+	public List<Book> findBooksByCategoryId(int categoryId) {
+		return (List<Book>) bookRepository.findAll();
+	}
+
 }
 

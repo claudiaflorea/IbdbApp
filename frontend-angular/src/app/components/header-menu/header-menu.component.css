@@ -27,3 +27,6 @@ img {
   text-decoration: underline;
   transform: rotate(-90deg);
 }
+ .authentication{
+   display: contents;
+ }

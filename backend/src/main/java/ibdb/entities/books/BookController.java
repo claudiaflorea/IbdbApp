@@ -36,6 +36,12 @@ public class BookController {
 		dataDisplay.printCrudInfo(); 
 		return bookService.findAllBooks();
 	}
+	
+	@RequestMapping(value = "/all/{categoryId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<Book> getBooksByCategoryId(@PathVariable("categoryId") int categoryId) {
+		dataDisplay.printCrudInfo(); 
+		return bookService.findAllBooks();
+	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public void insertBook(@RequestBody Book book) {

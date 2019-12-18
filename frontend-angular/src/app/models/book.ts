@@ -10,6 +10,7 @@ export class Book {
   author: string;
   publisher: string;
   category: Category;
+  categoryId: number;
   subcategory: Subcategory;
   image: string;
   reviews: Review[];

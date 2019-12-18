@@ -9,7 +9,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BooksCarouselComponent } from './components/books-carousel/books-carousel.component';
-import { UserListComponent } from './components/user-list/user-list.component';
+import { UserListComponent } from './components/dashboard/user-list/user-list.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
 import { UserService } from './services/user.service';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -45,9 +45,9 @@ import { RatingModule } from 'ng-starrating';
     HomeComponent,
     ContactComponent,
     BooksCarouselComponent,
-    UserListComponent,
     UserFormComponent,
     DashboardComponent,
+    UserListComponent,
     LoginComponent,
     SignupComponent,
     LogoutComponent,

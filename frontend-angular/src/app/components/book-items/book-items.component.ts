@@ -36,15 +36,9 @@ export class BookItemsComponent implements OnInit {
       (params: Params) => {
         this.bookService.getBookById(+params['id']).subscribe( data => {
           this.book = data;
-         // console.log('*********', this.book);
-         // this.reviews = this.book.reviews;
-         // console.log('reviews  +++++++++', this.book.reviews);
           this.reviewsArray = this.book.reviews;
           if (this.reviewsArray.length > 0) {
             for (let i = 0; i <= this.reviewsArray.length - 1; i++) {
-              // console.log('------------------', this.reviewsArray[i].reviewContent);
-              // console.log('------------------', this.reviewsArray[i].rating);
-              // console.log('------------------', this.reviewsArray[i].user.firstName, ' ', this.reviewsArray[i].user.lastName);
               this.currentStars = this.reviewsArray[i].rating;
            }
           }

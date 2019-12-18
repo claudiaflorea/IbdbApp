@@ -5,6 +5,7 @@ import { Subscription } from 'rxjs';
 import { BookService } from 'src/app/services/book.service';
 import { Category } from 'src/app/models/category';
 import { Subcategory } from 'src/app/models/subcategory';
+import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
   selector: 'app-header-menu',
@@ -15,12 +16,19 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
 
   books: Book[];
   booksSubscription: Subscription;
+  categorySubscription: Subscription;
   categories: Category[];
   category: Category;
   subcategories: Subcategory[];
   subcategory: Subcategory;
+  fiction: any;
+  nonfiction: any;
 
-  constructor( private router: Router, public bookService: BookService) { }
+  constructor(
+    private router: Router,
+    public bookService: BookService,
+    public categoryService: CategoryService
+    ) { }
 
   showContact() {
   }
@@ -29,16 +37,28 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
     this.booksSubscription = this.bookService.getBooks().subscribe(data => {
       this.books = data;
     });
+
+    this.categorySubscription = this.categoryService.getCategories().subscribe(data => {
+      this.categories = data;
+      this.fiction = this.categories[0];
+      this.nonfiction = this.categories[1];
+    });
   }
 
-  sortByFictionCategory(book: Book, category: Category) {
-    console.log('**************', book);
-    console.log('+++++++++++++++', category);
-    this.router.navigate(['/books', category[0].categoryId]);
+  sortByFictionCategory() {
+    console.log('categories::::::: ', this.categories);
+    console.log('category 0::::::: ', this.categories[0]);
+    this.router.navigate(['/books/all', this.fiction.categoryId]);
   }
-  sortByNonFictionCategory(book: Book, category: Category) {
-    console.log('+++++++++++++++', book);
-    this.router.navigate(['/books', category[1].categoryId]);
+  sortByNonFictionCategory() {
+    console.log('categories::::::: ', this.categories);
+    console.log('category 1::::::: ', this.categories[1]);
+    this.router.navigate(['/books/all', this.nonfiction.categoryId]);
+  }
+
+  sortBySubcategory() {
+    console.log('subcategories.................. ', this.categories[0]);
+    console.log('subcategories...................', this.categories[1]);
   }
 
   ngOnDestroy() {

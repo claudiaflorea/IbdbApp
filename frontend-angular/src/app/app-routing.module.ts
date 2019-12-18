@@ -5,7 +5,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { UserListComponent } from './components/user-list/user-list.component';
+import { UserListComponent } from './components/dashboard/user-list/user-list.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
 // import { AuthGuard } from './guards/auth-guard.service';
 import { SignupComponent } from './components/signup/signup.component';
@@ -35,9 +35,11 @@ const routes: Routes = [
   { path: 'users', component: UserListComponent },
   { path: 'adduser', component: UserFormComponent },
   { path: 'books', component:  BooksPageComponent },
-  { path: 'books/:category', component:  BooksPageComponent },
-  { path: 'books/:categoryId/:subcategoryId', component:  BooksPageComponent },
-  { path: 'book/:id', component: BookItemsComponent }
+  { path: 'books/all/:categoryId', component:  BooksPageComponent },
+  { path: 'books/all/:subcategoryId', component:  BooksPageComponent },
+  { path: 'book/:id', component: BookItemsComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'dashboard/user-list', component: UserListComponent },
 ];
 
 @NgModule({

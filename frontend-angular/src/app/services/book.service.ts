@@ -16,12 +16,12 @@ export class BookService {
 
   constructor(private http: HttpClient) { }
 
-  getBooks() : Observable<Book[]> {
+  getBooks(): Observable<Book[]> {
     return this.http.get(this.BASE_URL + 'all').pipe(map((res: Book[]) => res ));
   }
 
-  getListedBooksByCategoryId(categoryId: string) {
-    return this.http.get(this.BASE_URL + 'all/listed/' + categoryId)
+  getListedBooksByCategoryId(categoryId: number) {
+    return this.http.get('http://localhost:8090/books/all/' + categoryId)
       .pipe(map((res: Book[]) => res ));
   }
 
