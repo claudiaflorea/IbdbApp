@@ -35,6 +35,10 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { BookItemsComponent } from './components/book-items/book-items.component';
 import { BooksPageComponent } from './components/books-page/books-page.component';
 import { RatingModule } from 'ng-starrating';
+import { AddUserModalComponent } from './components/modals/add-user-modal/add-user-modal.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditUserModalComponent } from './components/modals/edit-user-modal/edit-user-modal.component';
+import { DeleteUserModalComponent } from './components/modals/delete-user-modal/delete-user-modal.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +57,10 @@ import { RatingModule } from 'ng-starrating';
     LogoutComponent,
     FilterPipe,
     BookItemsComponent,
-    BooksPageComponent
+    BooksPageComponent,
+    AddUserModalComponent,
+    EditUserModalComponent,
+    DeleteUserModalComponent
   ],
   imports: [
     AppRoutingModule,
@@ -63,7 +70,10 @@ import { RatingModule } from 'ng-starrating';
     HttpClientModule,
     NoopAnimationsModule,
     MatAutocompleteModule,
-    RatingModule
+    RatingModule,
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     UserService,
@@ -79,6 +89,11 @@ import { RatingModule } from 'ng-starrating';
     HttpClientService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    AddUserModalComponent,
+    EditUserModalComponent,
+    DeleteUserModalComponent
+  ]
 })
 export class AppModule {}

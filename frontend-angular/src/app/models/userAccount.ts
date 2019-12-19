@@ -7,4 +7,5 @@ export class UserAccount {
     username: string;
     password: string;
     birthDate: Date;
+    role: string;
 }
