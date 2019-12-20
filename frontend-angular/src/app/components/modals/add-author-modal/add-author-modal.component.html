@@ -1,36 +1,24 @@
 <div class="modal-header">
-    <h4 class="modal-title">Add new user</h4>
+    <h4 class="modal-title">Add new author</h4>
     <button type="button" class="close" aria-label="Close"
      (click)="activeModal.dismiss('Cross click')"> x
     </button>
   </div>
   <div class="modal-body">
-      <form [formGroup]="addUserForm" (ngSubmit)="submitForm()">
+      <form [formGroup]="addAuthorForm" (ngSubmit)="submitForm()">
           <div class="modal-body">
             <div class="container">
               <div class="form-group">
-                <label for="userId">User ID</label>
+                <label for="authorId">Author ID</label>
                 <input type="text"
                   class="form-control"
-                  formControlName="userId" />
+                  formControlName="authorId" />
               </div>
               <div class="form-group">
-                  <label for="emailAddress">Email Address</label>
+                  <label for="firstName">First Name</label>
                   <input type="text"
                     class="form-control"
-                    formControlName="emailAddress" />
-              </div>
-              <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text"
-                  class="form-control"
-                  formControlName="username" />
-              </div>
-              <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text"
-                  class="form-control"
-                  formControlName="firstName" />
+                    formControlName="firstName" />
               </div>
               <div class="form-group">
                 <label for="lastName">Last Name</label>
@@ -39,32 +27,21 @@
                   formControlName="lastName" />
               </div>
               <div class="form-group">
-                <label for="gender">Gender</label>
-                <input type="text"
-                  class="form-control"
-                  formControlName="gender" />
-              </div>
-              <div class="form-group">
                 <label for="birthDate">Date of Birth</label>
-                <input type="date"
+                <input type="text"
                   class="form-control"
                   formControlName="birthDate" />
               </div>
               <div class="form-group">
-                <label for="role">Role</label>
+                <label for="address">Address</label>
                 <input type="text"
                   class="form-control"
-                  formControlName="role" />
-              </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control"
-                formControlName="role" />
+                  formControlName="address" />
               </div>
           </div>
           <div class="modal-footer">
             <button class="btn btn-success"
-              [disabled]="!addUserForm.valid">
+              [disabled]="!addAuthorForm.valid">
               Submit Form
             </button>
           </div>

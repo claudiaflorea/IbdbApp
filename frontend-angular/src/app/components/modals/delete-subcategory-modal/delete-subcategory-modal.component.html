@@ -1,0 +1,19 @@
+<div class="modal-header">
+    <h4 class="modal-title">Delete subcategory</h4>
+    <button type="button" class="close" aria-label="Close"
+     (click)="activeModal.dismiss('Cross click')"> x
+    </button>
+  </div>
+  <div class="modal-body">
+     <h5>
+       Are you sure you want to delete this subcategory?
+     </h5>
+  </div>
+  <div class="modal-footer">
+    <button (click)="open(content)">
+        Yes
+    </button>
+    <button (click)="activeModal.dismiss('Close clicked')">
+      Cancel
+    </button>
+  </div>

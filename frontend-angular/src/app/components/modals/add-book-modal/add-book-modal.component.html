@@ -1,70 +1,59 @@
 <div class="modal-header">
-    <h4 class="modal-title">Add new user</h4>
+    <h4 class="modal-title">Add new book</h4>
     <button type="button" class="close" aria-label="Close"
      (click)="activeModal.dismiss('Cross click')"> x
     </button>
   </div>
   <div class="modal-body">
-      <form [formGroup]="addUserForm" (ngSubmit)="submitForm()">
+      <form [formGroup]="addBookForm" (ngSubmit)="submitForm()">
           <div class="modal-body">
             <div class="container">
               <div class="form-group">
-                <label for="userId">User ID</label>
+                <label for="bookId">Book ID</label>
                 <input type="text"
                   class="form-control"
-                  formControlName="userId" />
+                  formControlName="bookId" />
               </div>
               <div class="form-group">
-                  <label for="emailAddress">Email Address</label>
+                  <label for="title">Title</label>
                   <input type="text"
                     class="form-control"
-                    formControlName="emailAddress" />
+                    formControlName="title" />
               </div>
               <div class="form-group">
-                <label for="username">Username</label>
+                <label for="isbn">ISBN</label>
                 <input type="text"
                   class="form-control"
-                  formControlName="username" />
+                  formControlName="isbn" />
               </div>
               <div class="form-group">
-                <label for="firstName">First Name</label>
+                <label for="author">Author</label>
                 <input type="text"
                   class="form-control"
-                  formControlName="firstName" />
+                  formControlName="author" />
               </div>
               <div class="form-group">
-                <label for="lastName">Last Name</label>
+                <label for="publisher">Publisher</label>
                 <input type="text"
                   class="form-control"
-                  formControlName="lastName" />
+                  formControlName="publisher" />
               </div>
               <div class="form-group">
-                <label for="gender">Gender</label>
-                <input type="text"
-                  class="form-control"
-                  formControlName="gender" />
-              </div>
-              <div class="form-group">
-                <label for="birthDate">Date of Birth</label>
+                <label for="publishDate">Publish Date</label>
                 <input type="date"
                   class="form-control"
-                  formControlName="birthDate" />
+                  formControlName="publishDate" />
               </div>
               <div class="form-group">
-                <label for="role">Role</label>
+                <label for="category">Category</label>
                 <input type="text"
                   class="form-control"
-                  formControlName="role" />
-              </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control"
-                formControlName="role" />
+                  formControlName="category" />
               </div>
           </div>
           <div class="modal-footer">
             <button class="btn btn-success"
-              [disabled]="!addUserForm.valid">
+              [disabled]="!addBookForm.valid">
               Submit Form
             </button>
           </div>

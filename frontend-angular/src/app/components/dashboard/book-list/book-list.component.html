@@ -1,0 +1,50 @@
+<div class="row mt-5 text-sm-center text-lg-left">
+    <div class="col-lg-9 ml-lg-5"><h2>Books Details</h2></div>
+    <div class="col-lg-2 text-lg-center text-md-right text-sm-center">
+      <button type="button" class="btn btn-info add-new" (click)="addBook()">
+        <i class="fa fa-plus"></i> Add New
+      </button>
+    </div>
+  </div>
+
+  <div class="table-container p-5">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Book Id</th>
+            <th scope="col">Book Title</th>
+            <th scope="col">ISBN</th>
+            <th scope="col">Author</th>
+            <th scope="col">Publisher</th>
+            <th scope="col">Publishe Date</th>
+            <th scope="col">Category</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let b of books; index as i">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ b.bookId }}</td>
+            <td>{{ b.title }}</td>
+            <td>{{ b.isbn }}</td>
+            <td>{{ b.author.firstName }} {{ b.author.lastName }}</td>
+            <td>{{ b.publisher.publisherName }}</td>
+            <td>{{ b.publishDate | date: "mediumDate" }}</td>
+            <td>{{ b.subcategory.category.categoryName }} - {{ b.subcategory.subcategoryName }}</td>
+            <td>
+              <button class="btn btn-warning btn-sm mr-2" (click)="editBook()">
+                <i class="material-icons"></i>
+                <b>Edit</b>
+              </button>
+              <button class="btn btn-danger btn-sm ml-2" (click)="deleteBook()">
+                <i class="material-icons"></i>
+                <b>Delete</b>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

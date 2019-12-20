@@ -1,0 +1,40 @@
+<div class="row mt-5 text-sm-center text-lg-left">
+    <div class="col-lg-9 ml-lg-5"><h2>Categories Details</h2></div>
+    <div class="col-lg-2 text-lg-center text-md-right text-sm-center">
+      <button type="button" class="btn btn-info add-new" (click)="addCategory()">
+        <i class="fa fa-plus"></i> Add New
+      </button>
+    </div>
+  </div>
+
+  <div class="table-container p-5">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Category Id</th>
+            <th scope="col">Category Name</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of categories; index as i">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ c.categoryId }}</td>
+            <td>{{ c.categoryName }}</td>
+            <td>
+              <button class="btn btn-warning btn-sm mr-2" (click)="editCategory()">
+                <i class="material-icons"></i>
+                <b>Edit</b>
+              </button>
+              <button class="btn btn-danger btn-sm ml-2" (click)="deleteCategory()">
+                <i class="material-icons"></i>
+                <b>Delete</b>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

@@ -13,6 +13,10 @@ import { LogoutComponent } from './components/logout/logout.component';
 import { AuthGaurdService } from './services/auth-guard.service';
 import { BookItemsComponent } from './components/book-items/book-items.component';
 import { BooksPageComponent } from './components/books-page/books-page.component';
+import { BookListComponent } from './components/dashboard/book-list/book-list.component';
+import { AuthorListComponent } from './components/dashboard/author-list/author-list.component';
+import { CategoryListComponent } from './components/dashboard/category-list/category-list.component';
+import { SubcategoryListComponent } from './components/dashboard/subcategory-list/subcategory-list.component';
 
 
 const routes: Routes = [
@@ -32,14 +36,16 @@ const routes: Routes = [
    // canActivate: [AuthGuard]
   },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'users', component: UserListComponent },
+  { path: 'users-manager', component: UserListComponent },
+  { path: 'books-manager', component: BookListComponent },
+  { path: 'authors-manager', component: AuthorListComponent },
+  { path: 'categories-manager', component: CategoryListComponent },
+  { path: 'subcategories-manager', component: SubcategoryListComponent },
   { path: 'adduser', component: UserFormComponent },
   { path: 'books', component:  BooksPageComponent },
   { path: 'books/all/:categoryId', component:  BooksPageComponent },
   { path: 'books/all/:subcategoryId', component:  BooksPageComponent },
   { path: 'book/:id', component: BookItemsComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'dashboard/user-list', component: UserListComponent },
 ];
 
 @NgModule({

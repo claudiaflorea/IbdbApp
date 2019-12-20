@@ -1,0 +1,43 @@
+<div class="modal-header">
+    <h4 class="modal-title">Edit subcategory</h4>
+    <button type="button" class="close" aria-label="Close"
+     (click)="activeModal.dismiss('Cross click')"> x
+    </button>
+  </div>
+  <div class="modal-body">
+      <form [formGroup]="editSubcategoryForm" (ngSubmit)="submitForm()">
+          <div class="modal-body">
+            <div class="container">
+              <div class="form-group">
+                <label for="subcategoryId">Subcategory ID</label>
+                <input type="text"
+                  class="form-control"
+                  formControlName="subcategoryId" />
+              </div>
+              <div class="form-group">
+                  <label for="subcategoryName">Subcategory Name</label>
+                  <input type="text"
+                    class="form-control"
+                    formControlName="subcategoryName" />
+              </div>
+              <div class="form-group">
+                  <label for="category">Category</label>
+                  <input type="text"
+                    class="form-control"
+                    formControlName="category" />
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success"
+              [disabled]="!editSubcategoryForm.valid">
+              Submit Form
+            </button>
+          </div>
+        </div>
+      </form>
+  </div>
+  <div class="modal-footer">
+    <button (click)="activeModal.dismiss('Close clicked')">
+      Cancel
+    </button>
+  </div>
