@@ -28,7 +28,10 @@
             <td>{{ a.firstName }}</td>
             <td>{{ a.lastName }}</td>
             <td>{{ a.birthDate | date: "mediumDate" }}</td>
-            <td>{{ a.address.city }}, {{ a.address.country }}</td>
+            <td *ngIf="a.address != null">
+              {{ a.address.city }}, {{ a.address.country }}
+            </td>
+            <td *ngIf="a.address == null"> UNKNOWN </td>
             <td>
               <button class="btn btn-warning btn-sm mr-2" (click)="editAuthor()">
                 <i class="material-icons"></i>

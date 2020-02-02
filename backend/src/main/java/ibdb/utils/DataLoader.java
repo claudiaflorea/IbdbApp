@@ -389,23 +389,23 @@ public class DataLoader implements ApplicationListener<ContextRefreshedEvent> {
 		
 		UserAccount userAccount1 = new UserAccount(9900, "adelaminculescu@gmail.com", "Minculecu", "Adela", "Female","Adela Minculescu",
 				"@del@mincu22", dateFormat("12/03/1985"));
-		userAccount1.setRole(roleService.findRoleById(52));
+		userAccount1.setRole(roleService.findRoleById(52).get());
 		
 		UserAccount userAccount2 = new UserAccount(9901, "adinadima@gmail.com", "Dima", "Adina", "Female","Adina Dima", "adima127&", 
 				dateFormat("18/03/1990"));
-		userAccount2.setRole(roleService.findRoleById(52));
+		userAccount2.setRole(roleService.findRoleById(52).get());
 		
 		UserAccount userAccount3 = new UserAccount(9902, "teodorBarbu@gmail.com", "Barbu", "Teodor", "Male","Teodor B.", 
 				"theodor0242", dateFormat("10/02/1988"));
-		userAccount3.setRole(roleService.findRoleById(52));
+		userAccount3.setRole(roleService.findRoleById(52).get());
 		
 		UserAccount userAccount4 = new UserAccount(9903, "gabrieladobos@gmail.com", "Dobos", "Gabriela", "Female","Gabi", 
 				"dobosgabi24", dateFormat("20/09/1992"));
-		userAccount4.setRole(roleService.findRoleById(52));
+		userAccount4.setRole(roleService.findRoleById(52).get());
 		
 		UserAccount userAccount5 = new UserAccount(9904, "eugenpapuc@gmail.com", "Papuc", "Eugen", "Male","Eugen", 
 				"eugenpapuc34", dateFormat("12/08/1991"));
-		userAccount5.setRole(roleService.findRoleById(52));
+		userAccount5.setRole(roleService.findRoleById(52).get());
 		userAccountService.insertUserAccount(userAccount1);
 		userAccountService.insertUserAccount(userAccount2);
 		userAccountService.insertUserAccount(userAccount3);

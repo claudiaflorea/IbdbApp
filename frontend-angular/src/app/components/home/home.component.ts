@@ -1,29 +1,47 @@
-import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, OnChanges } from '@angular/core';
 import { BookService } from 'src/app/services/book.service';
 import { Book } from 'src/app/models/book';
-import { Subscription } from 'rxjs';
-import { FilterPipe} from '../../filter.pipe';
+import { Subscription, Subject } from 'rxjs';
+import { FilterPipe } from '../../filter.pipe';
 import { Router } from '@angular/router';
-import { BookItemsComponent } from '../book-items/book-items.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit, OnDestroy {
-
+export class HomeComponent implements OnInit, OnDestroy, OnChanges {
   books: Book[];
   booksSubscription: Subscription;
+  result: any[];
 
-  constructor(public bookService: BookService, private router: Router) { }
+  constructor(public bookService: BookService, private router: Router) {}
 
   ngOnInit() {
     this.booksSubscription = this.bookService.getBooks().subscribe(data => {
       this.books = data;
     });
 
-   // console.log('**************', this.book.id);
+    // console.log('**************', this.book.id);
+  }
+
+  handleFilter(value) {
+    console.log('BOOKS:::::', this.books);
+    this.books.filter(
+      (b) => {
+        if (b.title.toLowerCase().indexOf(value) > -1) {
+          this.result.push(b);
+        } else {
+          this.result = null;
+        }
+        return this.result;
+      }
+    );
+    console.log('+++++++++++++++++', this.result);
+  }
+
+  ngOnChanges() {
+    this.handleFilter(document.getElementById('searchText').valueOf());
   }
 
   goToBookPage(book: Book) {
@@ -34,6 +52,4 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.booksSubscription.unsubscribe();
   }
-
 }
-

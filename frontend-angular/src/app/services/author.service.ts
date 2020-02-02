@@ -20,7 +20,9 @@ export class AuthorService {
   }
 
   getListedAuthorsByCategoryId(categoryId: string) {
-    return this.http.get(this.BASE_URL + 'all/listed/' + categoryId)
+    return this.http.get(this.BASE_URL + 'all/listed/' + 
+    categoryId
+    )
       .pipe(map((res: Author[]) => res ));
   }
 
@@ -30,7 +32,10 @@ export class AuthorService {
   }
 
   insertAuthor(author: Author) {
-    return this.http.post<Author>(this.BASE_URL + 'add', JSON.stringify(author), this.httpOptions)
+    return this.http.post<Author>(this.BASE_URL + 'add', 
+    JSON.stringify(author), 
+    this.httpOptions
+    )
       .pipe(map((resp: any) => resp ));
   }
 

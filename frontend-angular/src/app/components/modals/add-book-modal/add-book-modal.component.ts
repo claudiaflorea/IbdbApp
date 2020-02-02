@@ -3,6 +3,9 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import { Book } from 'src/app/models/book';
 import { BookService } from 'src/app/services/book.service';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { Subcategory } from 'src/app/models/subcategory';
+import { Category } from 'src/app/models/category';
+import { SubcategoryService } from 'src/app/services/subcategory.service';
 
 @Component({
   selector: 'app-add-book-modal',
@@ -14,11 +17,15 @@ export class AddBookModalComponent implements OnInit {
   @Input() id: number;
   addBookForm: FormGroup;
   books: Book[];
+  subcategories: any;
+  categories: Category[];
+  selectedCategory: Subcategory;
 
   constructor(
     public activeModal: NgbActiveModal,
     private formBuilder: FormBuilder,
-    public bookService: BookService
+    public bookService: BookService,
+    public subcategoryService: SubcategoryService
   ) {
     this.createForm();
   }
@@ -31,7 +38,7 @@ export class AddBookModalComponent implements OnInit {
       author: '',
       publisher: '',
       publishDate: '',
-      category: ''
+      selectedCategory: ''
     });
   }
 
@@ -44,6 +51,23 @@ export class AddBookModalComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.subcategoryService.getSubcategories().subscribe( data => {
+   //   console.log('+++++++++++++++', data);
+      this.subcategories = data;
+   //   console.log('------------', this.subcategories);
+    });
+
   }
+
+  onSelect(subcategoryId) {
+   this.selectedCategory = null;
+   // tslint:disable-next-line: prefer-for-of
+   for (let i = 0; i < this.subcategories.length; i++) {
+      if (this.subcategories[i].subcategoryId === subcategoryId) {
+        this.selectedCategory = this.subcategories[i];
+        console.log('/////////////', this.selectedCategory);
+      }
+    }
+}
 
 }

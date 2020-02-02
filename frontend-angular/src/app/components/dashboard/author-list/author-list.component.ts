@@ -33,8 +33,9 @@ export class AuthorListComponent implements OnInit, OnDestroy {
     modalRef.componentInstance.id = 14;
     modalRef.result.then((result) => {
       console.log(result);
+     // result.address = JSON.parse('{"country":result.selectedCountry, "city":result.selectedCity}');
       this.authors.push(result);
-      this.authorService.insertAuthor(result);
+      this.authorService.insertAuthor(result).subscribe();
       this.authorService.getAuthors().subscribe( data => {
         console.log('DATA!!! ', data);
         this.authors = data;

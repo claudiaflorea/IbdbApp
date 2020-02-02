@@ -9,12 +9,6 @@
           <div class="modal-body">
             <div class="container">
               <div class="form-group">
-                <label for="subcategoryId">Subcategory ID</label>
-                <input type="text"
-                  class="form-control"
-                  formControlName="subcategoryId" />
-              </div>
-              <div class="form-group">
                   <label for="subcategoryName">Subcategory Name</label>
                   <input type="text"
                     class="form-control"
@@ -22,9 +16,15 @@
               </div>
               <div class="form-group">
                   <label for="category">Category</label>
-                  <input type="text"
+                  <select
                     class="form-control"
-                    formControlName="category" />
+                    formControlName="category"
+                    (change)="changeCategory($event.target.value)"
+                  >
+                    <option *ngFor="let c of categories">
+                      {{c.categoryName}}
+                    </option>
+                </select>
               </div>
           </div>
           <div class="modal-footer">

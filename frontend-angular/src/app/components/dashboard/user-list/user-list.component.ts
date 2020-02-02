@@ -40,8 +40,8 @@ export class UserListComponent implements OnInit, OnDestroy {
     modalRef.result.then((result) => {
       console.log(result);
       this.users.push(result);
-      this.userService.insertUser(result);
-      this.userService.save(result);
+      result.role = null;
+      this.userService.insertUser(result).subscribe();
       this.userService.getUsers().subscribe( data => {
         console.log('DATA!!! ', data);
         this.users = data;

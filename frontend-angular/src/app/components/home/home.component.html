@@ -9,32 +9,33 @@
           >
             <div id="main-search block--isbndb_search">
               <div class="input-group mb-2">
-                <!-- <input
-                  type="hidden"
-                  name="search_param"
-                  value="books"
-                  id="search_param"
-                /> -->
                 <input
                   id="searchText"
                   type="text"
                   class="search_query form-control"
                   placeholder="Search book by title..."
                   #searchText
+                  ng-model="searchText"
                 />
-                <button class="search-button font-weight-bold" type="button">
+                <button
+                  class="search-button font-weight-bold"
+                  type="button"
+                  (click) ="handleFilter(searchText)">
                   Search
                 </button>
               </div>
-              <div>
-                <button
+              <div
+                *ngFor="let b of books | filter:searchText"
+                class="container"
+              >
+                <div
+                  *ngIf="result != null"
                   type="button"
                   class="btn btn-basic btn-block"
-                  *ngFor="let b of books"
                   (click)="goToBookPage(b)"
                   >
                   {{b.title}}
-                </button>
+               </div>
               </div>
             </div>
           </div>
@@ -48,6 +49,6 @@
   <div class="carousel-title mt-5 mb-3 text-center">
     <h3><u>Top rated books</u></h3>
   </div>
-  <!-- <app-books-carousel></app-books-carousel> -->
+  <app-books-carousel></app-books-carousel>
 </div>
 

@@ -1,12 +1,25 @@
 .books-carousel {
   width: 100%;
  }
+
 .slider {
   padding-bottom: 5%;
 }
+
 img {
   align-content: center;
-  width: 100%;
-  height: 500px;
+  width: 400px;
+  height: 600px;
   padding-bottom: 5%;
+}
+
+.carousel-caption {
+  background-color: lightslategray;
+  width: 100%;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+.carousel-control-prev .carousel-control-next {
+  color: lightslategray;
 }

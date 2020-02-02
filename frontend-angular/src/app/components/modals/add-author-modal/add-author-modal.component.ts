@@ -4,6 +4,7 @@ import { Author } from 'src/app/models/author';
 import { AuthorService } from 'src/app/services/author.service';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
+
 @Component({
   selector: 'app-add-author-modal',
   templateUrl: './add-author-modal.component.html',
@@ -14,6 +15,17 @@ export class AddAuthorModalComponent implements OnInit {
   @Input() id: number;
   addAuthorForm: FormGroup;
   authors: Author[];
+  selectedCountry = "--Choose Country--";
+  cities: any[];
+
+
+  countries = [
+		{ name: 'Germany',  cities: ['Duesseldorf', 'Leinfelden-Echterdingen', 'Eschborn' ] },
+		{ name: 'Spain', cities: ['Barcelona' ] },
+		{ name: 'USA', cities: ['Downers Grove'] },
+		{ name: 'Mexico', cities: ['Puebla' ] },
+		{ name: 'India', cities: ['Delhi', 'Kolkata', 'Mumbai', 'Bangalore'] },
+  ];
 
   constructor(
     public activeModal: NgbActiveModal,
@@ -29,9 +41,14 @@ export class AddAuthorModalComponent implements OnInit {
       firstName: '',
       lastName: '',
       birthDate: '',
-      address: ''
+      selectedCountry: '',
+      selectedCity: ''
     });
   }
+
+  changeCountry(country) {
+		this.cities = this.countries.find(cntry => cntry.name === country).cities;
+	}
 
   private submitForm() {
     this.activeModal.close(this.addAuthorForm.value);

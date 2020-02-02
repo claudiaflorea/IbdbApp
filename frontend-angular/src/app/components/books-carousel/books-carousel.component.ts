@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
+import { BookService } from 'src/app/services/book.service';
+import { Book } from 'src/app/models/book';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,21 +12,32 @@ import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/n
 })
 
 export class BooksCarouselComponent implements OnInit {
-  images = [1, 2, 3, 4, 5, 6, 7].map(
-    () => `https://picsum.photos/900/500?random&t=${Math.random()}`
-    );
 
+  images: any[];
+  books: Book[]
   paused = false;
   unpauseOnArrow = false;
   pauseOnIndicator = false;
   pauseOnHover = true;
 
   @ViewChild('carousel', {static : true}) carousel: NgbCarousel;
-  constructor() { }
+  constructor(
+    public bookService: BookService,
+    public router: Router
+    ) { }
 
   ngOnInit() {
+
+    this.bookService.getBooks().subscribe((data) => {
+      this.books = data;
+    });
+    console.log('Books: ', this.books);
   }
 
+  goToBookPage(book: Book) {
+    console.log(book.bookId);
+    this.router.navigate(['/book', book.bookId]);
+  }
 
   togglePaused() {
     if (this.paused) {

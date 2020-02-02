@@ -27,14 +27,14 @@ export class CategoryListComponent implements OnInit, OnDestroy {
     });
   }
 
-  addCategoriy() {
+  addCategory() {
     console.log('Add new category');
     const modalRef = this.modalService.open(AddCategoryModalComponent);
     modalRef.componentInstance.id = 12;
     modalRef.result.then((result) => {
-      console.log(result);
+      console.log('------------------', result);
       this.categories.push(result);
-      this.categoryService.insertCategory(result);
+      this.categoryService.insertCategory(result).subscribe();
       this.categoryService.getCategories().subscribe( data => {
         console.log('DATA!!! ', data);
         this.categories = data;

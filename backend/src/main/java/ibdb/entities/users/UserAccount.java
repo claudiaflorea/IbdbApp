@@ -201,8 +201,8 @@ public class UserAccount {
 		this.birthDate = birthDate;
 	}
 
-	public void setRole(Optional<Role> findRoleById) {
-		// TODO Auto-generated method stub
-	}
+//	public void setRole(Optional<Role> findRoleById) {
+//		// TODO Auto-generated method stub
+//	}
 
 }

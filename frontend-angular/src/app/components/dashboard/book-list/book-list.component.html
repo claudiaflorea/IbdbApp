@@ -32,7 +32,7 @@
             <td>{{ b.author.firstName }} {{ b.author.lastName }}</td>
             <td>{{ b.publisher.publisherName }}</td>
             <td>{{ b.publishDate | date: "mediumDate" }}</td>
-            <td>{{ b.subcategory.category.categoryName }} - {{ b.subcategory.subcategoryName }}</td>
+            <td >{{ b.subcategory.category.categoryName }} - {{ b.subcategory.subcategoryName }}</td >
             <td>
               <button class="btn btn-warning btn-sm mr-2" (click)="editBook()">
                 <i class="material-icons"></i>
