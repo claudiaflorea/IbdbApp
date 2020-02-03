@@ -16,11 +16,12 @@
                   placeholder="Search book by title..."
                   #searchText
                   ng-model="searchText"
+                  (ngModelChange)="handleFilter($event)"
                 />
                 <button
                   class="search-button font-weight-bold"
                   type="button"
-                  (click) ="handleFilter(searchText)">
+                  (click) ="handleFilter($event)">
                   Search
                 </button>
               </div>
@@ -45,7 +46,7 @@
   </div>
 </div>
 
-<div class="carousel-section">
+<div class="carousel-section mb-5">
   <div class="carousel-title mt-5 mb-3 text-center">
     <h3><u>Top rated books</u></h3>
   </div>

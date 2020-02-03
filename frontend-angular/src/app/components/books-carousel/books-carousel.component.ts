@@ -30,6 +30,11 @@ export class BooksCarouselComponent implements OnInit {
 
     this.bookService.getBooks().subscribe((data) => {
       this.books = data;
+      this.books.forEach((b) => {
+        if (b.image === null) {
+          b.image = '/assets/images/books-images/bookPlaceholder.jpeg';
+        }
+      });
     });
     console.log('Books: ', this.books);
   }

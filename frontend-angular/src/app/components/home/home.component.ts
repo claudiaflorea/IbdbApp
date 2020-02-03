@@ -15,29 +15,26 @@ export class HomeComponent implements OnInit, OnDestroy, OnChanges {
   booksSubscription: Subscription;
   result: any[];
 
-  constructor(public bookService: BookService, private router: Router) {}
+  constructor(
+    public bookService: BookService,
+    private router: Router
+    ) {}
 
   ngOnInit() {
     this.booksSubscription = this.bookService.getBooks().subscribe(data => {
       this.books = data;
     });
-
-    // console.log('**************', this.book.id);
   }
 
   handleFilter(value) {
-    console.log('BOOKS:::::', this.books);
-    this.books.filter(
+   console.log('BOOKS:::::', this.books);
+   this.result = this.books.filter(
       (b) => {
-        if (b.title.toLowerCase().indexOf(value) > -1) {
-          this.result.push(b);
-        } else {
-          this.result = null;
-        }
-        return this.result;
+        return ((b.title.toLowerCase().indexOf(value) > -1 ||
+                  b.isbn.indexOf(value) > -1 ));
       }
     );
-    console.log('+++++++++++++++++', this.result);
+   console.log('+++++++++++++++++', this.result);
   }
 
   ngOnChanges() {

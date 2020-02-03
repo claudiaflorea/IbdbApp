@@ -32,6 +32,11 @@ export class BooksPageComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.booksSubscription = this.bookService.getBooks().subscribe(data => {
       this.books = data;
+      this.books.forEach((b) => {
+        if (b.image === null) {
+          b.image = '/assets/images/books-images/bookPlaceholder.jpeg';
+        }
+      });
     });
     this.subscriptions.push(this.booksSubscription);
 

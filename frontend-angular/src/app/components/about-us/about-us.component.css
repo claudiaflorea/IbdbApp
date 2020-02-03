@@ -1,5 +1,6 @@
 .container {
   padding-top: 5%;
+  overflow-y: hidden;
 }
  h2, h3 {
   color: #1c8adb;

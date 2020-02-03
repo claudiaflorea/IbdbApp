@@ -36,6 +36,9 @@ export class BookItemsComponent implements OnInit {
       (params: Params) => {
         this.bookService.getBookById(+params['id']).subscribe( data => {
           this.book = data;
+          if (this.book.image === null) {
+            this.book.image = '/assets/images/books-images/bookPlaceholder.jpeg';
+          }
           this.reviewsArray = this.book.reviews;
           if (this.reviewsArray.length > 0) {
             for (let i = 0; i <= this.reviewsArray.length - 1; i++) {

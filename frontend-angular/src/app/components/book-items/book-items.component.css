@@ -2,3 +2,7 @@ img {
   height: 400px;
   min-width: 250px;
 }
+
+.container {
+  overflow-y: hidden;
+}

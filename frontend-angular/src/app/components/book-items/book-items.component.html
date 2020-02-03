@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
   <div class="row">
     <div class="col-xs-4 col-lg-5 text-center item-photo">
       <img src="{{ book.image }}" alt="{{ book.title }}" />
@@ -52,7 +52,7 @@
     </div>
   </div>
   <!-- Review section-->
-  <div class="review-section mt-4">
+  <div class="review-section p-5">
     <h2>Reviews:</h2>
     <div *ngIf="reviewsArray.length > 0">
         <div *ngFor="let rev of reviewsArray">
