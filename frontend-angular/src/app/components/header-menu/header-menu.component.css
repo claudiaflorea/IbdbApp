@@ -5,6 +5,11 @@
   max-height: 70px;
 }
 */
+
+.nav-item {
+  color: #1f0052;
+}
+
 img {
   height: 40px;
   width: 50px;

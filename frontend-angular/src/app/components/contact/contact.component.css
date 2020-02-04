@@ -8,20 +8,26 @@
 }
 
 .title{
-  color: #1c8adb;
+  color: #1f0052;
 }
 .question{
-  color: #1c8adb;
+  color: #1f0052;
   font-weight: bold;
 }
 label {
-  color: #1c8adb;
+  color: #1f0052;
   font-weight: bold;
 }
 .form-control{
-  border: 1px solid #1261A0;
+  border: 1px solid #1f0052;
 }
 .sendButton{
   color: white;
   font-weight: bolder;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1f0052;
+  border-color: #1f0052;
 }

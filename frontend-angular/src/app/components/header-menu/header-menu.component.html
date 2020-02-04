@@ -23,14 +23,14 @@
         <a class="nav-link">Home</a>
       </li>
       <li
-        class="nav-item mr-3"
+        class="nav-item active mr-3"
         [routerLink]="['/about-us']"
         routerLinkActive="router-link-active"
       >
         <a class="nav-link">About</a>
       </li>
       <li
-        class="nav-item mr-3"
+        class="nav-item active mr-3"
         [routerLink]="['/contact']"
         routerLinkActive="router-link-active"
       >
@@ -53,7 +53,7 @@
         <ul
           class="dropdown-menu"
           aria-labelledby="navbarDropdownMenuLink"
-          *ngFor="let book of books"
+          *ngFor="let c of categories"
         >
           <li class="dropdown-submenu">
             <a
@@ -63,48 +63,13 @@
               "
               >Fiction</a
             >
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="/books">Action and Adventure</a>
-              </li>
-              <li><a class="dropdown-item" href="/books">Anthology</a></li>
-              <li><a class="dropdown-item" href="/books">Classic</a></li>
-              <li>
-                <a class="dropdown-item" href="/books">Comic/Graphic Novel</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="/books">Crime and Detective</a>
-              </li>
-              <li><a class="dropdown-item" href="/books">Drama</a></li>
-              <li><a class="dropdown-item" href="/books">Fable</a></li>
-              <li><a class="dropdown-item" href="/books">Fairy Tale</a></li>
-              <li><a class="dropdown-item" href="/books">Fan-Fiction</a></li>
-              <li><a class="dropdown-item" href="/books">Fantasy</a></li>
-              <li>
-                <a class="dropdown-item" href="/books">Historical Fiction</a>
-              </li>
-              <li><a class="dropdown-item" href="/books">Horror</a></li>
-              <li><a class="dropdown-item" href="/books">Humor</a></li>
-              <li><a class="dropdown-item" href="/books">Legend</a></li>
-              <li>
-                <a class="dropdown-item" href="/books">Magical Realism</a>
-              </li>
-              <li><a class="dropdown-item" href="/books">Mystery</a></li>
-              <li><a class="dropdown-item" href="/books">Mythology</a></li>
-              <li>
-                <a class="dropdown-item" href="/books">Historical Fiction</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="/books">Realistic Fiction</a>
-              </li>
-              <li><a class="dropdown-item" href="/books">Romance</a></li>
-              <li><a class="dropdown-item" href="/books">Satire</a></li>
-              <li>
-                <a class="dropdown-item" href="/books">Science Fiction</a>
-              </li>
-              <li><a class="dropdown-item" href="/books">Short Story</a></li>
-              <li>
-                <a class="dropdown-item" href="/books">Suspense/Thriller</a>
+            <ul class="dropdown-menu" >
+              <li
+                *ngFor="let s of fictionSubcategories; index as i"
+                class="dropdowm-item"
+                routerLink="/books/{{s.subcategoryId}}"
+                >
+                {{s.subcategoryName}}
               </li>
             </ul>
           </li>
@@ -115,26 +80,18 @@
               >Non-fiction</a
             >
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/books">Biography</a></li>
-              <li><a class="dropdown-item" href="/books">Essay</a></li>
-              <li><a class="dropdown-item" href="/books">Memoir</a></li>
-              <li>
-                <a class="dropdown-item" href="/books">Narrative Nonfiction</a>
+              <li *ngFor="let s of nonFictionSubcategories; index as i"
+                class="dropdowm-item"
+                routerLink="/books/{{s.subcategoryId}}"
+                >
+                {{s.subcategoryName}}
               </li>
-              <li><a class="dropdown-item" href="/books">Periodicals</a></li>
-              <li>
-                <a class="dropdown-item" href="/books">Reference Books</a>
-              </li>
-              <li><a class="dropdown-item" href="/books">Self-help Book</a></li>
-              <li><a class="dropdown-item" href="/books">Speech</a></li>
-              <li><a class="dropdown-item" href="/books">Textbook</a></li>
-              <li><a class="dropdown-item" href="/books">Poetry</a></li>
             </ul>
           </li>
         </ul>
       </li>
       <li
-        class="nav-item mr-3"
+        class="nav-item active mr-3"
         [routerLink]="['/dashboard']"
         routerLinkActive="router-link-active"
       >

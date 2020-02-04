@@ -14,12 +14,13 @@ import { CategoryService } from 'src/app/services/category.service';
 })
 export class HeaderMenuComponent implements OnInit, OnDestroy {
 
-  books: Book[];
+  books: any;
   booksSubscription: Subscription;
   categorySubscription: Subscription;
-  categories: Category[];
+  categories: any;
   category: Category;
-  subcategories: Subcategory[];
+  fictionSubcategories: any;
+  nonFictionSubcategories: any;
   subcategory: Subcategory;
   fiction: any;
   nonfiction: any;
@@ -42,6 +43,8 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
       this.categories = data;
       this.fiction = this.categories[0];
       this.nonfiction = this.categories[1];
+      this.fictionSubcategories = this.categories[0].subcategories;
+      this.nonFictionSubcategories = this.categories[1].subcategories;
     });
   }
 
