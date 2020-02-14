@@ -38,8 +38,6 @@
       </li>
       <li
         class="nav-item active mr-3 dropdown"
-        [routerLink]="['/books']"
-        routerLinkActive="router-link-active"
       >
         <a
           class="nav-link dropdown-toggle"
@@ -67,7 +65,7 @@
               <li
                 *ngFor="let s of fictionSubcategories; index as i"
                 class="dropdowm-item"
-                routerLink="/books/{{s.subcategoryId}}"
+                routerLink="/book/all/{{s.subcategoryId}}"
                 >
                 {{s.subcategoryName}}
               </li>
@@ -82,7 +80,7 @@
             <ul class="dropdown-menu">
               <li *ngFor="let s of nonFictionSubcategories; index as i"
                 class="dropdowm-item"
-                routerLink="/books/{{s.subcategoryId}}"
+                routerLink="/book/all/{{s.subcategoryId}}"
                 >
                 {{s.subcategoryName}}
               </li>

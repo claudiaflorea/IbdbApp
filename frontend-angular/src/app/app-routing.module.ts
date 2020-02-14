@@ -43,8 +43,8 @@ const routes: Routes = [
   { path: 'subcategories-manager', component: SubcategoryListComponent },
   { path: 'adduser', component: UserFormComponent },
   { path: 'books', component:  BooksPageComponent },
-  { path: 'books/all/:categoryId', component:  BooksPageComponent },
-  { path: 'books/all/:subcategoryId', component:  BooksPageComponent },
+  { path: 'book/all/:categoryId', component:  BooksPageComponent },
+  { path: 'book/all/:subcategoryId', component:  BooksPageComponent },
   { path: 'book/:id', component: BookItemsComponent },
 ];
 

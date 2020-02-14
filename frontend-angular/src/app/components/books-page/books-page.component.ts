@@ -57,7 +57,7 @@ export class BooksPageComponent implements OnInit, OnDestroy {
 
     this.categorySubscription =  this.route.params.subscribe(
       (params: Params) => {
-        this.bookService.getListedBooksByCategoryId(+params['subcategoryId']).subscribe( data => {
+        this.bookService.getListedBooksBySubcategoryId(+params['subcategoryId']).subscribe( data => {
           this.books = data;
         });
       }

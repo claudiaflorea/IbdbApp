@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Book } from 'src/app/models/book';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
@@ -11,7 +11,8 @@ import { BookService } from 'src/app/services/book.service';
 })
 export class EditBookModalComponent implements OnInit {
 
-  @Input() id: number;
+  @Input() book: Book;
+  @Output() editForm: EventEmitter<any> = new EventEmitter<any>();
   editBookForm: FormGroup;
   books: Book[];
 
@@ -22,6 +23,10 @@ export class EditBookModalComponent implements OnInit {
   ) {
     this.createForm();
    }
+
+  public loadForm(date: any): void {
+    this.editForm.emit(date);
+  }
 
   private createForm() {
     this.editBookForm = this.formBuilder.group({

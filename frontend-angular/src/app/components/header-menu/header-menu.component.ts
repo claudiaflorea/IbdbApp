@@ -51,12 +51,12 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
   sortByFictionCategory() {
     console.log('categories::::::: ', this.categories);
     console.log('category 0::::::: ', this.categories[0]);
-    this.router.navigate(['/books/all', this.fiction.categoryId]);
+    this.router.navigate(['/book/all', this.fiction.categoryId]);
   }
   sortByNonFictionCategory() {
     console.log('categories::::::: ', this.categories);
     console.log('category 1::::::: ', this.categories[1]);
-    this.router.navigate(['/books/all', this.nonfiction.categoryId]);
+    this.router.navigate(['/book/all', this.nonfiction.categoryId]);
   }
 
   sortBySubcategory() {

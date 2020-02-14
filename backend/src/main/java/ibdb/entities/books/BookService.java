@@ -1,6 +1,7 @@
 package ibdb.entities.books;
 
 import java.util.List;
+
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,14 @@ public class BookService implements IBookService {
 	public List<Book> findAllBooks() {
 		return (List<Book>) bookRepository.findAll();
 	}
+	
+	public Book findBooksByCategoryId(int categoryId) {
+		return Book bookRepository.findById(categoryId);
+	}
+
+	public Book findBooksBySubcategoryId(int subcategoryId) {
+		return Book bookRepository.findById(subcategoryId);
+	}
 
 	public void insertBook(Book book) {
 		bookRepository.save(book);
@@ -31,11 +40,5 @@ public class BookService implements IBookService {
 	public void deleteBookById(int bookId) {
 		bookRepository.deleteById(bookId);
 	}
-
-	@Override
-	public List<Book> findBooksByCategoryId(int categoryId) {
-		return (List<Book>) bookRepository.findAll();
-	}
-
 }
 

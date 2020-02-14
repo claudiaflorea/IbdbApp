@@ -26,14 +26,12 @@
             <td>{{ s.subcategoryName }}</td>
             <td *ngIf="s.category != null">{{ s.category.categoryName }}</td>
             <td *ngIf="s.category == null">UNDEFINED</td>
-            <td>
+            <td class="btn-group">
               <button class="btn btn-warning btn-sm mr-2" (click)="editSubcategory()">
                 <i class="material-icons"></i>
-                <b>Edit</b>
               </button>
               <button class="btn btn-danger btn-sm ml-2" (click)="deleteSubcategory()">
                 <i class="material-icons"></i>
-                <b>Delete</b>
               </button>
             </td>
           </tr>

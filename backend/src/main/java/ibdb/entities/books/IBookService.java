@@ -7,7 +7,9 @@ public interface IBookService {
 
 	public Optional<Book> findBookById(int bookId);
 
-	public List<Book> findBooksByCategoryId(int categoryId);
+	public Book findBooksByCategoryId(int categoryId);
+	
+	public Book findBooksBySubcategoryId(int subcategoryId);
 	
 	public List<Book> findAllBooks();
 

@@ -1,6 +1,7 @@
 package ibdb.entities.books;
 
 import java.util.List;
+
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,9 +39,15 @@ public class BookController {
 	}
 	
 	@RequestMapping(value = "/all/{categoryId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public List<Book> getBooksByCategoryId(@PathVariable("categoryId") int categoryId) {
+	public Book getBooksByCategoryId(@PathVariable("categoryId") int categoryId) {
 		dataDisplay.printCrudInfo(); 
-		return bookService.findAllBooks();
+		return bookService.findBooksByCategoryId(categoryId);
+	}
+	
+	@RequestMapping(value = "/all/{subcategoryId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	public Book getBooksBySubategoryId(@PathVariable("subcategoryId") int subcategoryId) {
+		dataDisplay.printCrudInfo(); 
+		return bookService.findBooksBySubcategoryId(subcategoryId);
 	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)

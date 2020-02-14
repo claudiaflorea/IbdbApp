@@ -17,6 +17,7 @@ export class BookListComponent implements OnInit, OnDestroy {
   book: Book;
   bookSubscription: Subscription;
   books: Book[];
+  formEdit: any;
 
   constructor(private bookService: BookService, private modalService: NgbModal) { }
 
@@ -25,6 +26,11 @@ export class BookListComponent implements OnInit, OnDestroy {
       this.books = data;
       console.log('BOOKS: ', this.books);
     });
+  }
+
+  loadEditForm(date: any):void {
+    console.log('Edit Form: ', date);
+    this.formEdit = date;
   }
 
   addBook() {
@@ -44,10 +50,19 @@ export class BookListComponent implements OnInit, OnDestroy {
     });
   }
 
-  editBook() {
+  editBook(book: Book) {
     console.log('Edit this book');
     const modalRef = this.modalService.open(EditBookModalComponent);
-    modalRef.componentInstance.id = 13;
+    //modalRef.componentInstance.id = 13;
+    this.formEdit.patchValue({
+      bookId: this.book.bookId,
+      title: this.book.title,
+      isbn: this.book.isbn,
+      author: this.book.author,
+      publisher: this.book.publisher,
+      publishDate: this.book.publishDate,
+      category: this.book.category
+     });
   }
 
   deleteBook() {

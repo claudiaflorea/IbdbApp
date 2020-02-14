@@ -23,14 +23,12 @@
             <th scope="row">{{ i + 1 }}</th>
             <td>{{ c.categoryId }}</td>
             <td>{{ c.categoryName }}</td>
-            <td>
+            <td class="btn-group">
               <button class="btn btn-warning btn-sm mr-2" (click)="editCategory()">
                 <i class="material-icons"></i>
-                <b>Edit</b>
               </button>
               <button class="btn btn-danger btn-sm ml-2" (click)="deleteCategory()">
                 <i class="material-icons"></i>
-                <b>Delete</b>
               </button>
             </td>
           </tr>

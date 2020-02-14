@@ -55,6 +55,7 @@ import { DeleteSubcategoryModalComponent } from './components/modals/delete-subc
 import { AuthorListComponent } from './components/dashboard/author-list/author-list.component';
 import { CategoryListComponent } from './components/dashboard/category-list/category-list.component';
 import { SubcategoryListComponent } from './components/dashboard/subcategory-list/subcategory-list.component';
+import { EmailService } from './services/email.service';
 
 @NgModule({
   declarations: [
@@ -116,6 +117,7 @@ import { SubcategoryListComponent } from './components/dashboard/subcategory-lis
     FeedbackService,
     ReviewService,
     PublisherService,
+    EmailService,
     AuthGaurdService,
     AuthenticationService,
     HttpClientService

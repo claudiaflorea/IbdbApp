@@ -33,14 +33,16 @@
             <td>{{ b.publisher.publisherName }}</td>
             <td>{{ b.publishDate | date: "mediumDate" }}</td>
             <td >{{ b.subcategory.category.categoryName }} - {{ b.subcategory.subcategoryName }}</td >
-            <td>
-              <button class="btn btn-warning btn-sm mr-2" (click)="editBook()">
+            <td class="btn-group">
+              <button 
+                class="btn btn-warning btn-sm mr-2" 
+                (editForm)="loadEditForm($event)"
+                (click)="editBook(b)"
+                >
                 <i class="material-icons"></i>
-                <b>Edit</b>
               </button>
               <button class="btn btn-danger btn-sm ml-2" (click)="deleteBook()">
                 <i class="material-icons"></i>
-                <b>Delete</b>
               </button>
             </td>
           </tr>

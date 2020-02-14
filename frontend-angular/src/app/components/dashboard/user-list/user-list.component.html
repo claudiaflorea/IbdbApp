@@ -8,7 +8,7 @@
 </div>
 
 <div class="table-container p-5">
-  <div class="table-responsive">
+  <div class="table-responsive table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl">
     <table class="table">
       <thead>
         <tr>
@@ -31,14 +31,12 @@
           <td>{{ u.firstName }} {{ u.lastName }}</td>
           <td>{{ u.gender }}</td>
           <td>{{ u.birthDate | date: "mediumDate" }}</td>
-          <td>
+          <td class="btn-group">
             <button class="btn btn-warning btn-sm mr-2" (click)="editUser()">
               <i class="material-icons"></i>
-              <b>Edit</b>
             </button>
             <button class="btn btn-danger btn-sm ml-2" (click)="deleteUser()">
               <i class="material-icons"></i>
-              <b>Delete</b>
             </button>
           </td>
         </tr>

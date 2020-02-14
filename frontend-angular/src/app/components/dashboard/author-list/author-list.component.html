@@ -32,14 +32,12 @@
               {{ a.address.city }}, {{ a.address.country }}
             </td>
             <td *ngIf="a.address == null"> UNKNOWN </td>
-            <td>
+            <td class="btn-group">
               <button class="btn btn-warning btn-sm mr-2" (click)="editAuthor()">
                 <i class="material-icons"></i>
-                <b>Edit</b>
               </button>
               <button class="btn btn-danger btn-sm ml-2" (click)="deleteAuthor()">
                 <i class="material-icons"></i>
-                <b>Delete</b>
               </button>
             </td>
           </tr>
