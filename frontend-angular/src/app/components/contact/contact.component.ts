@@ -27,17 +27,16 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
-  sendEmail(contactFormValue) {
-    this.emailService.sendEmail(contactFormValue)
-      .subscribe(
-        data => console.log('***************', data)
-        );
-  }
-
   onSubmit(contactData) {
     console.warn('Your message has been sent', contactData);
-    this.sendEmail(contactData);
+    this.sendEmail(<Contact> contactData);
     this.contactForm.reset();
+  }
+
+  sendEmail(contact: Contact) {
+    this.emailService.sendEmail(contact).subscribe(
+      data => console.log('***************', data)
+      );
   }
 
 }

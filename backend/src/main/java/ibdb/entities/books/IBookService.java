@@ -5,11 +5,12 @@ import java.util.Optional;
 
 public interface IBookService {
 
+	
 	public Optional<Book> findBookById(int bookId);
 
-	public Book findBooksByCategoryId(int categoryId);
+	public Optional findBooksByCategoryId(int categoryId);
 	
-	public Book findBooksBySubcategoryId(int subcategoryId);
+	public Optional findBooksBySubcategoryId(int subcategoryId);
 	
 	public List<Book> findAllBooks();
 

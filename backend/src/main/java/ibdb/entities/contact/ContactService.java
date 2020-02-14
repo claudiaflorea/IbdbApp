@@ -22,13 +22,7 @@ public class ContactService implements IContactService{
     }
 
     @Override
-	public void send(
-			String firstName, 
-			String lastName, 
-			String fromAddress, 
-			String toAddress, 
-			String subject, 
-			String message) throws Exception {	
+	public void send(String firstName, String lastName, String fromAddress, String toAddress, String subject, String message) throws Exception {	
 		MimeMessage mimeMessage = javaMailSender.createMimeMessage();
 		MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, true);
 		mimeMessageHelper.setFrom(fromAddress);
@@ -37,6 +31,7 @@ public class ContactService implements IContactService{
 		mimeMessageHelper.setText(message, true);
 		mimeMessageHelper.setSentDate(new Date());
 		javaMailSender.send(mimeMessage);
+				
 	}
     
 }

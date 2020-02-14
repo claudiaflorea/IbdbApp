@@ -18,7 +18,7 @@ export class EmailService {
   constructor(private http :HttpClient) { }
   
   sendEmail(contact :Contact): Observable<any> {
-    return this.http.post(this.BASE_URL + 'send', JSON.stringify(contact), this.httpOptions)
+    return this.http.post<Contact>(this.BASE_URL + 'send', JSON.stringify(contact), this.httpOptions)
     .pipe(map((resp: any) => resp ));
   }
 

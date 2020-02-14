@@ -39,13 +39,13 @@ public class BookController {
 	}
 	
 	@RequestMapping(value = "/all/{categoryId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public Book getBooksByCategoryId(@PathVariable("categoryId") int categoryId) {
+	public Optional<Book> getBooksByCategoryId(@PathVariable("categoryId") int categoryId) {
 		dataDisplay.printCrudInfo(); 
 		return bookService.findBooksByCategoryId(categoryId);
 	}
 	
 	@RequestMapping(value = "/all/{subcategoryId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public Book getBooksBySubategoryId(@PathVariable("subcategoryId") int subcategoryId) {
+	public Optional<Book> getBooksBySubategoryId(@PathVariable("subcategoryId") int subcategoryId) {
 		dataDisplay.printCrudInfo(); 
 		return bookService.findBooksBySubcategoryId(subcategoryId);
 	}

@@ -21,12 +21,12 @@ public class BookService implements IBookService {
 		return (List<Book>) bookRepository.findAll();
 	}
 	
-	public Book findBooksByCategoryId(int categoryId) {
-		return Book bookRepository.findById(categoryId);
+	public Optional<Book> findBooksByCategoryId(int categoryId) {
+		return bookRepository.findById(categoryId);
 	}
 
-	public Book findBooksBySubcategoryId(int subcategoryId) {
-		return Book bookRepository.findById(subcategoryId);
+	public Optional<Book> findBooksBySubcategoryId(int subcategoryId) {
+		return bookRepository.findById(subcategoryId);
 	}
 
 	public void insertBook(Book book) {

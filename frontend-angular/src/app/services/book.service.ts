@@ -21,12 +21,12 @@ export class BookService {
   }
 
   getListedBooksByCategoryId(categoryId: number) {
-    return this.http.get('http://localhost:8090/all/' + categoryId)
+    return this.http.get(this.BASE_URL + 'all' + categoryId)
       .pipe(map((res: Book[]) => res ));
   }
 
   getListedBooksBySubcategoryId(subcategoryId: number) {
-    return this.http.get('http://localhost:8090/book/all/' + subcategoryId)
+    return this.http.get(this.BASE_URL + 'all' + subcategoryId)
       .pipe(map((res: Book[]) => res ));
   }
 
