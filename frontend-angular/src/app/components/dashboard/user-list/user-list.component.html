@@ -1,7 +1,7 @@
 <div class="row mt-5 text-sm-center text-lg-left">
   <div class="col-lg-9 ml-lg-5"><h2>Users Details</h2></div>
   <div class="col-lg-2 text-lg-center text-md-right text-sm-center">
-    <button type="button" class="btn btn-info add-new" (click)="addUser()">
+    <button type="button" class="btn btn-info add-new" (click)="onAdd()">
       <i class="fa fa-plus"></i> Add New
     </button>
   </div>
@@ -32,10 +32,10 @@
           <td>{{ u.gender }}</td>
           <td>{{ u.birthDate | date: "mediumDate" }}</td>
           <td class="btn-group">
-            <button class="btn btn-warning btn-sm mr-2" (click)="editUser()">
+            <button class="btn btn-warning btn-sm mr-2" (click)="onUpdate(u)">
               <i class="material-icons"></i>
             </button>
-            <button class="btn btn-danger btn-sm ml-2" (click)="deleteUser()">
+            <button class="btn btn-danger btn-sm ml-2" (click)="onDelete(u)">
               <i class="material-icons"></i>
             </button>
           </td>
@@ -44,3 +44,85 @@
     </table>
   </div>
 </div>
+
+<!-- ***** Modal ***** -->
+<ng-template #usersModal>
+  <div class="modal-header">
+    <h4 class="modal-title">Users manager</h4>
+    <button type="button" class="close" aria-label="Close" (click)="onCloseModal()"> x
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="field">
+      <label class="label">Email address</label>
+      <input 
+        [(ngModel)]="user.emailAddress" 
+        class="input form-control"
+        type="text">
+    </div>
+
+  <div class="field">
+    <label class="label">Username</label>
+    <input 
+      [(ngModel)]="user.username" 
+      class="input form-control" 
+      type="text">
+  </div>
+    
+  <div class="field">
+    <label class="label">First name</label>
+    <input 
+      [(ngModel)]="user.firstName" 
+      class="input form-control" 
+      type="text">
+  </div>
+
+  <div class="field">
+    <label class="label">Last name</label>
+    <input 
+      [(ngModel)]="user.lastName" 
+      class="input form-control" 
+      type="text">
+  </div>
+
+  <div class="field">
+    <label class="label">Gender</label>
+    <select 
+      [(ngModel)]="gender" 
+      class="input has-text-centered is-cursor-pointer form-control"
+      >
+      <option value="Female" *ngFor="let gender of genders" [value]="gender">{{gender}}</option>
+    </select>
+  </div>
+    
+  <div class="field">
+    <label class="label">Birth Date</label>
+    <input 
+      type="input date" 
+      class="form-control" 
+      [value]="user.birthDate" 
+      [(ngModel)]="user.birthDate" 
+      data-date="user.birthDate" 
+      data-date-format="DD MMMM YYYY"
+    />
+  </div>
+    
+    <!-- <div class="field">
+      <label class="label">Role</label>
+      <select [(ngModel)]="selectedRole" class="input has-text-centered is-cursor-pointer form-control">
+        <option *ngFor="let role of roles" [value]="role.id">{{role.name}}</option>
+      </select>
+    </div> -->
+    
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn btn-success" (click)="onSubmit()">
+      Submit
+    </button>
+    <button class="btn btn-danger" (click)="onSubmit()">
+      Cancel
+    </button>
+  </div>
+
+</ng-template>

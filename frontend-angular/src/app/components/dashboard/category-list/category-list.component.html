@@ -1,7 +1,7 @@
 <div class="row mt-5 text-sm-center text-lg-left">
     <div class="col-lg-9 ml-lg-5"><h2>Categories Details</h2></div>
     <div class="col-lg-2 text-lg-center text-md-right text-sm-center">
-      <button type="button" class="btn btn-info add-new" (click)="addCategory()">
+      <button type="button" class="btn btn-info add-new" (click)="onAdd()">
         <i class="fa fa-plus"></i> Add New
       </button>
     </div>
@@ -24,10 +24,10 @@
             <td>{{ c.categoryId }}</td>
             <td>{{ c.categoryName }}</td>
             <td class="btn-group">
-              <button class="btn btn-warning btn-sm mr-2" (click)="editCategory()">
+              <button class="btn btn-warning btn-sm mr-2" (click)="onUpdate(c)">
                 <i class="material-icons"></i>
               </button>
-              <button class="btn btn-danger btn-sm ml-2" (click)="deleteCategory()">
+              <button class="btn btn-danger btn-sm ml-2" (click)="onDelete(c)">
                 <i class="material-icons"></i>
               </button>
             </td>
@@ -36,3 +36,29 @@
       </table>
     </div>
   </div>
+
+  <!-- ***** Modal ***** -->
+<ng-template #categoriesModal>
+  <div class="modal-header">
+    <h4 class="modal-title">Categories manager</h4>
+    <button type="button" class="close" aria-label="Close" (click)="onCloseModal()"> x
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="field">
+      <label class="label">Name</label>
+      <input [(ngModel)]="category.categoryName" class="input form-control" type="text">
+    </div>
+
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn btn-success" (click)="onSubmit()">
+      Submit
+    </button>
+    <button class="btn btn-danger" (click)="onSubmit()">
+      Cancel
+    </button>
+  </div>
+
+</ng-template>

@@ -1,6 +1,6 @@
 .container {
   padding-top: 5%;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
  h2, h3 {
   color: #1f0052;

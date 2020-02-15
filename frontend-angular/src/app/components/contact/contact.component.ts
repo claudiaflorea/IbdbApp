@@ -28,7 +28,6 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(contactData) {
-    console.warn('Your message has been sent', contactData);
     this.sendEmail(<Contact> contactData);
     this.contactForm.reset();
   }
@@ -37,6 +36,8 @@ export class ContactComponent implements OnInit {
     this.emailService.sendEmail(contact).subscribe(
       data => console.log('***************', data)
       );
+     alert('Thank you for reaching out to us!' 
+     + '\n' + 'Your message has been sent.');
   }
 
 }

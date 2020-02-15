@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild, TemplateRef } from '@angular/core';
 import { Author } from 'src/app/models/author';
 import { Subscription } from 'rxjs';
 import { AuthorService } from 'src/app/services/author.service';
@@ -17,6 +17,22 @@ export class AuthorListComponent implements OnInit, OnDestroy {
   author: Author;
   authorSubscription: Subscription;
   authors: Author[];
+  @ViewChild("authorsModal", {static: false}) 
+  private authorsModal: TemplateRef<any>;
+  selectedCountry: any;
+  shouldShow: boolean;
+  cities: any[];
+  currentPage = 1;
+  itemsPerPage = 5;
+  pageSize: number;
+
+  countries = [
+		{ name: 'Germany',  cities: ['Duesseldorf', 'Leinfelden-Echterdingen', 'Eschborn' ] },
+		{ name: 'Spain', cities: ['Barcelona' ] },
+		{ name: 'USA', cities: ['Downers Grove'] },
+		{ name: 'Mexico', cities: ['Puebla' ] },
+		{ name: 'India', cities: ['Delhi', 'Kolkata', 'Mumbai', 'Bangalore'] },
+  ];
 
   constructor(private authorService: AuthorService, private modalService: NgbModal) { }
 
@@ -27,6 +43,65 @@ export class AuthorListComponent implements OnInit, OnDestroy {
     });
   }
 
+  onAdd() {
+    this.author = new Author();
+    this.shouldShow = true;
+    this.modalService.open(this.authorsModal);
+  }
+
+  onUpdate(author: Author) {
+    this.author = author;
+    this.author.address.country = author.address.country;
+    this.author.address.city = author.address.city;
+    this.shouldShow = true;
+    this.modalService.open(this.authorsModal);
+  }
+
+  onDelete(author: Author) {
+    this.authorService.deleteAuthor(author).subscribe(data => { 
+      console.log(data, 'was deleted');
+      location.reload(); 
+    });
+  }
+
+  onSubmit() {
+    if (this.author.id != undefined) {
+      this.updateItem();
+    } else {
+      this.insertItem();
+    }
+  }
+
+  insertItem() {
+    this.authorService.insertAuthor(this.author).subscribe(data => {
+      this.shouldShow = false;
+      /* Reload page to display newly added book */
+      location.reload();
+    });
+  }
+
+  updateItem() {
+    this.authorService.updateAuthor(this.author).subscribe(data => {
+      this.shouldShow = false;
+    });
+  }
+
+  onCloseModal(){
+    this.modalService.dismissAll();
+  }
+
+  changeCountry(country) {
+		this.cities = this.countries.find(cntry => cntry.name === country).cities;
+  }
+  
+  public onPageChange(pageNum: number): void {
+    this.pageSize = this.itemsPerPage*(pageNum - 1);
+  }
+  
+  public changePagesize(num: number): void {
+    this.itemsPerPage = this.pageSize + num;
+  }
+/*
   addAuthor() {
     console.log('Add new author');
     const modalRef = this.modalService.open(AddAuthorModalComponent);
@@ -56,7 +131,7 @@ export class AuthorListComponent implements OnInit, OnDestroy {
     const modalRef = this.modalService.open(DeleteAuthorModalComponent);
     modalRef.componentInstance.id = 16;
   }
-
+*/
   ngOnDestroy() {
     this.authorSubscription.unsubscribe();
   }

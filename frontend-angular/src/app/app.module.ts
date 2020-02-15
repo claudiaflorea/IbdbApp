@@ -35,22 +35,12 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { BookItemsComponent } from './components/book-items/book-items.component';
 import { BooksPageComponent } from './components/books-page/books-page.component';
 import { RatingModule } from 'ng-starrating';
-import { AddUserModalComponent } from './components/modals/add-user-modal/add-user-modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { EditUserModalComponent } from './components/modals/edit-user-modal/edit-user-modal.component';
 import { DeleteUserModalComponent } from './components/modals/delete-user-modal/delete-user-modal.component';
 import { BookListComponent } from './components/dashboard/book-list/book-list.component';
-import { AddBookModalComponent } from './components/modals/add-book-modal/add-book-modal.component';
-import { EditBookModalComponent } from './components/modals/edit-book-modal/edit-book-modal.component';
 import { DeleteBookModalComponent } from './components/modals/delete-book-modal/delete-book-modal.component';
-import { AddAuthorModalComponent } from './components/modals/add-author-modal/add-author-modal.component';
-import { EditAuthorModalComponent } from './components/modals/edit-author-modal/edit-author-modal.component';
 import { DeleteAuthorModalComponent } from './components/modals/delete-author-modal/delete-author-modal.component';
-import { AddCategoryModalComponent } from './components/modals/add-category-modal/add-category-modal.component';
-import { EditCategoryModalComponent } from './components/modals/edit-category-modal/edit-category-modal.component';
 import { DeleteCategoryModalComponent } from './components/modals/delete-category-modal/delete-category-modal.component';
-import { AddSubcategoryModalComponent } from './components/modals/add-subcategory-modal/add-subcategory-modal.component';
-import { EditSubcategoryModalComponent } from './components/modals/edit-subcategory-modal/edit-subcategory-modal.component';
 import { DeleteSubcategoryModalComponent } from './components/modals/delete-subcategory-modal/delete-subcategory-modal.component';
 import { AuthorListComponent } from './components/dashboard/author-list/author-list.component';
 import { CategoryListComponent } from './components/dashboard/category-list/category-list.component';
@@ -75,21 +65,11 @@ import { EmailService } from './services/email.service';
     FilterPipe,
     BookItemsComponent,
     BooksPageComponent,
-    AddUserModalComponent,
-    EditUserModalComponent,
     DeleteUserModalComponent,
     BookListComponent,
-    AddBookModalComponent,
-    EditBookModalComponent,
     DeleteBookModalComponent,
-    AddAuthorModalComponent,
-    EditAuthorModalComponent,
     DeleteAuthorModalComponent,
-    AddCategoryModalComponent,
-    EditCategoryModalComponent,
     DeleteCategoryModalComponent,
-    AddSubcategoryModalComponent,
-    EditSubcategoryModalComponent,
     DeleteSubcategoryModalComponent,
     AuthorListComponent,
     CategoryListComponent,
@@ -125,20 +105,10 @@ import { EmailService } from './services/email.service';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent],
   entryComponents: [
-    AddUserModalComponent,
-    EditUserModalComponent,
     DeleteUserModalComponent,
-    AddBookModalComponent,
-    EditBookModalComponent,
     DeleteBookModalComponent,
-    AddAuthorModalComponent,
-    EditAuthorModalComponent,
     DeleteAuthorModalComponent,
-    AddCategoryModalComponent,
-    EditCategoryModalComponent,
     DeleteCategoryModalComponent,
-    AddSubcategoryModalComponent,
-    EditSubcategoryModalComponent,
     DeleteSubcategoryModalComponent
   ]
 })

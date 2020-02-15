@@ -6,6 +6,7 @@ import { BookService } from 'src/app/services/book.service';
 import { Category } from 'src/app/models/category';
 import { Subcategory } from 'src/app/models/subcategory';
 import { CategoryService } from 'src/app/services/category.service';
+import { GlobalService } from 'src/app/services/globalService.service';
 
 @Component({
   selector: 'app-header-menu',
@@ -28,7 +29,8 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
   constructor(
     private router: Router,
     public bookService: BookService,
-    public categoryService: CategoryService
+    public categoryService: CategoryService,
+    public globalService: GlobalService
     ) { }
 
   showContact() {
@@ -49,19 +51,12 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
   }
 
   sortByFictionCategory() {
-    console.log('categories::::::: ', this.categories);
-    console.log('category 0::::::: ', this.categories[0]);
-    this.router.navigate(['/book/all', this.fiction.categoryId]);
+    this.router.navigate(['/book/all/', this.fiction.categoryId]);
+    this.globalService.filterBooks(this.fiction.categoryId);
   }
   sortByNonFictionCategory() {
-    console.log('categories::::::: ', this.categories);
-    console.log('category 1::::::: ', this.categories[1]);
-    this.router.navigate(['/book/all', this.nonfiction.categoryId]);
-  }
-
-  sortBySubcategory() {
-    console.log('subcategories.................. ', this.categories[0]);
-    console.log('subcategories...................', this.categories[1]);
+    this.router.navigate(['/book/all/', this.nonfiction.categoryId]);
+    this.globalService.filterBooks(this.nonfiction.categoryId);
   }
 
   ngOnDestroy() {

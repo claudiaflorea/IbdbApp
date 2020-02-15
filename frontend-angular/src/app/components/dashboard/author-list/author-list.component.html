@@ -1,47 +1,130 @@
-<div class="row mt-5 text-sm-center text-lg-left">
-    <div class="col-lg-9 ml-lg-5"><h2>Authors Details</h2></div>
-    <div class="col-lg-2 text-lg-center text-md-right text-sm-center">
-      <button type="button" class="btn btn-info add-new" (click)="addAuthor()">
-        <i class="fa fa-plus"></i> Add New
-      </button>
+<div class="content"> 
+  <div class="author-list">
+    <div class="row mt-5 text-sm-center text-lg-left">
+      <div class="col-lg-9 ml-lg-5"><h2>Authors Details</h2></div>
+      <div class="col-lg-2 text-lg-center text-md-right text-sm-center">
+        <button type="button" class="btn btn-info add-new" (click)="onAdd()">
+          <i class="fa fa-plus"></i> Add New
+        </button>
+      </div>
     </div>
+  
+    <div class="table-container p-5">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Author Id</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Date of Birth</th>
+              <th scope="col">Address</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let a of authors; index as i">
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{ a.authorId }}</td>
+              <td>{{ a.firstName }}</td>
+              <td>{{ a.lastName }}</td>
+              <td>{{ a.birthDate | date: "mediumDate" }}</td>
+              <td *ngIf="a.address != null">
+                {{ a.address.city }}, {{ a.address.country }}
+              </td>
+              <td *ngIf="a.address == null"> UNKNOWN </td>
+              <td class="btn-group">
+                <button class="btn btn-warning btn-sm mr-2" (click)="onUpdate(a)">
+                  <i class="material-icons"></i>
+                </button>
+                <button class="btn btn-danger btn-sm ml-2" (click)="onDelete(a)">
+                  <i class="material-icons"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="pagination pt-5 pb-5 justify-content-center">
+    <ngb-pagination 
+      [collectionSize]="authors.length" 
+      #numPages 
+      [pageSize]="itemsPerPage" 
+      [(page)]="currentPage" 
+      (pageChange)="onPageChange(currentPage)">
+    </ngb-pagination>
   </div>
 
-  <div class="table-container p-5">
-    <div class="table-responsive">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col">Author Id</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Date of Birth</th>
-            <th scope="col">Address</th>
-            <th scope="col">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let a of authors; index as i">
-            <th scope="row">{{ i + 1 }}</th>
-            <td>{{ a.authorId }}</td>
-            <td>{{ a.firstName }}</td>
-            <td>{{ a.lastName }}</td>
-            <td>{{ a.birthDate | date: "mediumDate" }}</td>
-            <td *ngIf="a.address != null">
-              {{ a.address.city }}, {{ a.address.country }}
-            </td>
-            <td *ngIf="a.address == null"> UNKNOWN </td>
-            <td class="btn-group">
-              <button class="btn btn-warning btn-sm mr-2" (click)="editAuthor()">
-                <i class="material-icons"></i>
-              </button>
-              <button class="btn btn-danger btn-sm ml-2" (click)="deleteAuthor()">
-                <i class="material-icons"></i>
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+</div>
+
+  <!-- ***** Modal ***** -->
+<ng-template #authorsModal>
+  <div class="modal-header">
+    <h4 class="modal-title">Authors manager</h4>
+    <button type="button" class="close" aria-label="Close" (click)="onCloseModal()"> x
+    </button>
   </div>
+  <div class="modal-body">
+    <div class="field">
+      <label class="label">First name</label>
+      <input [(ngModel)]="author.firstName" class="input form-control" type="text">
+    </div>
+
+  <div class="field">
+    <label class="label">Last name</label>
+    <input [(ngModel)]="author.lastName" class="input form-control" type="text">
+  </div>
+  
+  <div class="field">
+    <label class="label">Date of birth</label>
+    <input 
+      type="input date" 
+      class="form-control" 
+      [value]="author.birthDate" 
+      [(ngModel)]="author.birthDate" 
+      data-date="author.birthDate" 
+      data-date-format="DD MMMM YYYY"
+    />
+  </div>
+
+  <div class="field">
+    <label class="label">Country</label>
+    <select 
+      [(ngModel)]="selectedContry" 
+      (change)="changeCountry($event.target.value)"
+      class="input has-text-centered is-cursor-pointer form-control"
+      >
+      <option *ngFor="let country of countries"  [value]="author.address.country">
+        {{country.name}}
+      </option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label class="label">City</label>
+    <select 
+      [(ngModel)]="selectedCity" 
+      class="input has-text-centered is-cursor-pointer form-control">
+      <option *ngFor="let city of cities"  [value]="author.address.city">
+        {{city}}
+      </option>
+    </select>
+  </div>
+   
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn btn-success" (click)="onSubmit()">
+      Submit
+    </button>
+    <button class="btn btn-danger" (click)="onSubmit()">
+      Cancel
+    </button>
+  </div>
+
+</ng-template>

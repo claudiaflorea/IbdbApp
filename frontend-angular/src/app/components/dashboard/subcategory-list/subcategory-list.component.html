@@ -1,7 +1,7 @@
 <div class="row mt-5 text-sm-center text-lg-left">
     <div class="col-lg-9 ml-lg-5"><h2>Subcategories Details</h2></div>
     <div class="col-lg-2 text-lg-center text-md-right text-sm-center">
-      <button type="button" class="btn btn-info add-new" (click)="addSubcategory()">
+      <button type="button" class="btn btn-info add-new" (click)="onAdd()">
         <i class="fa fa-plus"></i> Add New
       </button>
     </div>
@@ -27,10 +27,10 @@
             <td *ngIf="s.category != null">{{ s.category.categoryName }}</td>
             <td *ngIf="s.category == null">UNDEFINED</td>
             <td class="btn-group">
-              <button class="btn btn-warning btn-sm mr-2" (click)="editSubcategory()">
+              <button class="btn btn-warning btn-sm mr-2" (click)="onUpdate(s)">
                 <i class="material-icons"></i>
               </button>
-              <button class="btn btn-danger btn-sm ml-2" (click)="deleteSubcategory()">
+              <button class="btn btn-danger btn-sm ml-2" (click)="onDelete(s)">
                 <i class="material-icons"></i>
               </button>
             </td>
@@ -39,3 +39,43 @@
       </table>
     </div>
   </div>
+
+  
+<!-- ***** Modal ***** -->
+<ng-template #subcategoriesModal>
+  <div class="modal-header">
+    <h4 class="modal-title">Subcategories manager</h4>
+    <button type="button" class="close" aria-label="Close" (click)="onCloseModal()"> x
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="field">
+      <label class="label">Name</label>
+      <input 
+        [(ngModel)]="subcategory.subcategoryName" 
+        class="input form-control" 
+        type="text"
+        >
+    </div>
+    
+    <div class="field">
+      <label class="label">Category</label>
+      <select [(ngModel)]="selectedCategory" class="input has-text-centered is-cursor-pointer form-control">
+        <option *ngFor="let c of categories" [value]= "c.id">
+          {{c.categoryName}}
+        </option>
+      </select>
+    </div>
+    
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn btn-success" (click)="onSubmit()">
+      Submit
+    </button>
+    <button class="btn btn-danger" (click)="onSubmit()">
+      Cancel
+    </button>
+  </div>
+
+</ng-template>

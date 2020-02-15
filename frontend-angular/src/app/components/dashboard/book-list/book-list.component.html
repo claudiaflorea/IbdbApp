@@ -1,52 +1,114 @@
 <div class="row mt-5 text-sm-center text-lg-left">
-    <div class="col-lg-9 ml-lg-5"><h2>Books Details</h2></div>
-    <div class="col-lg-2 text-lg-center text-md-right text-sm-center">
-      <button type="button" class="btn btn-info add-new" (click)="addBook()">
-        <i class="fa fa-plus"></i> Add New
-      </button>
+  <div class="col-lg-9 ml-lg-5">
+    <h2>Books Details</h2>
+  </div>
+  <div class="col-lg-2 text-lg-center text-md-right text-sm-center">
+    <button type="button" class="btn btn-info add-new" (click)="onAdd()">
+      <i class="fa fa-plus"></i> Add New
+    </button>
+  </div>
+</div>
+
+<div class="table-container p-5">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Book Id</th>
+          <th scope="col">Book Title</th>
+          <th scope="col">ISBN</th>
+          <th scope="col">Author</th>
+          <th scope="col">Publisher</th>
+          <th scope="col">Publishe Date</th>
+          <th scope="col">Category</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let b of books; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ b.bookId }}</td>
+          <td>{{ b.title }}</td>
+          <td>{{ b.isbn }}</td>
+          <td>{{ b.author.firstName }} {{ b.author.lastName }}</td>
+          <td>{{ b.publisher.publisherName }}</td>
+          <td>{{ b.publishDate | date: "mediumDate" }}</td>
+          <td>{{ b.subcategory.category.categoryName }} - {{ b.subcategory.subcategoryName }}</td>
+          <td class="btn-group">
+            <button class="btn btn-warning btn-sm mr-2" (click)="onUpdate(b)">
+              <i class="material-icons"></i>
+            </button>
+            <button class="btn btn-danger btn-sm ml-2" (click)="onDelete(b)">
+              <i class="material-icons"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ***** Modal ***** -->
+<ng-template #booksModal>
+  <div class="modal-header">
+    <h4 class="modal-title">Books manager</h4>
+    <button type="button" class="close" aria-label="Close" (click)="onCloseModal()"> x
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="field">
+      <label class="label">Title</label>
+      <input [(ngModel)]="book.title" class="input form-control" type="text">
     </div>
+
+  <div class="field">
+    <label class="label">ISBN</label>
+    <input [(ngModel)]="book.isbn" class="input form-control" type="text">
+  </div>
+    
+  <div class="field">
+    <label class="label">Author</label>
+    <select [(ngModel)]="selectedAuthor" class="input has-text-centered is-cursor-pointer form-control">
+      <option *ngFor="let author of authors" [value]="author.id">{{author.firstName}} {{author.lastName}}</option>
+    </select>
   </div>
 
-  <div class="table-container p-5">
-    <div class="table-responsive">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col">Book Id</th>
-            <th scope="col">Book Title</th>
-            <th scope="col">ISBN</th>
-            <th scope="col">Author</th>
-            <th scope="col">Publisher</th>
-            <th scope="col">Publishe Date</th>
-            <th scope="col">Category</th>
-            <th scope="col">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let b of books; index as i">
-            <th scope="row">{{ i + 1 }}</th>
-            <td>{{ b.bookId }}</td>
-            <td>{{ b.title }}</td>
-            <td>{{ b.isbn }}</td>
-            <td>{{ b.author.firstName }} {{ b.author.lastName }}</td>
-            <td>{{ b.publisher.publisherName }}</td>
-            <td>{{ b.publishDate | date: "mediumDate" }}</td>
-            <td >{{ b.subcategory.category.categoryName }} - {{ b.subcategory.subcategoryName }}</td >
-            <td class="btn-group">
-              <button 
-                class="btn btn-warning btn-sm mr-2" 
-                (editForm)="loadEditForm($event)"
-                (click)="editBook(b)"
-                >
-                <i class="material-icons"></i>
-              </button>
-              <button class="btn btn-danger btn-sm ml-2" (click)="deleteBook()">
-                <i class="material-icons"></i>
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <div class="field">
+    <label class="label">Publisher</label>
+    <select [(ngModel)]="selectedPublisher" class="input has-text-centered is-cursor-pointer form-control">
+      <option *ngFor="let publisher of publishers" [value]="publisher.id">{{publisher.publisherName}}</option>
+    </select>
   </div>
+    
+  <div class="field">
+    <label class="label">Publish Date</label>
+    <input 
+      type="input date" 
+      class="form-control" 
+      [value]="book.publishDate" 
+      [(ngModel)]="book.publishDate" 
+      data-date="book.publishDate" 
+      data-date-format="DD MMMM YYYY"
+    />
+  </div>
+    
+    <div class="field">
+      <label class="label">Category</label>
+      <select [(ngModel)]="selectedCategory" class="input has-text-centered is-cursor-pointer form-control">
+        <option *ngFor="let subcategory of subcategories" [value]="subcategory.id">{{subcategory.subcategoryName}}</option>
+      </select>
+    </div>
+    
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn btn-success" (click)="onSubmit()">
+      Submit
+    </button>
+    <button class="btn btn-danger" (click)="onSubmit()">
+      Cancel
+    </button>
+  </div>
+
+</ng-template>

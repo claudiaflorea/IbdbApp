@@ -5,6 +5,7 @@ import org.springframework.http.MediaType;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -28,24 +29,22 @@ public class ContactController {
   		return "contact/index";
   	}
 
-  	@RequestMapping(value = "/send", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-  	public void send(@ModelAttribute("contact") @RequestBody Contact contact, ModelMap modelMap) {
+  	@PostMapping(value = "/send", consumes = MediaType.APPLICATION_JSON_VALUE)
+  	public void send(@RequestBody Contact contact, ModelMap modelMap) {
   		try {
   			contactService.send(
+  					contact.getFromAddress(), 
+  					"ibdb.company@gmail.com",
   					contact.getFirstName(), 
   					contact.getLastName(), 
-  					contact.getFromAddress(), 
-  					"claudiaflorea0@gmail.com",
   					contact.getSubject(), 
   					contact.getMessage()
   					);
-  			modelMap.put("msg", "DONE");
   			
   		  	dataDisplay.printCrudInfo(); 
   		  	
   		} catch (Exception e) {
   			e.printStackTrace();
-  			modelMap.put("msg", e.getMessage());
   		}
   	}
   

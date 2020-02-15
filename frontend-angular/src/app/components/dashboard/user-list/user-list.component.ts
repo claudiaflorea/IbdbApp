@@ -1,12 +1,8 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild, TemplateRef } from '@angular/core';
 import { UserAccount } from '../../../models/userAccount';
 import { UserService } from '../../../services/user.service';
 import { Subscription } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { AddUserModalComponent } from '../../modals/add-user-modal/add-user-modal.component';
-import { EditUserModalComponent } from '../../modals/edit-user-modal/edit-user-modal.component';
-import { DeleteUserModalComponent } from '../../modals/delete-user-modal/delete-user-modal.component';
-
 
 @Component({
   selector: 'app-user-list',
@@ -19,6 +15,10 @@ export class UserListComponent implements OnInit, OnDestroy {
   userSubscription: Subscription;
   usersArray: any;
   user: UserAccount;
+  shouldShow: boolean;
+  @ViewChild("usersModal", {static: false}) 
+  private usersModal: TemplateRef<any>;
+  genders: any;
 
   constructor(private userService: UserService, private modalService: NgbModal) {
   }
@@ -26,13 +26,65 @@ export class UserListComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.userSubscription = this.userService.getUsers().subscribe(data => {
       this.users = data;
+      console.log('USERS: ', this.users);
       this.usersArray = this.users;
       for (let i = 0; i < this.usersArray.length - 1; i++) {
        // console.log('user::::::::: ', this.usersArray[i]);
       }
     });
+
+    
+    this.genders = ['Male', 'Female'];
   }
 
+  onAdd() {
+    this.user = new UserAccount();
+    this.shouldShow = true;
+    this.modalService.open(this.usersModal);
+  }
+
+  onUpdate(user: UserAccount) {
+    this.user = user;
+    this.user.birthDate = user.birthDate;
+    this.user.gender = user.gender;
+    this.shouldShow = true;
+    this.modalService.open(this.usersModal);
+  }
+
+  onDelete(user: UserAccount) {
+    this.userService.deleteUser(user).subscribe(data => { 
+      console.log(data, 'was deleted');
+      location.reload(); 
+    });
+  }
+
+  onSubmit() {
+    if (this.user.id != undefined) {
+      this.updateItem();
+    } else {
+      this.insertItem();
+    }
+  }
+
+  insertItem() {
+    this.userService.insertUser(this.user).subscribe(data => {
+      this.shouldShow = false;
+      /* Reload page to display newly added book */
+      location.reload();
+    });
+  }
+
+  updateItem() {
+    this.userService.updateUser(this.user).subscribe(data => {
+      this.shouldShow = false;
+    });
+  }
+
+  onCloseModal(){
+    this.modalService.dismissAll();
+  }
+
+/*
   addUser() {
     console.log('Add new user');
     const modalRef = this.modalService.open(AddUserModalComponent);
@@ -62,7 +114,7 @@ export class UserListComponent implements OnInit, OnDestroy {
     const modalRef = this.modalService.open(DeleteUserModalComponent);
     modalRef.componentInstance.id = 12;
   }
-
+*/
   ngOnDestroy() {
     this.userSubscription.unsubscribe();
   }

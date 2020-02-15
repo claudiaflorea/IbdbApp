@@ -20,16 +20,6 @@ export class BookService {
     return this.http.get(this.BASE_URL + 'all').pipe(map((res: Book[]) => res ));
   }
 
-  getListedBooksByCategoryId(categoryId: number) {
-    return this.http.get(this.BASE_URL + 'all' + categoryId)
-      .pipe(map((res: Book[]) => res ));
-  }
-
-  getListedBooksBySubcategoryId(subcategoryId: number) {
-    return this.http.get(this.BASE_URL + 'all' + subcategoryId)
-      .pipe(map((res: Book[]) => res ));
-  }
-
   getBookById(bookId: number) {
     return this.http.get(this.BASE_URL + bookId)
       .pipe(map((res: Book) => res ));
@@ -49,4 +39,5 @@ export class BookService {
     return this.http.delete(this.BASE_URL + 'delete/' + book.bookId, this.httpOptions)
       .pipe(map((resp: any) => resp ));
   }
+  
 }
