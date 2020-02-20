@@ -3,9 +3,6 @@ import { Author } from 'src/app/models/author';
 import { Subscription } from 'rxjs';
 import { AuthorService } from 'src/app/services/author.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { AddAuthorModalComponent } from '../../modals/add-author-modal/add-author-modal.component';
-import { EditAuthorModalComponent } from '../../modals/edit-author-modal/edit-author-modal.component';
-import { DeleteAuthorModalComponent } from '../../modals/delete-author-modal/delete-author-modal.component';
 
 @Component({
   selector: 'app-author-list',
@@ -23,8 +20,9 @@ export class AuthorListComponent implements OnInit, OnDestroy {
   shouldShow: boolean;
   cities: any[];
   currentPage = 1;
-  itemsPerPage = 5;
+  itemsPerPage = 10;
   pageSize: number;
+  authorsLength: any;
 
   countries = [
 		{ name: 'Germany',  cities: ['Duesseldorf', 'Leinfelden-Echterdingen', 'Eschborn' ] },
@@ -39,6 +37,7 @@ export class AuthorListComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.authorSubscription = this.authorService.getAuthors().subscribe(data => {
       this.authors = data;
+      this.authorsLength = data.length;
       console.log('AUTHORS: ', this.authors);
     });
   }

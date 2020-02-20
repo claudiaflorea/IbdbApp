@@ -17,6 +17,9 @@ import { BookListComponent } from './components/dashboard/book-list/book-list.co
 import { AuthorListComponent } from './components/dashboard/author-list/author-list.component';
 import { CategoryListComponent } from './components/dashboard/category-list/category-list.component';
 import { SubcategoryListComponent } from './components/dashboard/subcategory-list/subcategory-list.component';
+import { UserComponent } from './components/roles/user/user.component';
+import { OperatorComponent } from './components/roles/operator/operator.component';
+import { AdminComponent } from './components/roles/admin/admin.component';
 
 
 const routes: Routes = [
@@ -24,9 +27,22 @@ const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent },
   { path: 'contact', component: ContactComponent },
   {
-    path: 'login', component: LoginComponent,
-   // canActivate: [AuthGuard]
+      path: 'user',
+      component: UserComponent
   },
+  {
+      path: 'operator',
+      component: OperatorComponent
+  },
+  {
+      path: 'admin',
+      component: AdminComponent
+  },
+
+    {
+      path: 'login', component: LoginComponent,
+    // canActivate: [AuthGuard]
+    },
   {
     path: 'logout', component: LogoutComponent,
     canActivate: [AuthGaurdService]

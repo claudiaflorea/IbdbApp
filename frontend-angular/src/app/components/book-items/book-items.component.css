@@ -6,3 +6,7 @@ img {
 .container {
   overflow-y: hidden;
 }
+
+.field {
+  font-size:2rem;
+}

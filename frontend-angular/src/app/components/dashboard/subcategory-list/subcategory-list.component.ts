@@ -3,11 +3,7 @@ import { Subcategory } from 'src/app/models/subcategory';
 import { Subscription } from 'rxjs';
 import { SubcategoryService } from 'src/app/services/subcategory.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { AddSubcategoryModalComponent } from '../../modals/add-subcategory-modal/add-subcategory-modal.component';
-import { EditSubcategoryModalComponent } from '../../modals/edit-subcategory-modal/edit-subcategory-modal.component';
-import { DeleteSubcategoryModalComponent } from '../../modals/delete-subcategory-modal/delete-subcategory-modal.component';
 import { CategoryService } from 'src/app/services/category.service';
-import { map } from 'rxjs/operators';
 import { Category } from 'src/app/models/category';
 
 @Component({

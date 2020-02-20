@@ -3,10 +3,6 @@ import { Category } from 'src/app/models/category';
 import { Subscription } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CategoryService } from 'src/app/services/category.service';
-import { AddCategoryModalComponent } from '../../modals/add-category-modal/add-category-modal.component';
-import { EditCategoryModalComponent } from '../../modals/edit-category-modal/edit-category-modal.component';
-import { DeleteCategoryModalComponent } from '../../modals/delete-category-modal/delete-category-modal.component';
-import { timingSafeEqual } from 'crypto';
 
 @Component({
   selector: 'app-category-list',

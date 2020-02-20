@@ -24,7 +24,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let a of authors; index as i">
+            <tr *ngFor="let a of authors; index as i ">
               <th scope="row">{{ i + 1 }}</th>
               <td>{{ a.authorId }}</td>
               <td>{{ a.firstName }}</td>
@@ -52,7 +52,7 @@
 
   <div class="pagination pt-5 pb-5 justify-content-center">
     <ngb-pagination 
-      [collectionSize]="authors.length" 
+      [collectionSize]="authorsLength" 
       #numPages 
       [pageSize]="itemsPerPage" 
       [(page)]="currentPage" 

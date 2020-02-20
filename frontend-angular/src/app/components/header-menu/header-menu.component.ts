@@ -7,6 +7,8 @@ import { Category } from 'src/app/models/category';
 import { Subcategory } from 'src/app/models/subcategory';
 import { CategoryService } from 'src/app/services/category.service';
 import { GlobalService } from 'src/app/services/globalService.service';
+import { User } from '../auth/user.model';
+import { AuthService } from '../auth/authentication.service';
 
 @Component({
   selector: 'app-header-menu',
@@ -26,17 +28,27 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
   fiction: any;
   nonfiction: any;
 
+  private userSub: Subscription;
+  isAuthenticated: boolean = false;
+  isAdmin: boolean = false;
+  open: boolean = false;
+
   constructor(
     private router: Router,
     public bookService: BookService,
     public categoryService: CategoryService,
-    public globalService: GlobalService
+    public globalService: GlobalService,
+    private authService: AuthService
     ) { }
 
   showContact() {
   }
 
   ngOnInit() {
+    this.userSub = this.authService.user.subscribe((user: User) => {
+      this.checkStatus(user);
+    });
+
     this.booksSubscription = this.bookService.getBooks().subscribe(data => {
       this.books = data;
     });
@@ -59,7 +71,40 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
     this.globalService.filterBooks(this.nonfiction.categoryId);
   }
 
+  private checkStatus(user: User) {
+    this.isAuthenticated = !!user;
+
+    if (this.isAuthenticated) {
+      let auths: string[];
+
+      if (this.checkIfAllString(user.authorities)) {
+        auths = user.authorities;
+      } else {
+        auths = user.authorities.reduce(function (s, a) {
+          s.push(a["authority"]);
+          return s;
+        }, []);
+      }
+
+      this.isAdmin = -1 != auths.indexOf("ROLE_ADMIN");
+    } else {
+      this.isAdmin = false;
+    }
+
+  }
+
+  private checkIfAllString(x) {
+    return x.every(function (i) { return typeof i === "string" });
+  }
+
+  onLogout() {
+    this.checkStatus(null);
+    this.authService.logout();
+  }
+
   ngOnDestroy() {
     this.booksSubscription.unsubscribe();
+    this.userSub.unsubscribe();
   }
+
 }

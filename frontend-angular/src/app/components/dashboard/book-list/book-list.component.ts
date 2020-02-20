@@ -91,6 +91,7 @@ export class BookListComponent implements OnInit, OnDestroy {
 
   insertItem() {
     this.bookService.insertBook(this.book).subscribe(data => {
+      console.log(data);
       this.shouldShow = false;
       /* Reload page to display newly added book */
       location.reload();

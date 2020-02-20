@@ -3,6 +3,8 @@ import { UserAccount } from '../../../models/userAccount';
 import { UserService } from '../../../services/user.service';
 import { Subscription } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { DatePipe } from '@angular/common';
+
 
 @Component({
   selector: 'app-user-list',
@@ -20,7 +22,11 @@ export class UserListComponent implements OnInit, OnDestroy {
   private usersModal: TemplateRef<any>;
   genders: any;
 
-  constructor(private userService: UserService, private modalService: NgbModal) {
+  constructor(
+    private userService: UserService, 
+    private modalService: NgbModal,
+    private datePipe: DatePipe
+    ) {
   }
 
   ngOnInit() {
@@ -45,7 +51,7 @@ export class UserListComponent implements OnInit, OnDestroy {
 
   onUpdate(user: UserAccount) {
     this.user = user;
-    this.user.birthDate = user.birthDate;
+    this.user.birthDate = new Date(this.datePipe.transform(this.user.birthDate, 'yyyy/MM/dd'));
     this.user.gender = user.gender;
     this.shouldShow = true;
     this.modalService.open(this.usersModal);

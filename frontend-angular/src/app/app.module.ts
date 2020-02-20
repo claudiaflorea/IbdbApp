@@ -46,6 +46,10 @@ import { AuthorListComponent } from './components/dashboard/author-list/author-l
 import { CategoryListComponent } from './components/dashboard/category-list/category-list.component';
 import { SubcategoryListComponent } from './components/dashboard/subcategory-list/subcategory-list.component';
 import { EmailService } from './services/email.service';
+import { DatePipe } from '@angular/common';
+import { AdminComponent } from './components/roles/admin/admin.component';
+import { UserComponent } from './components/roles/user/user.component';
+import { OperatorComponent } from './components/roles/operator/operator.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +77,10 @@ import { EmailService } from './services/email.service';
     DeleteSubcategoryModalComponent,
     AuthorListComponent,
     CategoryListComponent,
-    SubcategoryListComponent
+    SubcategoryListComponent,
+    AdminComponent,
+    UserComponent,
+    OperatorComponent
   ],
   imports: [
     AppRoutingModule,
@@ -100,7 +107,8 @@ import { EmailService } from './services/email.service';
     EmailService,
     AuthGaurdService,
     AuthenticationService,
-    HttpClientService
+    HttpClientService,
+    DatePipe
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent],

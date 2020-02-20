@@ -1,38 +1,43 @@
-  <div class="row d-flex text-center">
+<div class="row d-flex text-center">
   <div class="signup-box col-sm-12 col-md-8 col-lg-5 col-xl-4">
     <h1>Welcome to IBDB</h1>
-    <form (submit)="signupUser($event)">
-      <p class="text-left">First name</p>
-      <input
-        type="text"
-        ngModel="firstname"
-        id="firstname"
-        placeholder="First name"
-      />
-      <p class="text-left">Last name</p>
-      <input type="text" ngModel="lastname" id="lastname" placeholder="Last name" />
-      <p class="text-left">Username</p>
-      <input type="text" ngModel="username" id="username" placeholder="Username" />
-      <p class="text-left">Password</p>
-      <input
-        type="password"
-        ngModel="password"
-        id="password"
-        placeholder="Password"
-      />
-      <p class="text-left">Confirm Password</p>
-      <input
-        type="password"
-        ngModel="confirmedPassword"
-        id="confirmedPassword"
-        placeholder="Password"
-      />
-      <p class="text-left">Email</p>
-      <input type="text" ngModel="email" id="email" placeholder="Email@xyz.com" />
-
-      <button (click) = signupUser() class="btn btn-success">
-        Sign Up
-      </button>
+    <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+      <div class="form-group">
+        <div *ngIf="errorMessage" class="alert alert-danger">
+            Signup failed: {{ errorMessage }}
+        </div>
+      </div>
+      <div class="form-group">
+        <p class="text-left">First name</p>
+        <input type="text" [(ngModel)]="firstname" name="firstName" id="firstname" placeholder="First name" required/>
+      </div>
+      <div class="form-group">
+        <p class="text-left">Last name</p>
+        <input type="text" [(ngModel)]="lastname" name="lastName" id="lastname" placeholder="Last name" required/>
+      </div>
+      <div class="form-group">
+        <p class="text-left">Username</p>
+        <input type="text" [(ngModel)]="username" name="username" id="username" placeholder="Username" required/>
+      </div>
+      <div class="form-group">
+        <p class="text-left">Password</p>
+        <input type="password" [(ngModel)]="password" name="password" id="password" placeholder="Password" minlength="6" required/>
+      </div>
+      <div class="form-group">
+        <p class="text-left">Confirm Password</p>
+        <input type="password" [(ngModel)]="confirmedPassword" name="confirmedPassword" id="confirmedPassword" placeholder="Confirm Password" minlength="6" required/>
+      </div>
+      <div class="form-group">
+        <p class="text-left">Email</p>
+        <input type="text" [(ngModel)]="email" name="email" id="email" placeholder="Email@xyz.com" required/>
+  
+      </div>
+      <div>
+        <button type="submit" class="btn btn-success">
+          Sign Up
+        </button>
+      </div>
+    
     </form>
   </div>
 </div>

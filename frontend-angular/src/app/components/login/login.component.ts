@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthenticationService } from '../../services/authentication.service';
+import { AuthLoginInfo } from '../auth/login-info';
+import { AuthService } from '../auth/authentication.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -9,28 +11,31 @@ import { AuthenticationService } from '../../services/authentication.service';
 })
 export class LoginComponent implements OnInit {
 
-  username = '';
-  password = '';
-  invalidLogin = false;
+  private loginInfo: AuthLoginInfo;
+  isLoginFailed = false;
+  errorMessage: string = null;
 
-  constructor(private router: Router, private loginservice: AuthenticationService) { }
+  constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit() {
   }
 
-  checkLogin() {
-    (this.loginservice.authenticate(this.username, this.password).subscribe(
-      data => {
-        this.router.navigate(['']);
-        this.invalidLogin = false;
-      },
-      error => {
-        this.invalidLogin = true;
+  onSubmit(form: NgForm) {
+    if (!form.valid) {
+        return;
+    }
 
-      }
-    )
+    this.loginInfo = new AuthLoginInfo(form.value.username, form.value.password);
+
+    this.authService.attemptAuth(this.loginInfo).subscribe(
+        data => { },
+        error => {
+            this.errorMessage = error;
+            this.isLoginFailed = true;
+        }
     );
 
-  }
+    form.reset();
+}
 
 }
