@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthLoginInfo } from '../auth/login-info';
-import { AuthService } from '../auth/authentication.service';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -11,11 +9,10 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  private loginInfo: AuthLoginInfo;
   isLoginFailed = false;
   errorMessage: string = null;
 
-  constructor(private router: Router, private authService: AuthService) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -24,18 +21,7 @@ export class LoginComponent implements OnInit {
     if (!form.valid) {
         return;
     }
-
-    this.loginInfo = new AuthLoginInfo(form.value.username, form.value.password);
-
-    this.authService.attemptAuth(this.loginInfo).subscribe(
-        data => { },
-        error => {
-            this.errorMessage = error;
-            this.isLoginFailed = true;
-        }
-    );
-
     form.reset();
-}
+  }
 
 }

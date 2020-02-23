@@ -47,9 +47,6 @@ import { CategoryListComponent } from './components/dashboard/category-list/cate
 import { SubcategoryListComponent } from './components/dashboard/subcategory-list/subcategory-list.component';
 import { EmailService } from './services/email.service';
 import { DatePipe } from '@angular/common';
-import { AdminComponent } from './components/roles/admin/admin.component';
-import { UserComponent } from './components/roles/user/user.component';
-import { OperatorComponent } from './components/roles/operator/operator.component';
 
 @NgModule({
   declarations: [
@@ -77,10 +74,7 @@ import { OperatorComponent } from './components/roles/operator/operator.componen
     DeleteSubcategoryModalComponent,
     AuthorListComponent,
     CategoryListComponent,
-    SubcategoryListComponent,
-    AdminComponent,
-    UserComponent,
-    OperatorComponent
+    SubcategoryListComponent
   ],
   imports: [
     AppRoutingModule,
