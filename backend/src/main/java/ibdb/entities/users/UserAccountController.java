@@ -57,6 +57,6 @@ public class UserAccountController {
 	@RequestMapping(value = "/login", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public UserAccount findUserAccountByUsernameAndPassword(@RequestBody UserAccount userAccount) {
 		dataDisplay.printCrudInfo(); 
-		return userAccountService.findUserAccountByUsernameAndPassword(userAccount.getUsername(), userAccount.getPassword());
+		return userAccountService.findUserAccountByUsernameAndPassword(userAccount.getEmailAddress(), userAccount.getPassword());
 	}
 }

@@ -406,11 +406,20 @@ public class DataLoader implements ApplicationListener<ContextRefreshedEvent> {
 		UserAccount userAccount5 = new UserAccount(9904, "eugenpapuc@gmail.com", "Papuc", "Eugen", "Male","Eugen", 
 				"eugenpapuc34", dateFormat("12/08/1991"));
 		userAccount5.setRole(roleService.findRoleById(52).get());
+		
+		UserAccount userAccount6 = new UserAccount(9905, "claudiaflorea0@gmail.com", "Claudia", "Florea", "Female", "Admin",
+				"admin1234", dateFormat("18/09/1996"));
+		userAccount6.setRole(roleService.findRoleById(50).get());
+		
+
+		
+		
 		userAccountService.insertUserAccount(userAccount1);
 		userAccountService.insertUserAccount(userAccount2);
 		userAccountService.insertUserAccount(userAccount3);
 		userAccountService.insertUserAccount(userAccount4);
 		userAccountService.insertUserAccount(userAccount5);
+		userAccountService.insertUserAccount(userAccount6);
 		
 	}
 
