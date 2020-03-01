@@ -10,7 +10,6 @@ import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BooksCarouselComponent } from './components/books-carousel/books-carousel.component';
 import { UserListComponent } from './components/dashboard/user-list/user-list.component';
-import { UserFormComponent } from './components/user-form/user-form.component';
 import { UserService } from './services/user.service';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
@@ -27,7 +26,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './components/signup/signup.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { AuthGaurdService } from './services/auth-guard.service';
-import { AuthenticationService } from './services/authentication.service';
 import { HttpClientService } from './services/httpclient.service';
 import { FilterPipe} from './filter.pipe';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -57,7 +55,6 @@ import { DatePipe } from '@angular/common';
     HomeComponent,
     ContactComponent,
     BooksCarouselComponent,
-    UserFormComponent,
     DashboardComponent,
     UserListComponent,
     LoginComponent,
@@ -100,7 +97,6 @@ import { DatePipe } from '@angular/common';
     PublisherService,
     EmailService,
     AuthGaurdService,
-    AuthenticationService,
     HttpClientService,
     DatePipe
   ],

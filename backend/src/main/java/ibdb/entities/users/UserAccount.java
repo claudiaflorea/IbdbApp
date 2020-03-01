@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -45,7 +46,7 @@ public class UserAccount {
 	@JsonIgnoreProperties("sender")
 	@OneToMany(mappedBy = "sender")
 	private List<Feedback> messages;
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	private Role role;
 	// -----------------getters and setters--------------//
 
@@ -187,7 +188,7 @@ public class UserAccount {
 		this.messages = new ArrayList<Feedback>();
 		this.role = role;
 	}
-
+/*
 	public UserAccount(Integer userId, String emailAddress, String lastName, String firstName,
 			String gender, String username, String password, Date birthDate) {
 		super();
@@ -199,6 +200,19 @@ public class UserAccount {
 		this.username = username;
 		this.password = password;
 		this.birthDate = birthDate;
+	}
+	*/
+	public UserAccount(Integer userId, String firstName, String lastName, String emailAddress,
+			String gender, String username, String password, Date birthDate) {
+		super();
+		this.userId = userId;
+		this.lastName = lastName;
+		this.firstName = firstName;
+		this.emailAddress = emailAddress;
+		this.gender = gender;
+		this.birthDate = birthDate;
+		this.username = username;
+		this.password = password;
 	}
 
 //	public void setRole(Optional<Role> findRoleById) {

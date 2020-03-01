@@ -8,18 +8,26 @@
         </div>
       </div>
       <div class="form-group">
-        <p class="text-left">Username</p>
-        <input type="text" id="username" placeholder="Username" [(ngModel)]="username" name="username" required>
+        <div *ngIf="successMessage != null" class="alert alert-success">
+            {{ successMessage }}
+        </div>
       </div>
-      <div class="form-group">
-        <p class="text-left">Password</p>
-        <input type="password" id="password" placeholder="Password" [(ngModel)]="password" name="password" minlength="6" required>
+      <div class="actual-form" *ngIf="successMessage == null">
+        <div class="form-group">
+          <p class="text-left">Username</p>
+          <input type="text" id="username" placeholder="Username" [(ngModel)]="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <p class="text-left">Password</p>
+          <input type="password" id="password" placeholder="Password" [(ngModel)]="password" name="password" minlength="6" required>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-success" [disabled]="!authForm.valid">
+            Login
+          </button>
+        </div> 
       </div>
-      <div class="text-center">
-        <button type="submit" class="btn btn-success" [disabled]="!authForm.valid">
-          Login
-        </button>
-      </div>  
+      
       <div class="col-md-12 ">
         <div class="login-or">
             <hr class="hr-or">

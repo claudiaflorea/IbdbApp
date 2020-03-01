@@ -6,6 +6,6 @@ export class Review {
   content: string;
   publishedAt: Date;
   rating: number;
-  reviewAuthor: UserAccount;
+  userAccount: UserAccount;
   book: Book
 }

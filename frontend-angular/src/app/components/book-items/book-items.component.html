@@ -1,7 +1,7 @@
 <div class="container mt-5 mb-5">
   <div class="row">
     <div class="col-xs-4 col-lg-5 text-center item-photo">
-      <img src="{{book.image}}" alt="{{ book.title }}" />
+      <img src="{{ book.image }}" alt="{{ book.title }}" />
     </div>
     <div class="col-xs-4 col-lg-7">
       <!--Title section -->
@@ -23,7 +23,7 @@
           {{ book.subcategory.subcategoryName }}
         </h5>
         <h5>
-          <b>Author: </b> {{ book.author.firstName }} {{ book.author.lastName }}
+          <b>Author: </b> {{author.lastName}} {{author.firstName}}
         </h5>
         <h5>
           <b>Publisher: </b>
@@ -108,7 +108,7 @@
     <div class="field">
       <label class="label">Review content</label>
       <input 
-        [(ngModel)]="review.content" 
+        [(ngModel)]="review.reviewContent" 
         class="input form-control" 
         type="text">
     </div>

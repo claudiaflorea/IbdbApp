@@ -94,6 +94,7 @@
         class="nav-item active mr-3"
         [routerLink]="['/dashboard']"
         routerLinkActive="router-link-active"
+        *ngIf="this.authService.isAdmin == true"
       >
         <a class="nav-link">Dashboard</a>
     </li>
@@ -103,7 +104,7 @@
           class="nav-item mr-3"
           [routerLink]="['/signup']"
           routerLinkActive="router-link-active"
-          *ngIf="!isAuthenticated"
+          *ngIf="this.authService.loggedIn == false"
         >
           <a class="nav-link">Sign Up</a>
         </li>
@@ -111,7 +112,7 @@
           class="nav-item"
           [routerLink]="['/login']"
           routerLinkActive="router-link-active"
-          *ngIf="!isAuthenticated"
+          *ngIf="this.authService.loggedIn == false"
         >
           <a class="nav-link">Log In</a>
       </li>
@@ -119,7 +120,7 @@
           class="nav-item"
           [routerLink]="['/logout']"
           routerLinkActive="router-link-active"
-          *ngIf="isAuthenticated"
+          *ngIf="this.authService.loggedIn != false"
           (click)="onLogout()"
         >
           <a class="nav-link">Log Out</a>

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import ibdb.entities.roles.IRoleService;
 import ibdb.utils.DisplayData;
 
 @RestController
@@ -21,6 +22,9 @@ public class UserAccountController {
 
 	@Autowired
 	private IUserAccountService userAccountService;
+	
+	@Autowired
+	private IRoleService roleService;
 	
 	@Autowired
 	private DisplayData dataDisplay;
@@ -39,6 +43,7 @@ public class UserAccountController {
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public void insertUserAccount(@RequestBody UserAccount userAccount) {
+		userAccount.setRole(roleService.findRoleById(52).get());
 		userAccountService.insertUserAccount(userAccount);
 	}
 

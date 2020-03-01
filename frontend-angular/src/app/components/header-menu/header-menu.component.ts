@@ -7,6 +7,7 @@ import { Category } from 'src/app/models/category';
 import { Subcategory } from 'src/app/models/subcategory';
 import { CategoryService } from 'src/app/services/category.service';
 import { GlobalService } from 'src/app/services/globalService.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-header-menu',
@@ -35,7 +36,8 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
     private router: Router,
     public bookService: BookService,
     public categoryService: CategoryService,
-    public globalService: GlobalService
+    public globalService: GlobalService,
+    private authService: AuthService
     ) { }
 
   showContact() {
@@ -64,7 +66,12 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
     this.globalService.filterBooks(this.nonfiction.categoryId);
   }
 
- 
+  onLogout() {
+    this.authService.loggedIn = false;
+    this.authService.isAdmin = false;
+    this.authService.loggedInUser = null;
+    this.router.navigateByUrl('/');
+  }
 
   ngOnDestroy() {
     this.booksSubscription.unsubscribe();

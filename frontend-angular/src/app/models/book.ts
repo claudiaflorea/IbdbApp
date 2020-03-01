@@ -1,13 +1,14 @@
 import { Review } from './review';
 import { Category } from './category';
 import { Subcategory } from './subcategory';
+import { Author } from './author';
 
 export class Book {
   bookId: string;
   isbn: string;
   title: string;
   publishDate: Date;
-  author: string;
+  author: Author;
   publisher: string;
   category: Category;
   categoryId: number;

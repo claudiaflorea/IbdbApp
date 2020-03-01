@@ -9,6 +9,8 @@ import { Review } from 'src/app/models/review';
 import { StarRatingComponent } from 'ng-starrating';
 import { NgbModal, NgbModalModule, NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 import { ReviewService } from 'src/app/services/review.service';
+import { AuthService } from 'src/app/services/auth.service';
+import { Author } from 'src/app/models/author';
 
 @Component({
   selector: 'app-book-items',
@@ -18,6 +20,7 @@ import { ReviewService } from 'src/app/services/review.service';
 export class BookItemsComponent implements OnInit {
 
   book: Book;
+  author: Author;
   booksSubscription: Subscription;
   publisherSubscription: Subscription;
   publisher: Publisher;
@@ -30,6 +33,7 @@ export class BookItemsComponent implements OnInit {
   nrOfReviews:any;
   currentRate: 5;
   allReviews: any;
+  books: any;
 
   @ViewChild("reviewModal", {static: false}) 
   private reviewModal: TemplateRef<any>;
@@ -40,11 +44,14 @@ export class BookItemsComponent implements OnInit {
     public pubService: PublisherService,
     private modalService: NgbModal,
     private reviewService: ReviewService,
-    private config: NgbRatingConfig
+    private config: NgbRatingConfig,
+    private authService: AuthService
     ) { }
 
   ngOnInit() {
+  }
 
+  ngOnChanges() {
     this.allReviews = this.reviewService.getReviews().subscribe( data => {
       console.log('+++++++++++++++++>>>>>>', data);
     });
@@ -53,6 +60,7 @@ export class BookItemsComponent implements OnInit {
       (params: Params) => {
         this.bookService.getBookById(+params['id']).subscribe( data => {
           this.book = data;
+          this.author = data.author;
           console.log('------------------> ', data);
           if (this.book.image === null) {
             this.book.image = '/assets/images/books-images/bookPlaceholder.jpeg';
@@ -74,7 +82,7 @@ export class BookItemsComponent implements OnInit {
   onAdd() {
     this.review = new Review();
     this.review.book = this.book;
-   // this.review.reviewAuthor = this.user??
+    this.review.userAccount = this.authService.loggedInUser;
     this.review.publishedAt = new Date();
     this.shouldShow = true;
     this.modalService.open(this.reviewModal);
@@ -88,8 +96,7 @@ export class BookItemsComponent implements OnInit {
    this.reviewService.insertReview(this.review).subscribe(data => {
       console.log("INSERTING THIS REVIEW:   ", data);
       this.shouldShow = false;
-      /* Reload page to display newly added book */
-     // location.reload();
+      location.reload();
     });
   }
 

@@ -6,37 +6,16 @@ import { map } from 'rxjs/operators';
 
 @Injectable()
 export class UserService {
+
   private userAccountUrl: string;
+  private BASE_URL = 'http://localhost:8090/userAccount/';
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
-  private userUrl = 'http://localhost:8080/api/test/user';
-  private operatorUrl = 'http://localhost:8080/api/test/operator';
-  private adminUrl = 'http://localhost:8080/api/test/admin';
-
+ 
   constructor(private http: HttpClient) {
     this.userAccountUrl = 'http://localhost:8090/userAccount';
-  }
-
-  getUserBoard(): Observable<string> {
-    return this.http.get(this.userUrl, { responseType: 'text' });
-  }
-
-  getOperatorBoard(): Observable<string> {
-      return this.http.get(this.operatorUrl, { responseType: 'text' });
-  }
-
-  getAdminBoard(): Observable<string> {
-      return this.http.get(this.adminUrl, { responseType: 'text' });
-  }
-
-  public findAll(): Observable<UserAccount[]> {
-    return this.http.get<UserAccount[]>(this.userAccountUrl);
-  }
-
-  public save(userAccount: UserAccount) {
-    return this.http.post<UserAccount>(this.userAccountUrl, userAccount);
   }
 
   getUsers() {

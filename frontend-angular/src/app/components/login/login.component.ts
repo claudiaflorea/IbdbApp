@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AbstractType } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
+import { UserService } from 'src/app/services/user.service';
+import { AuthService } from 'src/app/services/auth.service';
+import { RoleService } from 'src/app/services/role.service';
 
 @Component({
   selector: 'app-login',
@@ -11,15 +14,51 @@ export class LoginComponent implements OnInit {
 
   isLoginFailed = false;
   errorMessage: string = null;
+  users: any;
+  successMessage = null;
+  allRoles: any;
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router, 
+    private userService: UserService, 
+    private authService: AuthService,
+    private roleService: RoleService
+    ) { }
 
   ngOnInit() {
+    this.userService.getUsers().subscribe(data => {
+      this.users = data;
+      console.log('USEEEEEEEEEEERSSSS::: ', this.users);
+    });
+    this.roleService.getRoles().subscribe(data => {
+      this.allRoles = data;
+      console.log('ROLEEEEESSSSSSSSSS::: ', this.allRoles);
+     });
   }
 
   onSubmit(form: NgForm) {
     if (!form.valid) {
         return;
+    } else {
+      for(let user of this.users) {
+        if (
+          (form.value.username === user.username || form.value.username === user.emailAddress ) 
+          && form.value.password === user.password) {
+
+            this.successMessage = 'You logged in successfully!';
+            this.authService.loggedIn = true;
+            this.authService.loggedInUser = user;
+
+            console.log('ROLE OF USER :::::::::::: ', user.role);
+            console.log('LOGGED IN :::::::::::: ', this.authService.loggedIn);
+            console.log('LOGGED IN USER :::::::::::: ', this.authService.loggedInUser);
+
+            if(user.role.roleName === 'Admin') {
+              this.authService.isAdmin = true;
+            }
+            console.log('IS ADMIN :::::::::::: ', this.authService.isAdmin);
+        }
+      }
     }
     form.reset();
   }

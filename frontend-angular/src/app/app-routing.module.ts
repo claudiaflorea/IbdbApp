@@ -6,7 +6,6 @@ import { ContactComponent } from './components/contact/contact.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { UserListComponent } from './components/dashboard/user-list/user-list.component';
-import { UserFormComponent } from './components/user-form/user-form.component';
 // import { AuthGuard } from './guards/auth-guard.service';
 import { SignupComponent } from './components/signup/signup.component';
 import { LogoutComponent } from './components/logout/logout.component';
@@ -41,7 +40,6 @@ const routes: Routes = [
   { path: 'authors-manager', component: AuthorListComponent },
   { path: 'categories-manager', component: CategoryListComponent },
   { path: 'subcategories-manager', component: SubcategoryListComponent },
-  { path: 'adduser', component: UserFormComponent },
   { path: 'books', component:  BooksPageComponent },
   { path: 'book/all/:categoryId', component:  BooksPageComponent },
   { path: 'book/all/:subcategoryId', component:  BooksPageComponent },
