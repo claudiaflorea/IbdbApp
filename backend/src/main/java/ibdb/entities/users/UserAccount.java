@@ -40,10 +40,10 @@ public class UserAccount {
 	@OneToOne
 	private Address address;
 	private String image;
-	@JsonIgnoreProperties("user")
+	@JsonIgnoreProperties(value = "user", allowSetters = true)
 	@OneToMany(mappedBy = "userAccount")
 	private List<Review> reviews;
-	@JsonIgnoreProperties("sender")
+	@JsonIgnoreProperties(value = "sender", allowSetters = true)
 	@OneToMany(mappedBy = "sender")
 	private List<Feedback> messages;
 	@ManyToOne(cascade = CascadeType.ALL)
@@ -188,7 +188,7 @@ public class UserAccount {
 		this.messages = new ArrayList<Feedback>();
 		this.role = role;
 	}
-/*
+
 	public UserAccount(Integer userId, String emailAddress, String lastName, String firstName,
 			String gender, String username, String password, Date birthDate) {
 		super();
@@ -201,7 +201,8 @@ public class UserAccount {
 		this.password = password;
 		this.birthDate = birthDate;
 	}
-	*/
+	
+	/*
 	public UserAccount(Integer userId, String firstName, String lastName, String emailAddress,
 			String gender, String username, String password, Date birthDate) {
 		super();
@@ -213,7 +214,7 @@ public class UserAccount {
 		this.birthDate = birthDate;
 		this.username = username;
 		this.password = password;
-	}
+	}*/
 
 //	public void setRole(Optional<Role> findRoleById) {
 //		// TODO Auto-generated method stub

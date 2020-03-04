@@ -24,7 +24,7 @@ public class Review {
 	private String reviewContent;
 	private Date publishedAt;
 	private Integer rating;
-	@JsonIgnoreProperties("reviews")
+	@JsonIgnoreProperties(value = "reviews", allowSetters = true)
 	@ManyToOne
 	private UserAccount userAccount;
 	@JsonIgnoreProperties("reviews")
