@@ -44,9 +44,9 @@
           </div>
         </div>
         <div *ngIf="nrOfReviews > 0">
-          <div class="col-lg-12" *ngFor="let rev of reviewsArray">
+          <div class="col-lg-12" >
               <star-rating
-                value="{{ rev.rating }}"
+                value="{{ bookStarsAverage }}"
                 totalstars="5"
                 checkedcolor="gold"
                 uncheckedcolor="gray"
@@ -97,7 +97,7 @@
 
 
 
-<!-- ***** Modal ***** -->
+<!-- ***** Review Modal ***** -->
 <ng-template #reviewModal>
   <div class="modal-header">
     <h4 class="modal-title">Leave a review</h4>
@@ -112,7 +112,6 @@
         class="input form-control" 
         type="text">
     </div>
-
   <div class="field rating">
     <label class="label">Rating</label>
     <ngb-rating 
@@ -121,9 +120,7 @@
     >
     </ngb-rating>
   </div>
-    
   </div>
-
   <div class="modal-footer">
     <button class="btn btn-success" (click)="onSubmit()">
       Submit
@@ -132,5 +129,26 @@
       Cancel
     </button>
   </div>
+</ng-template>
 
+<!-- ***** Log in Modal ***** -->
+<ng-template #logInModal>
+  <div class="modal-header">
+    <h6 class="modal-title">Unauthorised</h6>
+    <button type="button" class="close" aria-label="Close" (click)="onCloseModal()"> x
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="field">
+      <h6>You have to be logged in to be able to leave a review.</h6>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-success" (click)="goToLogin()">
+      Go to login page
+    </button>
+    <button class="btn btn-danger" (click)="onCloseModal()">
+      Cancel
+    </button>
+  </div>
 </ng-template>

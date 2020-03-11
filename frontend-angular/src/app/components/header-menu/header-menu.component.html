@@ -65,8 +65,8 @@
               <li
                 *ngFor="let s of fictionSubcategories; index as i"
                 class="dropdowm-item"
-                routerLink="/book/all/{{s.subcategoryId}}"
-                (click) = "this.globalService.filterBooks(s.subcategoryId)"
+                routerLink="/book/all/{{s.id}}"
+               
                 >
                 {{s.subcategoryName}}
               </li>
@@ -81,8 +81,8 @@
             <ul class="dropdown-menu">
               <li *ngFor="let s of nonFictionSubcategories; index as i"
                 class="dropdowm-item"
-                routerLink="/book/all/{{s.subcategoryId}}"
-                (click) = "this.globalService.filterBooks(s.subcategoryId)"
+                routerLink="/book/all/{{s.id}}"
+    
                 >
                 {{s.subcategoryName}}
               </li>

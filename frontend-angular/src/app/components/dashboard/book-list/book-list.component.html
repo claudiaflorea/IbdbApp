@@ -69,15 +69,15 @@
     
   <div class="field">
     <label class="label">Author</label>
-    <select [(ngModel)]="selectedAuthor" class="input has-text-centered is-cursor-pointer form-control">
-      <option *ngFor="let author of authors" [value]="author.id">{{author.firstName}} {{author.lastName}}</option>
+    <select [compareWith]="compareAuthor" [(ngModel)]="selectedAuthor" class="input has-text-centered is-cursor-pointer form-control">
+      <option *ngFor="let author of authors" [(ngValue)]="author">{{author.firstName}} {{author.lastName}}</option>
     </select>
   </div>
 
   <div class="field">
     <label class="label">Publisher</label>
-    <select [(ngModel)]="selectedPublisher" class="input has-text-centered is-cursor-pointer form-control">
-      <option *ngFor="let publisher of publishers" [value]="publisher.id">{{publisher.publisherName}}</option>
+    <select  [compareWith]="comparePublisher"  [(ngModel)]="selectedPublisher" class="input has-text-centered is-cursor-pointer form-control">
+      <option *ngFor="let publisher of publishers" [(ngValue)]="publisher">{{publisher.publisherName}}</option>
     </select>
   </div>
     
@@ -93,12 +93,12 @@
     />
   </div>
     
-    <div class="field">
-      <label class="label">Category</label>
-      <select [(ngModel)]="selectedCategory" class="input has-text-centered is-cursor-pointer form-control">
-        <option *ngFor="let subcategory of subcategories" [value]="subcategory.id">{{subcategory.subcategoryName}}</option>
-      </select>
-    </div>
+  <div class="field">
+    <label class="label">Category</label>
+    <select [compareWith]="compareCategory"  [(ngModel)]="selectedCategory" class="input has-text-centered is-cursor-pointer form-control">
+      <option *ngFor="let subcategory of subcategories" [(ngValue)]="subcategory">{{subcategory.subcategoryName}}</option>
+    </select>
+  </div>
     
   </div>
 

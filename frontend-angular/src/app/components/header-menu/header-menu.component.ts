@@ -58,14 +58,22 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
   }
 
   sortByFictionCategory() {
-    this.router.navigate(['/book/all/', this.fiction.categoryId]);
-    this.globalService.filterBooks(this.fiction.categoryId);
+    this.router.navigate(['/book/all/', this.fiction.id]);
   }
   sortByNonFictionCategory() {
-    this.router.navigate(['/book/all/', this.nonfiction.categoryId]);
-    this.globalService.filterBooks(this.nonfiction.categoryId);
+    this.router.navigate(['/book/all/', this.nonfiction.id]);
   }
 
+  sortByFictionSubCategory(name: String) {
+    for(let sub of this.fictionSubcategories) {
+      this.router.navigate(['/book/all/', sub.id]);
+    }
+  }
+  sortByNonFictionSubCategory() {
+    for(let sub of this.nonFictionSubcategories) {
+      this.router.navigate(['/book/all/', sub.id]);
+    }
+  }
   onLogout() {
     this.authService.loggedIn = false;
     this.authService.isAdmin = false;

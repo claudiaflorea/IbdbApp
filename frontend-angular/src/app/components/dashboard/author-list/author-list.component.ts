@@ -3,6 +3,7 @@ import { Author } from 'src/app/models/author';
 import { Subscription } from 'rxjs';
 import { AuthorService } from 'src/app/services/author.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Address } from 'src/app/models/address';
 
 @Component({
   selector: 'app-author-list',
@@ -16,21 +17,13 @@ export class AuthorListComponent implements OnInit, OnDestroy {
   authors: Author[];
   @ViewChild("authorsModal", {static: false}) 
   private authorsModal: TemplateRef<any>;
-  selectedCountry: any;
   shouldShow: boolean;
-  cities: any[];
   currentPage = 1;
   itemsPerPage = 10;
   pageSize: number;
   authorsLength: any;
-
-  countries = [
-		{ name: 'Germany',  cities: ['Duesseldorf', 'Leinfelden-Echterdingen', 'Eschborn' ] },
-		{ name: 'Spain', cities: ['Barcelona' ] },
-		{ name: 'USA', cities: ['Downers Grove'] },
-		{ name: 'Mexico', cities: ['Puebla' ] },
-		{ name: 'India', cities: ['Delhi', 'Kolkata', 'Mumbai', 'Bangalore'] },
-  ];
+  country: any;
+  city: any;
 
   constructor(private authorService: AuthorService, private modalService: NgbModal) { }
 
@@ -39,11 +32,16 @@ export class AuthorListComponent implements OnInit, OnDestroy {
       this.authors = data;
       this.authorsLength = data.length;
       console.log('AUTHORS: ', this.authors);
+      for(let a of this.authors) {
+        this.country = a.address.country;
+        this.city = a.address.city;
+      }
     });
   }
 
   onAdd() {
     this.author = new Author();
+    this.author.address = new Address();
     this.shouldShow = true;
     this.modalService.open(this.authorsModal);
   }
@@ -74,7 +72,6 @@ export class AuthorListComponent implements OnInit, OnDestroy {
   insertItem() {
     this.authorService.insertAuthor(this.author).subscribe(data => {
       this.shouldShow = false;
-      /* Reload page to display newly added book */
       location.reload();
     });
   }
@@ -88,10 +85,6 @@ export class AuthorListComponent implements OnInit, OnDestroy {
   onCloseModal(){
     this.modalService.dismissAll();
   }
-
-  changeCountry(country) {
-		this.cities = this.countries.find(cntry => cntry.name === country).cities;
-  }
   
   public onPageChange(pageNum: number): void {
     this.pageSize = this.itemsPerPage*(pageNum - 1);
@@ -100,37 +93,7 @@ export class AuthorListComponent implements OnInit, OnDestroy {
   public changePagesize(num: number): void {
     this.itemsPerPage = this.pageSize + num;
   }
-/*
-  addAuthor() {
-    console.log('Add new author');
-    const modalRef = this.modalService.open(AddAuthorModalComponent);
-    modalRef.componentInstance.id = 14;
-    modalRef.result.then((result) => {
-      console.log(result);
-     // result.address = JSON.parse('{"country":result.selectedCountry, "city":result.selectedCity}');
-      this.authors.push(result);
-      this.authorService.insertAuthor(result).subscribe();
-      this.authorService.getAuthors().subscribe( data => {
-        console.log('DATA!!! ', data);
-        this.authors = data;
-      });
-    }).catch((error) => {
-      console.log(error);
-    });
-  }
 
-  editAuthor() {
-    console.log('Edit this author');
-    const modalRef = this.modalService.open(EditAuthorModalComponent);
-    modalRef.componentInstance.id = 15;
-  }
-
-  deleteAuthor() {
-    console.log('Delete this author');
-    const modalRef = this.modalService.open(DeleteAuthorModalComponent);
-    modalRef.componentInstance.id = 16;
-  }
-*/
   ngOnDestroy() {
     this.authorSubscription.unsubscribe();
   }

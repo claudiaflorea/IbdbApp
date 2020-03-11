@@ -94,26 +94,12 @@
 
   <div class="field">
     <label class="label">Country</label>
-    <select 
-      [(ngModel)]="selectedContry" 
-      (change)="changeCountry($event.target.value)"
-      class="input has-text-centered is-cursor-pointer form-control"
-      >
-      <option *ngFor="let country of countries"  [value]="author.address.country">
-        {{country.name}}
-      </option>
-    </select>
+    <input [(ngModel)]="author.address.country" class="input form-control" type="text">
   </div>
 
   <div class="field">
     <label class="label">City</label>
-    <select 
-      [(ngModel)]="selectedCity" 
-      class="input has-text-centered is-cursor-pointer form-control">
-      <option *ngFor="let city of cities"  [value]="author.address.city">
-        {{city}}
-      </option>
-    </select>
+    <input [(ngModel)]="author.address.city" class="input form-control" type="text">
   </div>
    
   </div>

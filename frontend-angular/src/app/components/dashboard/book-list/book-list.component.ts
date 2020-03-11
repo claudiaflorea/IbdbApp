@@ -26,8 +26,14 @@ export class BookListComponent implements OnInit, OnDestroy {
   subcategories: Subcategory[];
   authors: Author[];
   publishers: Publisher[];
-  selectedCategory: any;
+  selectedAuthor : Author;
+  selectedPublisher : Publisher;
+  selectedCategory : Subcategory;
   shouldShow = false;
+
+  author: any;
+  publisher: any;
+  categ: any;
 
   @ViewChild("booksModal", {static: false}) 
   private booksModal: TemplateRef<any>;
@@ -43,25 +49,37 @@ export class BookListComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.bookSubscription = this.bookService.getBooks().subscribe(data => {
       this.books = data;
-      console.log('BOOKS: ', this.books);
     });
     this.subcategorySubscription = this.subcategoryService.getSubcategories().subscribe(data => {
       this.subcategories = data;
-      console.log('SUBCATEGORIES: ', this.subcategories);
     });
     this.publisherSubscription = this.publisherService.getPublishers().subscribe(data => {
       this.publishers = data;
-      console.log('PUBLISHERS: ', this.publishers);
     });
     this.auhtorSubscription = this.authorService.getAuthors().subscribe(data => {
       this.authors = data;
-      console.log('AUTHORS: ', this.authors);
     });
+  }
+
+  //compareFn = this.compareAuthor.bind(this)
+
+  compareAuthor(a, b) {
+    return !a || !b ? false : a.authorId === b.authorId;
+  }
+
+  comparePublisher(a, b) {
+    return !a || !b ? false : a.publisherId === b.publisherId;
+  }
+
+  compareCategory(a, b) {
+    return !a || !b ? false : a.id === b.id;
   }
 
   onAdd() {
     this.book = new Book();
+    this.selectedAuthor = null;
     this.selectedCategory = null;
+    this.selectedPublisher = null;
     this.shouldShow = true;
     this.modalService.open(this.booksModal);
   }
@@ -69,7 +87,9 @@ export class BookListComponent implements OnInit, OnDestroy {
   onUpdate(book: Book) {
     this.book = book;
     this.book.publishDate = book.publishDate;
-    this.selectedCategory = "" + book.subcategory.id;
+    this.selectedAuthor = book.author;
+    this.selectedPublisher = book.publisher;
+    this.selectedCategory =  book.subcategory;
     this.shouldShow = true;
     this.modalService.open(this.booksModal);
   }
@@ -82,18 +102,16 @@ export class BookListComponent implements OnInit, OnDestroy {
   }
 
   onSubmit() {
-    if (this.book.bookId != undefined) {
-      this.updateItem();
-    } else {
-      this.insertItem();
-    }
+    this.book.author = this.selectedAuthor;
+    this.book.publisher = this.selectedPublisher;
+    this.book.subcategory = this.selectedCategory;
+    this.book.bookId? this.updateItem() : this.insertItem() ;
   }
 
   insertItem() {
     this.bookService.insertBook(this.book).subscribe(data => {
       console.log(data);
       this.shouldShow = false;
-      /* Reload page to display newly added book */
       location.reload();
     });
   }
@@ -101,6 +119,7 @@ export class BookListComponent implements OnInit, OnDestroy {
   updateItem() {
     this.bookService.updateBook(this.book).subscribe(data => {
       this.shouldShow = false;
+      location.reload();
     });
   }
 
@@ -108,43 +127,6 @@ export class BookListComponent implements OnInit, OnDestroy {
     this.modalService.dismissAll();
   }
 
-/*
-   addBook() {
-    console.log('Add new book');
-    const modalRef = this.modalService.open(AddBookModalComponent);
-    modalRef.componentInstance.id = 12;
-    modalRef.result.then((result) => {
-      console.log(result);
-      this.books.push(result);
-      this.bookService.insertBook(result);
-      this.bookService.getBooks().subscribe( data => {
-        console.log('DATA!!! ', data);
-        this.books = data;
-      });
-    }).catch((error) => {
-      console.log(error);
-    });
-  }
-
-  editBook(book: Book) {
-    console.log('Edit this book');
-    const modalRef = this.modalService.open(EditBookModalComponent);
-    modalRef.componentInstance.book.bookId = book.bookId;
-    modalRef.componentInstance.book.title = book.title;
-    modalRef.componentInstance.book.isbn = book.isbn;
-    modalRef.componentInstance.book.author = book.author;
-    modalRef.componentInstance.book.publisher = book.publisher;
-    modalRef.componentInstance.book.publishDate = book.publishDate;
-    modalRef.componentInstance.book.category = book.category;
-     
-  }
-
-  deleteBook(book: Book) {
-    console.log('Delete this book');
-    const modalRef = this.modalService.open(DeleteBookModalComponent);
-    modalRef.componentInstance.id = 14;
-  }
-*/
   ngOnDestroy() {
     this.bookSubscription.unsubscribe();
     this.publisherSubscription.unsubscribe();

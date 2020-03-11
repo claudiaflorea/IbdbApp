@@ -13,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import ibdb.entities.authors.Author;
 import ibdb.entities.publishers.Publisher;
@@ -28,10 +29,13 @@ public class Book {
 	private Integer bookId;
 	private String ISBN;
 	private String title;
+	@JsonProperty("publisher")
 	@ManyToOne
 	private Publisher publisher;
+	@JsonProperty("author")
 	@ManyToOne
 	private Author author;
+	@JsonProperty("subcategory")
 	@ManyToOne
 	private Subcategory subcategory;
 	private Date publishDate;

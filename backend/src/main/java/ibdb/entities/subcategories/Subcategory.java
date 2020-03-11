@@ -16,7 +16,7 @@ public class Subcategory {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "subcategory_generator")
 	@SequenceGenerator(name = "role_generator", sequenceName = "role_generator", initialValue = 990, allocationSize = 1)
-	private Integer subcategoryId;
+	private Integer id;
 	private String subcategoryName;
 	@JsonIgnoreProperties("subcategories")
 	@ManyToOne
@@ -24,12 +24,12 @@ public class Subcategory {
 	
 	//----------------getters and setters ------------//
 	
-	public Integer getSubcategoryId() {
-		return subcategoryId;
+	public Integer getid() {
+		return id;
 	}
 
-	public void setSubcategoryId(Integer subcategoryId) {
-		this.subcategoryId = subcategoryId;
+	public void setid(Integer id) {
+		this.id = id;
 	}
 
 	public String getSubcategoryName() {
@@ -53,16 +53,16 @@ public class Subcategory {
 	public Subcategory() {
 		super();
 	}
-	public Subcategory(Integer subcategoryId, String subcategoryName, Category category) {
+	public Subcategory(Integer id, String subcategoryName, Category category) {
 		super();
-		this.subcategoryId = subcategoryId;
+		this.id = id;
 		this.subcategoryName = subcategoryName;
 		this.category = category;
 	}
 
-	public Subcategory(Integer subcategoryId, String subcategoryName) {
+	public Subcategory(Integer id, String subcategoryName) {
 		super();
-		this.subcategoryId = subcategoryId;
+		this.id = id;
 		this.subcategoryName = subcategoryName;
 	}
 	

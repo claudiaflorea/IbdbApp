@@ -29,10 +29,11 @@ export class BookItemsComponent implements OnInit {
   review: Review;
   revs: any;
   reviewsArray: any;
-  currentStars: any;
+  currentStars =0 ;
   shouldShow = false;
   nrOfReviews:any;
   currentRate: 5;
+  bookStarsAverage= 0;
   allReviews: any;
   books: any;
   lastSegment: any;
@@ -40,6 +41,8 @@ export class BookItemsComponent implements OnInit {
 
   @ViewChild("reviewModal", {static: false}) 
   private reviewModal: TemplateRef<any>;
+  @ViewChild("logInModal", {static: false}) 
+  private logInModal: TemplateRef<any>;
 
   constructor(
     public bookService: BookService,
@@ -62,17 +65,16 @@ export class BookItemsComponent implements OnInit {
     }
 
   ngOnInit() {
+    /*console.log('AVERAGE: ', this.avg);
     this.lastSegment = this.router.url.substr(this.router.url.lastIndexOf('/')+1);
     console.log('LAST SEGMENT: ', this.lastSegment);
-    
+    */
     this.route.params.subscribe(
       (params: Params) => {
         params = this.route.snapshot.params;
         this.bookService.getBookById(+params['id']).subscribe( data => {
           this.book = data;
           this.author = data.author;
-          console.log('------------------> ', data
-          );
           if (this.book.image === null) {
             this.book.image = '/assets/images/books-images/bookPlaceholder.jpeg';
           }
@@ -80,33 +82,35 @@ export class BookItemsComponent implements OnInit {
           this.nrOfReviews = this.reviewsArray.length;
           if (this.reviewsArray.length > 0) {
             for (let i = 0; i <= this.reviewsArray.length - 1; i++) {
-              this.currentStars = this.reviewsArray[i].rating;
+              this.currentStars += this.reviewsArray[i].rating;
            }
+           this.bookStarsAverage = this.currentStars / this.nrOfReviews;
           }
         });
       }
     );
-
     this.config.max = 5;
-
-    this.allReviews = this.reviewService.getReviews().subscribe( data => {
-      console.log('+++++++++++++++++>>>>>>', data);
-    });
-
+    this.allReviews = this.reviewService.getReviews().subscribe( data => { });
     this.currentUser = this.authService.loggedInUser;
-    console.log('<<<<<<<<<<<<<<< CURRENT USER >>>>>>>>>>>>>>>>', this.currentUser);
-
   }
 
   onAdd() {
-    this.review = new Review();
-    this.review.book = this.book;
-    this.review.user = this.currentUser;
-    this.review.publishedAt = new Date();
-    this.shouldShow = true;
-    this.modalService.open(this.reviewModal);
+    console.log('***************** ', this.currentUser);
+    if ((this.currentUser === null) || (this.currentUser === undefined)) {
+      this.modalService.open(this.logInModal);
+     } else {
+      this.review = new Review();
+      this.review.book = this.book;
+      this.review.user = this.currentUser;
+      this.review.publishedAt = new Date();
+      this.shouldShow = true;
+      this.modalService.open(this.reviewModal);
+    }
+  }
 
-    console.log('Inserting review >>>>>>>>> ', this.review);
+  goToLogin() {
+    this.router.navigateByUrl('/login');
+    this.onCloseModal();
   }
 
   onSubmit() {
@@ -117,13 +121,11 @@ export class BookItemsComponent implements OnInit {
    this.reviewService.insertReview(this.review).subscribe(data => {
       this.shouldShow = false;
       this.onCloseModal();
-      location.reload();
+      this.ngOnInit();
     });
   }
 
   onCloseModal(){
     this.modalService.dismissAll();
   }
-
-
 }

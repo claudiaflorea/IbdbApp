@@ -7,9 +7,9 @@
     <div class="card-body">
       <h5 class="card-title">{{book.title}}</h5>
       <p class="card-text">{{ book.author.firstName }} {{ book.author.lastName }}</p>
-      <div *ngFor="let rev of book.reviews">
+      <div *ngIf="book.reviews.length > 0">
         <star-rating
-          value="{{ rev.rating }}"
+          value="{{ bookStarsAverage }}"
           totalstars="5"
           checkedcolor="gold"
           uncheckedcolor="gray"
@@ -17,6 +17,31 @@
           readonly="true"
       ></star-rating>
       </div>
+      <div *ngIf="book.reviews.length == 0">
+        <p>No reviews yet</p>
+      </div>
     </div>
   </div>
 </div>
+
+<!-- ***** Notification Modal ***** -->
+<ng-template #notifyModal>
+  <div class="modal-header">
+    <h6 class="modal-title">Info</h6>
+    <button type="button" class="close" aria-label="Close" (click)="onCloseModal()"> x
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="field">
+      <h6>There are no books in this section for now.</h6>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-success" (click)="goToBooks()">
+      Go to books page
+    </button>
+    <button class="btn btn-danger" (click)="onCloseModal()">
+      Cancel
+    </button>
+  </div>
+</ng-template>

@@ -20,19 +20,19 @@ public class Category {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "category_generator")
 	@SequenceGenerator(name = "category_generator", sequenceName = "category_generator", initialValue = 300, allocationSize = 1)
-	private Integer categoryId;
+	private Integer id;
 	private String categoryName;
 	@JsonIgnoreProperties("category")
 	@OneToMany(mappedBy = "category")
 	private List<Subcategory> subcategories;
 
 	// -----------------getters and setters------------//
-	public Integer getCategoryId() {
-		return categoryId;
+	public Integer getid() {
+		return id;
 	}
 
-	public void setCategoryId(Integer categoryId) {
-		this.categoryId = categoryId;
+	public void setid(Integer id) {
+		this.id = id;
 	}
 
 	public String getCategoryName() {
@@ -57,9 +57,9 @@ public class Category {
 		this.subcategories = new ArrayList<Subcategory>();
 	}
 
-	public Category(Integer categoryId, String categoryName) {
+	public Category(Integer id, String categoryName) {
 		super();
-		this.categoryId = categoryId;
+		this.id = id;
 		this.categoryName = categoryName;
 		this.subcategories = new ArrayList<Subcategory>();
 	}

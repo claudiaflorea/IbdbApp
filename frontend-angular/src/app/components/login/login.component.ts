@@ -28,11 +28,9 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.userService.getUsers().subscribe(data => {
       this.users = data;
-      console.log('USEEEEEEEEEEERSSSS::: ', this.users);
     });
     this.roleService.getRoles().subscribe(data => {
       this.allRoles = data;
-      console.log('ROLEEEEESSSSSSSSSS::: ', this.allRoles);
      });
   }
 
@@ -44,19 +42,13 @@ export class LoginComponent implements OnInit {
         if (
           (form.value.username === user.username || form.value.username === user.emailAddress ) 
           && form.value.password === user.password) {
-
             this.successMessage = 'You logged in successfully!';
             this.authService.loggedIn = true;
             this.authService.loggedInUser = user;
-
-            console.log('ROLE OF USER :::::::::::: ', user.role);
-            console.log('LOGGED IN :::::::::::: ', this.authService.loggedIn);
             console.log('LOGGED IN USER :::::::::::: ', this.authService.loggedInUser);
-
             if(user.role.roleName === 'Admin') {
               this.authService.isAdmin = true;
             }
-            console.log('IS ADMIN :::::::::::: ', this.authService.isAdmin);
         }
       }
     }

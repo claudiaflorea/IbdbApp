@@ -2,7 +2,7 @@ package ibdb.entities.authors;
 
 import java.util.Date;
 
-
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,7 +22,7 @@ public class Author {
 	private String lastName;
 	private String firstName;
 	private Date birthDate;
-	@OneToOne
+	@OneToOne(cascade = {CascadeType.ALL})
 	private Address address;
 
 	// ----------getters and setters ---------//
