@@ -69,11 +69,13 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
       this.router.navigate(['/book/all/', sub.id]);
     }
   }
+  
   sortByNonFictionSubCategory() {
     for(let sub of this.nonFictionSubcategories) {
       this.router.navigate(['/book/all/', sub.id]);
     }
   }
+
   onLogout() {
     this.authService.loggedIn = false;
     this.authService.isAdmin = false;

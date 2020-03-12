@@ -4,6 +4,7 @@ import { Book } from 'src/app/models/book';
 import { Subscription, Subject } from 'rxjs';
 import { FilterPipe } from '../../filter.pipe';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -13,32 +14,36 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit, OnDestroy, OnChanges {
   books: Book[];
   booksSubscription: Subscription;
-  result: any[];
+  result: any[] = [];
+  searchText : any;
+  show = false;
 
   constructor(
     public bookService: BookService,
-    private router: Router
+    private router: Router,
+    private authService: AuthService
     ) {}
 
   ngOnInit() {
     this.booksSubscription = this.bookService.getBooks().subscribe(data => {
       this.books = data;
     });
+
+    console.log('******************** ', this.authService.loggedInUser);
   }
 
-  handleFilter(value) {
-   console.log('BOOKS:::::', this.books);
-   this.result = this.books.filter(
-      (b) => {
-        return ((b.title.toLowerCase().indexOf(value) > -1 ||
-                  b.isbn.indexOf(value) > -1 ));
-      }
-    );
-   console.log('+++++++++++++++++', this.result);
+  filterBooks() {
+    console.log('BOOKS:::::', this.books);
+    for(let b of this.books) {
+      if((b.title.toLowerCase().indexOf(this.searchText) > -1) || (b.isbn.indexOf(this.searchText) > -1) ) {
+        this.result.push(b);
+        this.show = true;
+      } 
+    }
   }
 
   ngOnChanges() {
-    this.handleFilter(document.getElementById('searchText').valueOf());
+  
   }
 
   goToBookPage(book: Book) {

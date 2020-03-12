@@ -4,7 +4,6 @@ import { BookService } from 'src/app/services/book.service';
 import { Book } from 'src/app/models/book';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-books-carousel',
   templateUrl: './books-carousel.component.html',
@@ -27,14 +26,19 @@ export class BooksCarouselComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-
     this.bookService.getBooks().subscribe((data) => {
-      this.books = data;
-      this.books.forEach((b) => {
-        if (b.image === null) {
-          b.image = '/assets/images/books-images/bookPlaceholder.jpeg';
+      for(let b of data) {
+        for(let rev of b.reviews) {
+          if (rev.rating >= 4) {
+            this.books = data;
+            this.books.forEach((b) => {
+              if (b.image === null) {
+                b.image = '/assets/images/books-images/bookPlaceholder.jpeg';
+              }
+            });
+          }
         }
-      });
+      }
     });
     console.log('Books: ', this.books);
   }

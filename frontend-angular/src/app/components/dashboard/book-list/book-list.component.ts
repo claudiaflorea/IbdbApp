@@ -61,8 +61,6 @@ export class BookListComponent implements OnInit, OnDestroy {
     });
   }
 
-  //compareFn = this.compareAuthor.bind(this)
-
   compareAuthor(a, b) {
     return !a || !b ? false : a.authorId === b.authorId;
   }

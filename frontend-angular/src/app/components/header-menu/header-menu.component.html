@@ -94,7 +94,7 @@
         class="nav-item active mr-3"
         [routerLink]="['/dashboard']"
         routerLinkActive="router-link-active"
-        *ngIf="this.authService.isAdmin == true"
+        *ngIf="this.authService.loggedIn && this.authService.isAdmin === true"
       >
         <a class="nav-link">Dashboard</a>
     </li>

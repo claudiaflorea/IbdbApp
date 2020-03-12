@@ -21,6 +21,7 @@ export class UserListComponent implements OnInit, OnDestroy {
   @ViewChild("usersModal", {static: false}) 
   private usersModal: TemplateRef<any>;
   genders: any;
+  selectedGender: any;
 
   constructor(
     private userService: UserService, 
@@ -34,25 +35,27 @@ export class UserListComponent implements OnInit, OnDestroy {
       this.users = data;
       console.log('USERS: ', this.users);
       this.usersArray = this.users;
-      for (let i = 0; i < this.usersArray.length - 1; i++) {
-       // console.log('user::::::::: ', this.usersArray[i]);
-      }
     });
 
     
     this.genders = ['Male', 'Female'];
   }
 
+  compareGender(a, b) {
+    return !a || !b ? false : a.gender === b.gender;
+  }
+
   onAdd() {
     this.user = new UserAccount();
     this.shouldShow = true;
+    this.selectedGender = null;
     this.modalService.open(this.usersModal);
   }
 
   onUpdate(user: UserAccount) {
     this.user = user;
     this.user.birthDate = new Date(this.datePipe.transform(this.user.birthDate, 'yyyy/MM/dd'));
-    this.user.gender = user.gender;
+    this.selectedGender = user.gender;
     this.shouldShow = true;
     this.modalService.open(this.usersModal);
   }
@@ -65,17 +68,13 @@ export class UserListComponent implements OnInit, OnDestroy {
   }
 
   onSubmit() {
-    if (this.user.id != undefined) {
-      this.updateItem();
-    } else {
-      this.insertItem();
-    }
+    this.user.gender = this.selectedGender;
+    this.user.id != undefined ? this.updateItem() : this.insertItem();
   }
 
   insertItem() {
     this.userService.insertUser(this.user).subscribe(data => {
       this.shouldShow = false;
-      /* Reload page to display newly added book */
       location.reload();
     });
   }
@@ -83,6 +82,7 @@ export class UserListComponent implements OnInit, OnDestroy {
   updateItem() {
     this.userService.updateUser(this.user).subscribe(data => {
       this.shouldShow = false;
+      location.reload();
     });
   }
 
@@ -90,37 +90,6 @@ export class UserListComponent implements OnInit, OnDestroy {
     this.modalService.dismissAll();
   }
 
-/*
-  addUser() {
-    console.log('Add new user');
-    const modalRef = this.modalService.open(AddUserModalComponent);
-    modalRef.componentInstance.id = 10;
-    modalRef.result.then((result) => {
-      console.log(result);
-      this.users.push(result);
-      result.role = null;
-      this.userService.insertUser(result).subscribe();
-      this.userService.getUsers().subscribe( data => {
-        console.log('DATA!!! ', data);
-        this.users = data;
-      });
-    }).catch((error) => {
-      console.log(error);
-    });
-  }
-
-  editUser() {
-    console.log('Edit this user');
-    const modalRef = this.modalService.open(EditUserModalComponent);
-    modalRef.componentInstance.id = 11;
-  }
-
-  deleteUser() {
-    console.log('Delete this user');
-    const modalRef = this.modalService.open(DeleteUserModalComponent);
-    modalRef.componentInstance.id = 12;
-  }
-*/
   ngOnDestroy() {
     this.userSubscription.unsubscribe();
   }

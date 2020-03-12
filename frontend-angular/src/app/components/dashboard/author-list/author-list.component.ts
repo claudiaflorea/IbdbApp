@@ -31,7 +31,6 @@ export class AuthorListComponent implements OnInit, OnDestroy {
     this.authorSubscription = this.authorService.getAuthors().subscribe(data => {
       this.authors = data;
       this.authorsLength = data.length;
-      console.log('AUTHORS: ', this.authors);
       for(let a of this.authors) {
         this.country = a.address.country;
         this.city = a.address.city;

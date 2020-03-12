@@ -40,6 +40,9 @@ export class SubcategoryListComponent implements OnInit, OnDestroy {
     });
   }
 
+  compareCategory(a, b) {
+    return !a || !b ? false : a.id === b.id;
+  }
   
   onAdd() {
     this.subcategory = new Subcategory();
@@ -50,7 +53,7 @@ export class SubcategoryListComponent implements OnInit, OnDestroy {
 
   onUpdate(subcategory: Subcategory) {
     this.subcategory = subcategory;
-    this.subcategory.category = subcategory.category;
+    this.selectedCategory = subcategory.category;
     this.shouldShow = true;
     this.modalService.open(this.subcategoriesModal);
   }
@@ -63,24 +66,22 @@ export class SubcategoryListComponent implements OnInit, OnDestroy {
   }
 
   onSubmit() {
-    if (this.subcategory.id != undefined) {
-      this.updateItem();
-    } else {
-      this.insertItem();
-    }
+    this.subcategory.category = this.selectedCategory;
+    this.subcategory.id != undefined ? this.updateItem() : this.insertItem();
   }
 
   insertItem() {
     this.subcategoryService.insertSubcategory(this.subcategory).subscribe(data => {
       this.shouldShow = false;
-      /* Reload page to display newly added book */
       location.reload();
     });
   }
 
   updateItem() {
+    debugger;
     this.subcategoryService.updateSubcategory(this.subcategory).subscribe(data => {
       this.shouldShow = false;
+      location.reload();
     });
   }
 
@@ -88,41 +89,6 @@ export class SubcategoryListComponent implements OnInit, OnDestroy {
     this.modalService.dismissAll();
   }
 
-/*  addSubcategory() {
-    console.log('Add new subcategory');
-    const modalRef = this.modalService.open(AddSubcategoryModalComponent);
-    modalRef.componentInstance.id = 17;
-    modalRef.result.then((result) => {
-    this.categoryService.getCategories().subscribe( data => {
-      data.filter((categ) => {
-        if (categ.categoryName === result.category) {
-        result.category = categ;
-        console.log('***********', result.category);
-        }
-      });
-    });
-    console.log('RESUUUUUUUUUUUUUUUUUUUUUUUUULT', result);
-    this.subcategoryService.insertSubcategory(result).subscribe();
-    this.subcategoryService.getSubcategories().subscribe( data => {
-      this.subcategories = data;
-    });
-    }).catch((error) => {
-      console.log(error);
-    });
-  }
-
-  editSubcategory() {
-    console.log('Edit this subcategory');
-    const modalRef = this.modalService.open(EditSubcategoryModalComponent);
-    modalRef.componentInstance.id = 18;
-  }
-
-  deleteSubcategory() {
-    console.log('Delete this subcategory');
-    const modalRef = this.modalService.open(DeleteSubcategoryModalComponent);
-    modalRef.componentInstance.id = 19;
-  }
-*/
   ngOnDestroy() {
     this.subcategorySubscription.unsubscribe();
     this.categorySubscription.unsubscribe();

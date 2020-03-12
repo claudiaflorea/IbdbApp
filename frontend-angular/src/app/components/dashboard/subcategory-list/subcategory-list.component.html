@@ -60,8 +60,8 @@
     
     <div class="field">
       <label class="label">Category</label>
-      <select [(ngModel)]="selectedCategory" class="input has-text-centered is-cursor-pointer form-control">
-        <option *ngFor="let c of categories" [value]= "c.id">
+      <select [compareWith]="compareCategory" [(ngModel)]="selectedCategory" class="input has-text-centered is-cursor-pointer form-control">
+        <option *ngFor="let c of categories" [(ngValue)]= "c">
           {{c.categoryName}}
         </option>
       </select>
