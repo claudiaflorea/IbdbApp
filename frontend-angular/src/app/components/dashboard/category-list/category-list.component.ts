@@ -3,6 +3,7 @@ import { Category } from 'src/app/models/category';
 import { Subscription } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CategoryService } from 'src/app/services/category.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-category-list',

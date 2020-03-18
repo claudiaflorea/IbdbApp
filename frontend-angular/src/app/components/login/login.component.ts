@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
     this.roleService.getRoles().subscribe(data => {
       this.allRoles = data;
      });
+
   }
 
   onSubmit(form: NgForm) {
@@ -44,7 +45,8 @@ export class LoginComponent implements OnInit {
           && form.value.password === user.password) {
             this.successMessage = 'You logged in successfully!';
             this.authService.loggedIn = true;
-            this.authService.loggedInUser = user;
+            window.localStorage.setItem('currentUser', JSON.stringify(user));
+            this.authService.loggedInUser = JSON.parse(localStorage.getItem('currentUser'));
             console.log('LOGGED IN USER :::::::::::: ', this.authService.loggedInUser);
             if(user.role.roleName === 'Admin') {
               this.authService.isAdmin = true;
