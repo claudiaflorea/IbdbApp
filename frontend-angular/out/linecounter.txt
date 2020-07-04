@@ -1,0 +1,1392 @@
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2020-06-04 16:51:49
+count workspace : d:\ClaudiaFlorea\wks\IbdbApp\frontend-angular
+total files : 440
+total code lines : 19359
+total comment lines : 547
+total blank lines : 666
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |               |             43|             23|              8|   0.22|
+   |          .json|          11631|              0|             24|     60|
+   |            .md|             14|              5|             13|  0.072|
+   |          .html|           1229|             16|             66|    6.3|
+   |            .js|           3409|            380|              4|     18|
+   |            .ts|           2606|            114|            516|     13|
+   |           .css|            302|              9|             35|    1.6|
+   |           .map|            125|              0|              0|   0.65|
+   -------------------------------------------------------------------------
+.editorconfig, code is 11, comment is 1, blank is 2.
+.gitignore, code is 22, comment is 21, blank is 5.
+angular.json, code is 134, comment is 0, blank is 8.
+browserslist, code is 10, comment is 1, blank is 1.
+dist\out-tsc\e2e\src\app.e2e-spec.js, code is 19, comment is 2, blank is 0.
+dist\out-tsc\e2e\src\app.e2e-spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\e2e\src\app.po.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\e2e\src\app.po.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\app-routing.module.js, code is 52, comment is 2, blank is 0.
+dist\out-tsc\src\app\app-routing.module.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\app.component.js, code is 15, comment is 1, blank is 0.
+dist\out-tsc\src\app\app.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\app.component.spec.js, code is 31, comment is 1, blank is 0.
+dist\out-tsc\src\app\app.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\app.module.js, code is 116, comment is 2, blank is 0.
+dist\out-tsc\src\app\app.module.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\about-us\about-us.component.js, code is 32, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\about-us\about-us.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\about-us\about-us.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\about-us\about-us.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\book-items\book-items.component.js, code is 86, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\book-items\book-items.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\book-items\book-items.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\book-items\book-items.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\books-carousel\books-carousel.component.js, code is 62, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\books-carousel\books-carousel.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\books-carousel\books-carousel.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\books-carousel\books-carousel.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\books-page\books-page.component.js, code is 51, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\books-page\books-page.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\books-page\books-page.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\books-page\books-page.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\contact\contact.component.js, code is 39, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\contact\contact.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\contact\contact.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\contact\contact.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\author-list\author-list.component.js, code is 92, comment is 33, blank is 0.
+dist\out-tsc\src\app\components\dashboard\author-list\author-list.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\author-list\author-list.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\dashboard\author-list\author-list.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\book-list\book-list.component.js, code is 101, comment is 39, blank is 0.
+dist\out-tsc\src\app\components\dashboard\book-list\book-list.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\book-list\book-list.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\dashboard\book-list\book-list.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\category-list\category-list.component.js, code is 73, comment is 32, blank is 0.
+dist\out-tsc\src\app\components\dashboard\category-list\category-list.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\category-list\category-list.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\dashboard\category-list\category-list.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\dashboard.component.js, code is 59, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\dashboard\dashboard.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\dashboard.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\dashboard\dashboard.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\subcategory-list\subcategory-list.component.js, code is 81, comment is 37, blank is 0.
+dist\out-tsc\src\app\components\dashboard\subcategory-list\subcategory-list.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\subcategory-list\subcategory-list.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\dashboard\subcategory-list\subcategory-list.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\user-list\user-list.component.js, code is 81, comment is 34, blank is 0.
+dist\out-tsc\src\app\components\dashboard\user-list\user-list.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\user-list\user-list.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\dashboard\user-list\user-list.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\footer-menu\footer-menu.component.js, code is 16, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\footer-menu\footer-menu.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\footer-menu\footer-menu.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\footer-menu\footer-menu.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\header-menu\header-menu.component.js, code is 63, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\header-menu\header-menu.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\header-menu\header-menu.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\header-menu\header-menu.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\home\home.component.js, code is 43, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\home\home.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\home\home.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\home\home.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\login\login.component.js, code is 62, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\login\login.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\login\login.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\login\login.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\logout\logout.component.js, code is 23, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\logout\logout.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\logout\logout.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\logout\logout.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-author-modal\add-author-modal.component.js, code is 57, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-author-modal\add-author-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-author-modal\add-author-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-author-modal\add-author-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-book-modal\add-book-modal.component.js, code is 62, comment is 4, blank is 0.
+dist\out-tsc\src\app\components\modals\add-book-modal\add-book-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-book-modal\add-book-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-book-modal\add-book-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-category-modal\add-category-modal.component.js, code is 42, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-category-modal\add-category-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-category-modal\add-category-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-category-modal\add-category-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-subcategory-modal\add-subcategory-modal.component.js, code is 52, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-subcategory-modal\add-subcategory-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-subcategory-modal\add-subcategory-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-subcategory-modal\add-subcategory-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-user-modal\add-user-modal.component.js, code is 48, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-user-modal\add-user-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-user-modal\add-user-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-user-modal\add-user-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-author-modal\delete-author-modal.component.js, code is 26, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-author-modal\delete-author-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-author-modal\delete-author-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-author-modal\delete-author-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-book-modal\delete-book-modal.component.js, code is 26, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-book-modal\delete-book-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-book-modal\delete-book-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-book-modal\delete-book-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-category-modal\delete-category-modal.component.js, code is 26, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-category-modal\delete-category-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-category-modal\delete-category-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-category-modal\delete-category-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.js, code is 26, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-user-modal\delete-user-modal.component.js, code is 26, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-user-modal\delete-user-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-user-modal\delete-user-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-user-modal\delete-user-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-author-modal\edit-author-modal.component.js, code is 45, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-author-modal\edit-author-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-author-modal\edit-author-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-author-modal\edit-author-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-book-modal\edit-book-modal.component.js, code is 56, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-book-modal\edit-book-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-book-modal\edit-book-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-book-modal\edit-book-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-category-modal\edit-category-modal.component.js, code is 42, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-category-modal\edit-category-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-category-modal\edit-category-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-category-modal\edit-category-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-subcategory-modal\edit-subcategory-modal.component.js, code is 43, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-subcategory-modal\edit-subcategory-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-subcategory-modal\edit-subcategory-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-subcategory-modal\edit-subcategory-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-user-modal\edit-user-modal.component.js, code is 46, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-user-modal\edit-user-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-user-modal\edit-user-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-user-modal\edit-user-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\signup\signup.component.js, code is 44, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\signup\signup.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\signup\signup.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\signup\signup.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\user-form\user-form.component.js, code is 30, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\user-form\user-form.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\user-form\user-form.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\user-form\user-form.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\filter.pipe.js, code is 31, comment is 3, blank is 0.
+dist\out-tsc\src\app\filter.pipe.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\address.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\address.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\author.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\author.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\author.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\author.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\book.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\book.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\book.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\book.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\category.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\category.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\category.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\category.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\contact.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\contact.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\feedback.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\feedback.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\feedback.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\feedback.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\publisher.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\publisher.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\publisher.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\publisher.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\review.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\review.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\review.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\review.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\role.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\role.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\subcategory.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\subcategory.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\subcategory.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\subcategory.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\userAccount.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\userAccount.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\userAccount.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\userAccount.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\auth-guard.service.js, code is 24, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\auth-guard.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\auth-guard.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\auth-guard.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\auth.service.js, code is 12, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\auth.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\authentication.service.js, code is 37, comment is 2, blank is 0.
+dist\out-tsc\src\app\services\authentication.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\authentication.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\authentication.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\author.service.js, code is 44, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\author.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\author.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\author.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\basic-auth-http-interceptor.service.js, code is 22, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\basic-auth-http-interceptor.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\basic-auth-http-interceptor.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\basic-auth-http-interceptor.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\book.service.js, code is 39, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\book.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\book.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\book.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\category.service.js, code is 39, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\category.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\category.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\category.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\email.service.js, code is 24, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\email.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\feedback.service.js, code is 39, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\feedback.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\feedback.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\feedback.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\globalService.service.js, code is 42, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\globalService.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\httpclient.service.js, code is 45, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\httpclient.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\httpclient.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\httpclient.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\publisher.service.js, code is 39, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\publisher.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\publisher.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\publisher.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\review.service.js, code is 43, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\review.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\review.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\review.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\role.service.js, code is 27, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\role.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\subcategory.service.js, code is 43, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\subcategory.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\subcategory.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\subcategory.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\user.service.js, code is 44, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\user.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\user.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\user.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\environments\environment.js, code is 3, comment is 12, blank is 0.
+dist\out-tsc\src\environments\environment.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\environments\environment.prod.js, code is 3, comment is 1, blank is 0.
+dist\out-tsc\src\environments\environment.prod.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\main.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\main.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\polyfills.js, code is 1, comment is 57, blank is 0.
+dist\out-tsc\src\polyfills.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\test.js, code is 6, comment is 5, blank is 0.
+dist\out-tsc\src\test.js.map, code is 1, comment is 0, blank is 0.
+e2e\protractor.conf.js, code is 23, comment is 2, blank is 3.
+e2e\src\app.e2e-spec.ts, code is 18, comment is 1, blank is 4.
+e2e\src\app.po.ts, code is 9, comment is 0, blank is 2.
+e2e\tsconfig.e2e.json, code is 12, comment is 0, blank is 1.
+package-lock.json, code is 11301, comment is 0, blank is 0.
+package.json, code is 55, comment is 0, blank is 0.
+README.md, code is 14, comment is 5, blank is 13.
+src\app\app-routing.module.ts, code is 47, comment is 3, blank is 3.
+src\app\app.component.css, code is 0, comment is 0, blank is 0.
+src\app\app.component.html, code is 3, comment is 0, blank is 1.
+src\app\app.component.spec.ts, code is 31, comment is 0, blank is 4.
+src\app\app.component.ts, code is 9, comment is 0, blank is 1.
+src\app\app.module.ts, code is 111, comment is 1, blank is 1.
+src\app\components\about-us\about-us.component.css, code is 10, comment is 0, blank is 1.
+src\app\components\about-us\about-us.component.html, code is 31, comment is 0, blank is 0.
+src\app\components\about-us\about-us.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\about-us\about-us.component.ts, code is 36, comment is 0, blank is 10.
+src\app\components\book-items\book-items.component.css, code is 10, comment is 0, blank is 2.
+src\app\components\book-items\book-items.component.html, code is 142, comment is 6, blank is 6.
+src\app\components\book-items\book-items.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\book-items\book-items.component.ts, code is 117, comment is 4, blank is 10.
+src\app\components\books-carousel\books-carousel.component.css, code is 21, comment is 0, blank is 4.
+src\app\components\books-carousel\books-carousel.component.html, code is 22, comment is 0, blank is 1.
+src\app\components\books-carousel\books-carousel.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\books-carousel\books-carousel.component.ts, code is 61, comment is 0, blank is 8.
+src\app\components\books-page\books-page.component.css, code is 8, comment is 0, blank is 0.
+src\app\components\books-page\books-page.component.html, code is 42, comment is 1, blank is 4.
+src\app\components\books-page\books-page.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\books-page\books-page.component.ts, code is 93, comment is 10, blank is 10.
+src\app\components\contact\contact.component.css, code is 31, comment is 0, blank is 2.
+src\app\components\contact\contact.component.html, code is 76, comment is 0, blank is 1.
+src\app\components\contact\contact.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\contact\contact.component.ts, code is 36, comment is 0, blank is 7.
+src\app\components\dashboard\author-list\author-list.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\dashboard\author-list\author-list.component.html, code is 104, comment is 1, blank is 12.
+src\app\components\dashboard\author-list\author-list.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\dashboard\author-list\author-list.component.ts, code is 85, comment is 0, blank is 16.
+src\app\components\dashboard\book-list\book-list.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\dashboard\book-list\book-list.component.html, code is 104, comment is 1, blank is 10.
+src\app\components\dashboard\book-list\book-list.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\dashboard\book-list\book-list.component.ts, code is 117, comment is 0, blank is 18.
+src\app\components\dashboard\category-list\category-list.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\dashboard\category-list\category-list.component.html, code is 58, comment is 1, blank is 5.
+src\app\components\dashboard\category-list\category-list.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\dashboard\category-list\category-list.component.ts, code is 62, comment is 0, blank is 14.
+src\app\components\dashboard\dashboard.component.css, code is 3, comment is 0, blank is 0.
+src\app\components\dashboard\dashboard.component.html, code is 68, comment is 0, blank is 1.
+src\app\components\dashboard\dashboard.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\dashboard\dashboard.component.ts, code is 74, comment is 0, blank is 11.
+src\app\components\dashboard\subcategory-list\subcategory-list.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\dashboard\subcategory-list\subcategory-list.component.html, code is 73, comment is 1, blank is 7.
+src\app\components\dashboard\subcategory-list\subcategory-list.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\dashboard\subcategory-list\subcategory-list.component.ts, code is 81, comment is 0, blank is 16.
+src\app\components\dashboard\user-list\user-list.component.css, code is 3, comment is 0, blank is 0.
+src\app\components\dashboard\user-list\user-list.component.html, code is 113, comment is 1, blank is 10.
+src\app\components\dashboard\user-list\user-list.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\dashboard\user-list\user-list.component.ts, code is 80, comment is 0, blank is 16.
+src\app\components\footer-menu\footer-menu.component.css, code is 7, comment is 0, blank is 0.
+src\app\components\footer-menu\footer-menu.component.html, code is 4, comment is 0, blank is 1.
+src\app\components\footer-menu\footer-menu.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\footer-menu\footer-menu.component.ts, code is 11, comment is 0, blank is 4.
+src\app\components\header-menu\header-menu.component.css, code is 25, comment is 8, blank is 4.
+src\app\components\header-menu\header-menu.component.html, code is 126, comment is 0, blank is 2.
+src\app\components\header-menu\header-menu.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\header-menu\header-menu.component.ts, code is 77, comment is 1, blank is 13.
+src\app\components\home\home.component.css, code is 34, comment is 0, blank is 1.
+src\app\components\home\home.component.html, code is 52, comment is 0, blank is 2.
+src\app\components\home\home.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\home\home.component.ts, code is 48, comment is 0, blank is 9.
+src\app\components\login\login.component.css, code is 74, comment is 0, blank is 10.
+src\app\components\login\login.component.html, code is 43, comment is 0, blank is 1.
+src\app\components\login\login.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\login\login.component.ts, code is 64, comment is 0, blank is 8.
+src\app\components\logout\logout.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\logout\logout.component.html, code is 1, comment is 0, blank is 0.
+src\app\components\logout\logout.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\logout\logout.component.ts, code is 17, comment is 0, blank is 5.
+src\app\components\modals\delete-author-modal\delete-author-modal.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\modals\delete-author-modal\delete-author-modal.component.html, code is 19, comment is 0, blank is 0.
+src\app\components\modals\delete-author-modal\delete-author-modal.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\modals\delete-author-modal\delete-author-modal.component.ts, code is 17, comment is 0, blank is 5.
+src\app\components\modals\delete-book-modal\delete-book-modal.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\modals\delete-book-modal\delete-book-modal.component.html, code is 19, comment is 0, blank is 0.
+src\app\components\modals\delete-book-modal\delete-book-modal.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\modals\delete-book-modal\delete-book-modal.component.ts, code is 17, comment is 0, blank is 5.
+src\app\components\modals\delete-category-modal\delete-category-modal.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\modals\delete-category-modal\delete-category-modal.component.html, code is 19, comment is 0, blank is 0.
+src\app\components\modals\delete-category-modal\delete-category-modal.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\modals\delete-category-modal\delete-category-modal.component.ts, code is 17, comment is 0, blank is 5.
+src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.html, code is 19, comment is 0, blank is 0.
+src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.ts, code is 17, comment is 0, blank is 5.
+src\app\components\modals\delete-user-modal\delete-user-modal.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\modals\delete-user-modal\delete-user-modal.component.html, code is 19, comment is 0, blank is 0.
+src\app\components\modals\delete-user-modal\delete-user-modal.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\modals\delete-user-modal\delete-user-modal.component.ts, code is 17, comment is 0, blank is 4.
+src\app\components\signup\signup.component.css, code is 74, comment is 0, blank is 10.
+src\app\components\signup\signup.component.html, code is 57, comment is 4, blank is 1.
+src\app\components\signup\signup.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\signup\signup.component.ts, code is 40, comment is 0, blank is 6.
+src\app\filter.pipe.ts, code is 26, comment is 2, blank is 7.
+src\app\models\address.ts, code is 4, comment is 0, blank is 0.
+src\app\models\author.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\author.ts, code is 7, comment is 0, blank is 1.
+src\app\models\book.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\book.ts, code is 19, comment is 0, blank is 1.
+src\app\models\category.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\category.ts, code is 6, comment is 0, blank is 1.
+src\app\models\contact.ts, code is 7, comment is 0, blank is 0.
+src\app\models\feedback.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\feedback.ts, code is 8, comment is 0, blank is 1.
+src\app\models\publisher.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\publisher.ts, code is 4, comment is 0, blank is 0.
+src\app\models\review.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\review.ts, code is 10, comment is 0, blank is 1.
+src\app\models\role.ts, code is 4, comment is 0, blank is 1.
+src\app\models\subcategory.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\subcategory.ts, code is 6, comment is 0, blank is 1.
+src\app\models\userAccount.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\userAccount.ts, code is 12, comment is 21, blank is 2.
+src\app\services\auth-guard.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\auth-guard.service.ts, code is 16, comment is 0, blank is 7.
+src\app\services\auth.service.ts, code is 18, comment is 0, blank is 7.
+src\app\services\author.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\author.service.ts, code is 42, comment is 0, blank is 9.
+src\app\services\basic-auth-http-interceptor.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\basic-auth-http-interceptor.service.ts, code is 18, comment is 0, blank is 4.
+src\app\services\book.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\book.service.ts, code is 34, comment is 0, blank is 9.
+src\app\services\category.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\category.service.ts, code is 33, comment is 0, blank is 8.
+src\app\services\email.service.ts, code is 19, comment is 0, blank is 6.
+src\app\services\feedback.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\feedback.service.ts, code is 33, comment is 0, blank is 8.
+src\app\services\globalService.service.ts, code is 40, comment is 0, blank is 7.
+src\app\services\httpclient.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\httpclient.service.ts, code is 38, comment is 0, blank is 7.
+src\app\services\publisher.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\publisher.service.ts, code is 33, comment is 0, blank is 8.
+src\app\services\review.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\review.service.ts, code is 37, comment is 0, blank is 9.
+src\app\services\role.service.ts, code is 21, comment is 0, blank is 7.
+src\app\services\subcategory.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\subcategory.service.ts, code is 37, comment is 0, blank is 9.
+src\app\services\user.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\user.service.ts, code is 49, comment is 0, blank is 9.
+src\assets\.gitkeep, code is 0, comment is 0, blank is 0.
+src\assets\images\books-header.png, it is a binary file.
+src\assets\images\books-images\1984.jpg, it is a binary file.
+src\assets\images\books-images\bookImagePlaceholder.png, it is a binary file.
+src\assets\images\books-images\bookPlaceholder.jpg, it is a binary file.
+src\assets\images\books-images\harry-potter-philosopher-stone.jpg, it is a binary file.
+src\assets\images\books-images\Harry-Potter-pop-up-book-matthew-reinhart.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterAnd The Half-BloodPrince.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterAndTheChamberOfSecrets.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterAndtheDeathlyHallows.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterandtheGobletofFire.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterAndTheOrderOfThePhoenix.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterAndThePrisonerOfAzkaban.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterAndThePrisonerOfAzkaban2.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterandtheSorcerersStone.jpg, it is a binary file.
+src\assets\images\books-images\TheHobbit.jpg, it is a binary file.
+src\assets\images\books.jpg, it is a binary file.
+src\assets\images\favicon.png, it is a binary file.
+src\assets\images\hb.jpg, it is a binary file.
+src\assets\images\header-books.jpg, it is a binary file.
+src\assets\images\ibdb-logo.jpg, it is a binary file.
+src\assets\images\library.jpg, it is a binary file.
+src\assets\images\logo.png, it is a binary file.
+src\assets\images\search-icon.png, it is a binary file.
+src\assets\images\search.png, it is a binary file.
+src\environments\environment.prod.ts, code is 3, comment is 0, blank is 0.
+src\environments\environment.ts, code is 3, comment is 11, blank is 2.
+src\favicon.ico, it is a binary file.
+src\index.html, code is 15, comment is 0, blank is 1.
+src\karma.conf.js, code is 29, comment is 3, blank is 1.
+src\main.ts, code is 9, comment is 0, blank is 3.
+src\polyfills.ts, code is 1, comment is 56, blank is 7.
+src\styles.css, code is 2, comment is 1, blank is 1.
+src\test.ts, code is 13, comment is 4, blank is 3.
+src\tsconfig.app.json, code is 10, comment is 0, blank is 1.
+src\tsconfig.spec.json, code is 15, comment is 0, blank is 3.
+src\tslint.json, code is 15, comment is 0, blank is 2.
+tsconfig.json, code is 21, comment is 0, blank is 2.
+tslint.json, code is 68, comment is 0, blank is 7.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2020-06-04 17:10:30
+count workspace : d:\ClaudiaFlorea\wks\IbdbApp\frontend-angular
+total files : 440
+total code lines : 19344
+total comment lines : 532
+total blank lines : 660
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |               |             43|             23|              8|   0.22|
+   |          .json|          11631|              0|             24|     60|
+   |            .md|             14|              5|             13|  0.072|
+   |            .js|           3409|            380|              4|     18|
+   |          .html|           1229|             16|             66|    6.4|
+   |            .ts|           2591|             99|            510|     13|
+   |           .css|            302|              9|             35|    1.6|
+   |           .map|            125|              0|              0|   0.65|
+   -------------------------------------------------------------------------
+.editorconfig, code is 11, comment is 1, blank is 2.
+.gitignore, code is 22, comment is 21, blank is 5.
+angular.json, code is 134, comment is 0, blank is 8.
+browserslist, code is 10, comment is 1, blank is 1.
+dist\out-tsc\e2e\src\app.e2e-spec.js, code is 19, comment is 2, blank is 0.
+dist\out-tsc\e2e\src\app.e2e-spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\e2e\src\app.po.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\e2e\src\app.po.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\app-routing.module.js, code is 52, comment is 2, blank is 0.
+dist\out-tsc\src\app\app-routing.module.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\app.component.js, code is 15, comment is 1, blank is 0.
+dist\out-tsc\src\app\app.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\app.component.spec.js, code is 31, comment is 1, blank is 0.
+dist\out-tsc\src\app\app.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\app.module.js, code is 116, comment is 2, blank is 0.
+dist\out-tsc\src\app\app.module.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\about-us\about-us.component.js, code is 32, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\about-us\about-us.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\about-us\about-us.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\about-us\about-us.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\book-items\book-items.component.js, code is 86, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\book-items\book-items.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\book-items\book-items.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\book-items\book-items.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\books-carousel\books-carousel.component.js, code is 62, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\books-carousel\books-carousel.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\books-carousel\books-carousel.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\books-carousel\books-carousel.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\books-page\books-page.component.js, code is 51, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\books-page\books-page.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\books-page\books-page.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\books-page\books-page.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\contact\contact.component.js, code is 39, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\contact\contact.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\contact\contact.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\contact\contact.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\author-list\author-list.component.js, code is 92, comment is 33, blank is 0.
+dist\out-tsc\src\app\components\dashboard\author-list\author-list.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\author-list\author-list.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\dashboard\author-list\author-list.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\book-list\book-list.component.js, code is 101, comment is 39, blank is 0.
+dist\out-tsc\src\app\components\dashboard\book-list\book-list.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\book-list\book-list.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\dashboard\book-list\book-list.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\category-list\category-list.component.js, code is 73, comment is 32, blank is 0.
+dist\out-tsc\src\app\components\dashboard\category-list\category-list.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\category-list\category-list.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\dashboard\category-list\category-list.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\dashboard.component.js, code is 59, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\dashboard\dashboard.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\dashboard.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\dashboard\dashboard.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\subcategory-list\subcategory-list.component.js, code is 81, comment is 37, blank is 0.
+dist\out-tsc\src\app\components\dashboard\subcategory-list\subcategory-list.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\subcategory-list\subcategory-list.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\dashboard\subcategory-list\subcategory-list.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\user-list\user-list.component.js, code is 81, comment is 34, blank is 0.
+dist\out-tsc\src\app\components\dashboard\user-list\user-list.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\user-list\user-list.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\dashboard\user-list\user-list.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\footer-menu\footer-menu.component.js, code is 16, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\footer-menu\footer-menu.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\footer-menu\footer-menu.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\footer-menu\footer-menu.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\header-menu\header-menu.component.js, code is 63, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\header-menu\header-menu.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\header-menu\header-menu.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\header-menu\header-menu.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\home\home.component.js, code is 43, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\home\home.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\home\home.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\home\home.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\login\login.component.js, code is 62, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\login\login.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\login\login.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\login\login.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\logout\logout.component.js, code is 23, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\logout\logout.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\logout\logout.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\logout\logout.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-author-modal\add-author-modal.component.js, code is 57, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-author-modal\add-author-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-author-modal\add-author-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-author-modal\add-author-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-book-modal\add-book-modal.component.js, code is 62, comment is 4, blank is 0.
+dist\out-tsc\src\app\components\modals\add-book-modal\add-book-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-book-modal\add-book-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-book-modal\add-book-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-category-modal\add-category-modal.component.js, code is 42, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-category-modal\add-category-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-category-modal\add-category-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-category-modal\add-category-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-subcategory-modal\add-subcategory-modal.component.js, code is 52, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-subcategory-modal\add-subcategory-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-subcategory-modal\add-subcategory-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-subcategory-modal\add-subcategory-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-user-modal\add-user-modal.component.js, code is 48, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-user-modal\add-user-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-user-modal\add-user-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-user-modal\add-user-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-author-modal\delete-author-modal.component.js, code is 26, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-author-modal\delete-author-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-author-modal\delete-author-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-author-modal\delete-author-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-book-modal\delete-book-modal.component.js, code is 26, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-book-modal\delete-book-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-book-modal\delete-book-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-book-modal\delete-book-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-category-modal\delete-category-modal.component.js, code is 26, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-category-modal\delete-category-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-category-modal\delete-category-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-category-modal\delete-category-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.js, code is 26, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-user-modal\delete-user-modal.component.js, code is 26, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-user-modal\delete-user-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-user-modal\delete-user-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-user-modal\delete-user-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-author-modal\edit-author-modal.component.js, code is 45, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-author-modal\edit-author-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-author-modal\edit-author-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-author-modal\edit-author-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-book-modal\edit-book-modal.component.js, code is 56, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-book-modal\edit-book-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-book-modal\edit-book-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-book-modal\edit-book-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-category-modal\edit-category-modal.component.js, code is 42, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-category-modal\edit-category-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-category-modal\edit-category-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-category-modal\edit-category-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-subcategory-modal\edit-subcategory-modal.component.js, code is 43, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-subcategory-modal\edit-subcategory-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-subcategory-modal\edit-subcategory-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-subcategory-modal\edit-subcategory-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-user-modal\edit-user-modal.component.js, code is 46, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-user-modal\edit-user-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-user-modal\edit-user-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-user-modal\edit-user-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\signup\signup.component.js, code is 44, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\signup\signup.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\signup\signup.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\signup\signup.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\user-form\user-form.component.js, code is 30, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\user-form\user-form.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\user-form\user-form.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\user-form\user-form.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\filter.pipe.js, code is 31, comment is 3, blank is 0.
+dist\out-tsc\src\app\filter.pipe.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\address.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\address.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\author.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\author.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\author.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\author.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\book.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\book.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\book.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\book.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\category.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\category.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\category.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\category.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\contact.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\contact.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\feedback.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\feedback.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\feedback.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\feedback.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\publisher.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\publisher.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\publisher.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\publisher.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\review.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\review.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\review.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\review.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\role.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\role.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\subcategory.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\subcategory.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\subcategory.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\subcategory.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\userAccount.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\userAccount.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\userAccount.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\userAccount.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\auth-guard.service.js, code is 24, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\auth-guard.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\auth-guard.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\auth-guard.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\auth.service.js, code is 12, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\auth.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\authentication.service.js, code is 37, comment is 2, blank is 0.
+dist\out-tsc\src\app\services\authentication.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\authentication.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\authentication.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\author.service.js, code is 44, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\author.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\author.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\author.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\basic-auth-http-interceptor.service.js, code is 22, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\basic-auth-http-interceptor.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\basic-auth-http-interceptor.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\basic-auth-http-interceptor.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\book.service.js, code is 39, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\book.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\book.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\book.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\category.service.js, code is 39, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\category.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\category.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\category.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\email.service.js, code is 24, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\email.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\feedback.service.js, code is 39, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\feedback.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\feedback.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\feedback.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\globalService.service.js, code is 42, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\globalService.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\httpclient.service.js, code is 45, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\httpclient.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\httpclient.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\httpclient.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\publisher.service.js, code is 39, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\publisher.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\publisher.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\publisher.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\review.service.js, code is 43, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\review.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\review.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\review.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\role.service.js, code is 27, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\role.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\subcategory.service.js, code is 43, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\subcategory.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\subcategory.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\subcategory.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\user.service.js, code is 44, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\user.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\user.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\user.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\environments\environment.js, code is 3, comment is 12, blank is 0.
+dist\out-tsc\src\environments\environment.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\environments\environment.prod.js, code is 3, comment is 1, blank is 0.
+dist\out-tsc\src\environments\environment.prod.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\main.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\main.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\polyfills.js, code is 1, comment is 57, blank is 0.
+dist\out-tsc\src\polyfills.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\test.js, code is 6, comment is 5, blank is 0.
+dist\out-tsc\src\test.js.map, code is 1, comment is 0, blank is 0.
+e2e\protractor.conf.js, code is 23, comment is 2, blank is 3.
+e2e\src\app.e2e-spec.ts, code is 18, comment is 1, blank is 4.
+e2e\src\app.po.ts, code is 9, comment is 0, blank is 2.
+e2e\tsconfig.e2e.json, code is 12, comment is 0, blank is 1.
+package-lock.json, code is 11301, comment is 0, blank is 0.
+package.json, code is 55, comment is 0, blank is 0.
+README.md, code is 14, comment is 5, blank is 13.
+src\app\app-routing.module.ts, code is 47, comment is 3, blank is 3.
+src\app\app.component.css, code is 0, comment is 0, blank is 0.
+src\app\app.component.html, code is 3, comment is 0, blank is 1.
+src\app\app.component.spec.ts, code is 31, comment is 0, blank is 4.
+src\app\app.component.ts, code is 9, comment is 0, blank is 1.
+src\app\app.module.ts, code is 111, comment is 1, blank is 1.
+src\app\components\about-us\about-us.component.css, code is 10, comment is 0, blank is 1.
+src\app\components\about-us\about-us.component.html, code is 31, comment is 0, blank is 0.
+src\app\components\about-us\about-us.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\about-us\about-us.component.ts, code is 36, comment is 0, blank is 10.
+src\app\components\book-items\book-items.component.css, code is 10, comment is 0, blank is 2.
+src\app\components\book-items\book-items.component.html, code is 142, comment is 6, blank is 6.
+src\app\components\book-items\book-items.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\book-items\book-items.component.ts, code is 116, comment is 0, blank is 10.
+src\app\components\books-carousel\books-carousel.component.css, code is 21, comment is 0, blank is 4.
+src\app\components\books-carousel\books-carousel.component.html, code is 22, comment is 0, blank is 1.
+src\app\components\books-carousel\books-carousel.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\books-carousel\books-carousel.component.ts, code is 60, comment is 0, blank is 8.
+src\app\components\books-page\books-page.component.css, code is 8, comment is 0, blank is 0.
+src\app\components\books-page\books-page.component.html, code is 42, comment is 1, blank is 4.
+src\app\components\books-page\books-page.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\books-page\books-page.component.ts, code is 92, comment is 0, blank is 10.
+src\app\components\contact\contact.component.css, code is 31, comment is 0, blank is 2.
+src\app\components\contact\contact.component.html, code is 76, comment is 0, blank is 1.
+src\app\components\contact\contact.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\contact\contact.component.ts, code is 36, comment is 0, blank is 7.
+src\app\components\dashboard\author-list\author-list.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\dashboard\author-list\author-list.component.html, code is 104, comment is 1, blank is 12.
+src\app\components\dashboard\author-list\author-list.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\dashboard\author-list\author-list.component.ts, code is 84, comment is 0, blank is 14.
+src\app\components\dashboard\book-list\book-list.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\dashboard\book-list\book-list.component.html, code is 104, comment is 1, blank is 10.
+src\app\components\dashboard\book-list\book-list.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\dashboard\book-list\book-list.component.ts, code is 115, comment is 0, blank is 18.
+src\app\components\dashboard\category-list\category-list.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\dashboard\category-list\category-list.component.html, code is 58, comment is 1, blank is 5.
+src\app\components\dashboard\category-list\category-list.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\dashboard\category-list\category-list.component.ts, code is 61, comment is 0, blank is 14.
+src\app\components\dashboard\dashboard.component.css, code is 3, comment is 0, blank is 0.
+src\app\components\dashboard\dashboard.component.html, code is 68, comment is 0, blank is 1.
+src\app\components\dashboard\dashboard.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\dashboard\dashboard.component.ts, code is 74, comment is 0, blank is 11.
+src\app\components\dashboard\subcategory-list\subcategory-list.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\dashboard\subcategory-list\subcategory-list.component.html, code is 73, comment is 1, blank is 7.
+src\app\components\dashboard\subcategory-list\subcategory-list.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\dashboard\subcategory-list\subcategory-list.component.ts, code is 80, comment is 0, blank is 16.
+src\app\components\dashboard\user-list\user-list.component.css, code is 3, comment is 0, blank is 0.
+src\app\components\dashboard\user-list\user-list.component.html, code is 113, comment is 1, blank is 10.
+src\app\components\dashboard\user-list\user-list.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\dashboard\user-list\user-list.component.ts, code is 78, comment is 0, blank is 16.
+src\app\components\footer-menu\footer-menu.component.css, code is 7, comment is 0, blank is 0.
+src\app\components\footer-menu\footer-menu.component.html, code is 4, comment is 0, blank is 1.
+src\app\components\footer-menu\footer-menu.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\footer-menu\footer-menu.component.ts, code is 11, comment is 0, blank is 4.
+src\app\components\header-menu\header-menu.component.css, code is 25, comment is 8, blank is 4.
+src\app\components\header-menu\header-menu.component.html, code is 126, comment is 0, blank is 2.
+src\app\components\header-menu\header-menu.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\header-menu\header-menu.component.ts, code is 77, comment is 0, blank is 13.
+src\app\components\home\home.component.css, code is 34, comment is 0, blank is 1.
+src\app\components\home\home.component.html, code is 52, comment is 0, blank is 2.
+src\app\components\home\home.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\home\home.component.ts, code is 45, comment is 0, blank is 7.
+src\app\components\login\login.component.css, code is 74, comment is 0, blank is 10.
+src\app\components\login\login.component.html, code is 43, comment is 0, blank is 1.
+src\app\components\login\login.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\login\login.component.ts, code is 62, comment is 0, blank is 7.
+src\app\components\logout\logout.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\logout\logout.component.html, code is 1, comment is 0, blank is 0.
+src\app\components\logout\logout.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\logout\logout.component.ts, code is 17, comment is 0, blank is 4.
+src\app\components\modals\delete-author-modal\delete-author-modal.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\modals\delete-author-modal\delete-author-modal.component.html, code is 19, comment is 0, blank is 0.
+src\app\components\modals\delete-author-modal\delete-author-modal.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\modals\delete-author-modal\delete-author-modal.component.ts, code is 17, comment is 0, blank is 5.
+src\app\components\modals\delete-book-modal\delete-book-modal.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\modals\delete-book-modal\delete-book-modal.component.html, code is 19, comment is 0, blank is 0.
+src\app\components\modals\delete-book-modal\delete-book-modal.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\modals\delete-book-modal\delete-book-modal.component.ts, code is 17, comment is 0, blank is 5.
+src\app\components\modals\delete-category-modal\delete-category-modal.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\modals\delete-category-modal\delete-category-modal.component.html, code is 19, comment is 0, blank is 0.
+src\app\components\modals\delete-category-modal\delete-category-modal.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\modals\delete-category-modal\delete-category-modal.component.ts, code is 17, comment is 0, blank is 5.
+src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.html, code is 19, comment is 0, blank is 0.
+src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.ts, code is 17, comment is 0, blank is 5.
+src\app\components\modals\delete-user-modal\delete-user-modal.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\modals\delete-user-modal\delete-user-modal.component.html, code is 19, comment is 0, blank is 0.
+src\app\components\modals\delete-user-modal\delete-user-modal.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\modals\delete-user-modal\delete-user-modal.component.ts, code is 17, comment is 0, blank is 4.
+src\app\components\signup\signup.component.css, code is 74, comment is 0, blank is 10.
+src\app\components\signup\signup.component.html, code is 57, comment is 4, blank is 1.
+src\app\components\signup\signup.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\signup\signup.component.ts, code is 40, comment is 0, blank is 6.
+src\app\filter.pipe.ts, code is 26, comment is 2, blank is 7.
+src\app\models\address.ts, code is 4, comment is 0, blank is 0.
+src\app\models\author.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\author.ts, code is 7, comment is 0, blank is 1.
+src\app\models\book.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\book.ts, code is 19, comment is 0, blank is 1.
+src\app\models\category.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\category.ts, code is 6, comment is 0, blank is 1.
+src\app\models\contact.ts, code is 7, comment is 0, blank is 0.
+src\app\models\feedback.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\feedback.ts, code is 8, comment is 0, blank is 1.
+src\app\models\publisher.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\publisher.ts, code is 4, comment is 0, blank is 0.
+src\app\models\review.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\review.ts, code is 10, comment is 0, blank is 1.
+src\app\models\role.ts, code is 4, comment is 0, blank is 1.
+src\app\models\subcategory.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\subcategory.ts, code is 6, comment is 0, blank is 1.
+src\app\models\userAccount.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\userAccount.ts, code is 12, comment is 21, blank is 2.
+src\app\services\auth-guard.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\auth-guard.service.ts, code is 16, comment is 0, blank is 7.
+src\app\services\auth.service.ts, code is 18, comment is 0, blank is 7.
+src\app\services\author.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\author.service.ts, code is 42, comment is 0, blank is 9.
+src\app\services\basic-auth-http-interceptor.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\basic-auth-http-interceptor.service.ts, code is 18, comment is 0, blank is 4.
+src\app\services\book.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\book.service.ts, code is 34, comment is 0, blank is 9.
+src\app\services\category.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\category.service.ts, code is 33, comment is 0, blank is 8.
+src\app\services\email.service.ts, code is 19, comment is 0, blank is 6.
+src\app\services\feedback.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\feedback.service.ts, code is 33, comment is 0, blank is 8.
+src\app\services\globalService.service.ts, code is 40, comment is 0, blank is 7.
+src\app\services\httpclient.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\httpclient.service.ts, code is 38, comment is 0, blank is 7.
+src\app\services\publisher.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\publisher.service.ts, code is 33, comment is 0, blank is 8.
+src\app\services\review.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\review.service.ts, code is 37, comment is 0, blank is 9.
+src\app\services\role.service.ts, code is 21, comment is 0, blank is 7.
+src\app\services\subcategory.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\subcategory.service.ts, code is 37, comment is 0, blank is 9.
+src\app\services\user.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\user.service.ts, code is 49, comment is 0, blank is 9.
+src\assets\.gitkeep, code is 0, comment is 0, blank is 0.
+src\assets\images\books-header.png, it is a binary file.
+src\assets\images\books-images\1984.jpg, it is a binary file.
+src\assets\images\books-images\bookImagePlaceholder.png, it is a binary file.
+src\assets\images\books-images\bookPlaceholder.jpg, it is a binary file.
+src\assets\images\books-images\harry-potter-philosopher-stone.jpg, it is a binary file.
+src\assets\images\books-images\Harry-Potter-pop-up-book-matthew-reinhart.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterAnd The Half-BloodPrince.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterAndTheChamberOfSecrets.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterAndtheDeathlyHallows.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterandtheGobletofFire.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterAndTheOrderOfThePhoenix.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterAndThePrisonerOfAzkaban.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterAndThePrisonerOfAzkaban2.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterandtheSorcerersStone.jpg, it is a binary file.
+src\assets\images\books-images\TheHobbit.jpg, it is a binary file.
+src\assets\images\books.jpg, it is a binary file.
+src\assets\images\favicon.png, it is a binary file.
+src\assets\images\hb.jpg, it is a binary file.
+src\assets\images\header-books.jpg, it is a binary file.
+src\assets\images\ibdb-logo.jpg, it is a binary file.
+src\assets\images\library.jpg, it is a binary file.
+src\assets\images\logo.png, it is a binary file.
+src\assets\images\search-icon.png, it is a binary file.
+src\assets\images\search.png, it is a binary file.
+src\environments\environment.prod.ts, code is 3, comment is 0, blank is 0.
+src\environments\environment.ts, code is 3, comment is 11, blank is 2.
+src\favicon.ico, it is a binary file.
+src\index.html, code is 15, comment is 0, blank is 1.
+src\karma.conf.js, code is 29, comment is 3, blank is 1.
+src\main.ts, code is 9, comment is 0, blank is 3.
+src\polyfills.ts, code is 1, comment is 56, blank is 7.
+src\styles.css, code is 2, comment is 1, blank is 1.
+src\test.ts, code is 13, comment is 4, blank is 3.
+src\tsconfig.app.json, code is 10, comment is 0, blank is 1.
+src\tsconfig.spec.json, code is 15, comment is 0, blank is 3.
+src\tslint.json, code is 15, comment is 0, blank is 2.
+tsconfig.json, code is 21, comment is 0, blank is 2.
+tslint.json, code is 68, comment is 0, blank is 7.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2020-06-05 18:57:21
+count workspace : d:\ClaudiaFlorea\wks\IbdbApp\frontend-angular
+total files : 440
+total code lines : 19344
+total comment lines : 532
+total blank lines : 660
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |               |             43|             23|              8|   0.22|
+   |          .json|          11631|              0|             24|     60|
+   |            .js|           3409|            380|              4|     18|
+   |            .md|             14|              5|             13|  0.072|
+   |          .html|           1229|             16|             66|    6.4|
+   |            .ts|           2591|             99|            510|     13|
+   |           .css|            302|              9|             35|    1.6|
+   |           .map|            125|              0|              0|   0.65|
+   -------------------------------------------------------------------------
+.editorconfig, code is 11, comment is 1, blank is 2.
+.gitignore, code is 22, comment is 21, blank is 5.
+angular.json, code is 134, comment is 0, blank is 8.
+browserslist, code is 10, comment is 1, blank is 1.
+dist\out-tsc\e2e\src\app.e2e-spec.js, code is 19, comment is 2, blank is 0.
+dist\out-tsc\e2e\src\app.e2e-spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\e2e\src\app.po.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\e2e\src\app.po.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\app-routing.module.js, code is 52, comment is 2, blank is 0.
+dist\out-tsc\src\app\app-routing.module.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\app.component.js, code is 15, comment is 1, blank is 0.
+dist\out-tsc\src\app\app.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\app.component.spec.js, code is 31, comment is 1, blank is 0.
+dist\out-tsc\src\app\app.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\app.module.js, code is 116, comment is 2, blank is 0.
+dist\out-tsc\src\app\app.module.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\about-us\about-us.component.js, code is 32, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\about-us\about-us.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\about-us\about-us.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\about-us\about-us.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\book-items\book-items.component.js, code is 86, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\book-items\book-items.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\book-items\book-items.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\book-items\book-items.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\books-carousel\books-carousel.component.js, code is 62, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\books-carousel\books-carousel.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\books-carousel\books-carousel.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\books-carousel\books-carousel.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\books-page\books-page.component.js, code is 51, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\books-page\books-page.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\books-page\books-page.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\books-page\books-page.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\contact\contact.component.js, code is 39, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\contact\contact.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\contact\contact.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\contact\contact.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\author-list\author-list.component.js, code is 92, comment is 33, blank is 0.
+dist\out-tsc\src\app\components\dashboard\author-list\author-list.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\author-list\author-list.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\dashboard\author-list\author-list.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\book-list\book-list.component.js, code is 101, comment is 39, blank is 0.
+dist\out-tsc\src\app\components\dashboard\book-list\book-list.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\book-list\book-list.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\dashboard\book-list\book-list.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\category-list\category-list.component.js, code is 73, comment is 32, blank is 0.
+dist\out-tsc\src\app\components\dashboard\category-list\category-list.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\category-list\category-list.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\dashboard\category-list\category-list.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\dashboard.component.js, code is 59, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\dashboard\dashboard.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\dashboard.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\dashboard\dashboard.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\subcategory-list\subcategory-list.component.js, code is 81, comment is 37, blank is 0.
+dist\out-tsc\src\app\components\dashboard\subcategory-list\subcategory-list.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\subcategory-list\subcategory-list.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\dashboard\subcategory-list\subcategory-list.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\user-list\user-list.component.js, code is 81, comment is 34, blank is 0.
+dist\out-tsc\src\app\components\dashboard\user-list\user-list.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\dashboard\user-list\user-list.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\dashboard\user-list\user-list.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\footer-menu\footer-menu.component.js, code is 16, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\footer-menu\footer-menu.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\footer-menu\footer-menu.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\footer-menu\footer-menu.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\header-menu\header-menu.component.js, code is 63, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\header-menu\header-menu.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\header-menu\header-menu.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\header-menu\header-menu.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\home\home.component.js, code is 43, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\home\home.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\home\home.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\home\home.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\login\login.component.js, code is 62, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\login\login.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\login\login.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\login\login.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\logout\logout.component.js, code is 23, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\logout\logout.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\logout\logout.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\logout\logout.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-author-modal\add-author-modal.component.js, code is 57, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-author-modal\add-author-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-author-modal\add-author-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-author-modal\add-author-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-book-modal\add-book-modal.component.js, code is 62, comment is 4, blank is 0.
+dist\out-tsc\src\app\components\modals\add-book-modal\add-book-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-book-modal\add-book-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-book-modal\add-book-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-category-modal\add-category-modal.component.js, code is 42, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-category-modal\add-category-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-category-modal\add-category-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-category-modal\add-category-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-subcategory-modal\add-subcategory-modal.component.js, code is 52, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-subcategory-modal\add-subcategory-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-subcategory-modal\add-subcategory-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-subcategory-modal\add-subcategory-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-user-modal\add-user-modal.component.js, code is 48, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-user-modal\add-user-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\add-user-modal\add-user-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\add-user-modal\add-user-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-author-modal\delete-author-modal.component.js, code is 26, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-author-modal\delete-author-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-author-modal\delete-author-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-author-modal\delete-author-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-book-modal\delete-book-modal.component.js, code is 26, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-book-modal\delete-book-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-book-modal\delete-book-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-book-modal\delete-book-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-category-modal\delete-category-modal.component.js, code is 26, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-category-modal\delete-category-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-category-modal\delete-category-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-category-modal\delete-category-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.js, code is 26, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-user-modal\delete-user-modal.component.js, code is 26, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-user-modal\delete-user-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-user-modal\delete-user-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\delete-user-modal\delete-user-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-author-modal\edit-author-modal.component.js, code is 45, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-author-modal\edit-author-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-author-modal\edit-author-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-author-modal\edit-author-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-book-modal\edit-book-modal.component.js, code is 56, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-book-modal\edit-book-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-book-modal\edit-book-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-book-modal\edit-book-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-category-modal\edit-category-modal.component.js, code is 42, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-category-modal\edit-category-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-category-modal\edit-category-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-category-modal\edit-category-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-subcategory-modal\edit-subcategory-modal.component.js, code is 43, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-subcategory-modal\edit-subcategory-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-subcategory-modal\edit-subcategory-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-subcategory-modal\edit-subcategory-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-user-modal\edit-user-modal.component.js, code is 46, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-user-modal\edit-user-modal.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-user-modal\edit-user-modal.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\modals\edit-user-modal\edit-user-modal.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\signup\signup.component.js, code is 44, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\signup\signup.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\signup\signup.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\signup\signup.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\user-form\user-form.component.js, code is 30, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\user-form\user-form.component.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\components\user-form\user-form.component.spec.js, code is 20, comment is 1, blank is 0.
+dist\out-tsc\src\app\components\user-form\user-form.component.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\filter.pipe.js, code is 31, comment is 3, blank is 0.
+dist\out-tsc\src\app\filter.pipe.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\address.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\address.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\author.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\author.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\author.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\author.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\book.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\book.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\book.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\book.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\category.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\category.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\category.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\category.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\contact.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\contact.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\feedback.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\feedback.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\feedback.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\feedback.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\publisher.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\publisher.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\publisher.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\publisher.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\review.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\review.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\review.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\review.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\role.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\role.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\subcategory.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\subcategory.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\subcategory.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\subcategory.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\userAccount.js, code is 2, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\userAccount.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\models\userAccount.spec.js, code is 6, comment is 1, blank is 0.
+dist\out-tsc\src\app\models\userAccount.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\auth-guard.service.js, code is 24, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\auth-guard.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\auth-guard.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\auth-guard.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\auth.service.js, code is 12, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\auth.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\authentication.service.js, code is 37, comment is 2, blank is 0.
+dist\out-tsc\src\app\services\authentication.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\authentication.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\authentication.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\author.service.js, code is 44, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\author.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\author.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\author.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\basic-auth-http-interceptor.service.js, code is 22, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\basic-auth-http-interceptor.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\basic-auth-http-interceptor.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\basic-auth-http-interceptor.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\book.service.js, code is 39, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\book.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\book.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\book.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\category.service.js, code is 39, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\category.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\category.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\category.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\email.service.js, code is 24, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\email.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\feedback.service.js, code is 39, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\feedback.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\feedback.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\feedback.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\globalService.service.js, code is 42, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\globalService.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\httpclient.service.js, code is 45, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\httpclient.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\httpclient.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\httpclient.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\publisher.service.js, code is 39, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\publisher.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\publisher.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\publisher.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\review.service.js, code is 43, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\review.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\review.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\review.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\role.service.js, code is 27, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\role.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\subcategory.service.js, code is 43, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\subcategory.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\subcategory.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\subcategory.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\user.service.js, code is 44, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\user.service.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\app\services\user.service.spec.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\app\services\user.service.spec.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\environments\environment.js, code is 3, comment is 12, blank is 0.
+dist\out-tsc\src\environments\environment.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\environments\environment.prod.js, code is 3, comment is 1, blank is 0.
+dist\out-tsc\src\environments\environment.prod.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\main.js, code is 9, comment is 1, blank is 0.
+dist\out-tsc\src\main.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\polyfills.js, code is 1, comment is 57, blank is 0.
+dist\out-tsc\src\polyfills.js.map, code is 1, comment is 0, blank is 0.
+dist\out-tsc\src\test.js, code is 6, comment is 5, blank is 0.
+dist\out-tsc\src\test.js.map, code is 1, comment is 0, blank is 0.
+e2e\protractor.conf.js, code is 23, comment is 2, blank is 3.
+e2e\src\app.e2e-spec.ts, code is 18, comment is 1, blank is 4.
+e2e\src\app.po.ts, code is 9, comment is 0, blank is 2.
+e2e\tsconfig.e2e.json, code is 12, comment is 0, blank is 1.
+package-lock.json, code is 11301, comment is 0, blank is 0.
+package.json, code is 55, comment is 0, blank is 0.
+README.md, code is 14, comment is 5, blank is 13.
+src\app\app-routing.module.ts, code is 47, comment is 3, blank is 3.
+src\app\app.component.css, code is 0, comment is 0, blank is 0.
+src\app\app.component.html, code is 3, comment is 0, blank is 1.
+src\app\app.component.spec.ts, code is 31, comment is 0, blank is 4.
+src\app\app.component.ts, code is 9, comment is 0, blank is 1.
+src\app\app.module.ts, code is 111, comment is 1, blank is 1.
+src\app\components\about-us\about-us.component.css, code is 10, comment is 0, blank is 1.
+src\app\components\about-us\about-us.component.html, code is 31, comment is 0, blank is 0.
+src\app\components\about-us\about-us.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\about-us\about-us.component.ts, code is 36, comment is 0, blank is 10.
+src\app\components\book-items\book-items.component.css, code is 10, comment is 0, blank is 2.
+src\app\components\book-items\book-items.component.html, code is 142, comment is 6, blank is 6.
+src\app\components\book-items\book-items.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\book-items\book-items.component.ts, code is 116, comment is 0, blank is 10.
+src\app\components\books-carousel\books-carousel.component.css, code is 21, comment is 0, blank is 4.
+src\app\components\books-carousel\books-carousel.component.html, code is 22, comment is 0, blank is 1.
+src\app\components\books-carousel\books-carousel.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\books-carousel\books-carousel.component.ts, code is 60, comment is 0, blank is 8.
+src\app\components\books-page\books-page.component.css, code is 8, comment is 0, blank is 0.
+src\app\components\books-page\books-page.component.html, code is 42, comment is 1, blank is 4.
+src\app\components\books-page\books-page.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\books-page\books-page.component.ts, code is 92, comment is 0, blank is 10.
+src\app\components\contact\contact.component.css, code is 31, comment is 0, blank is 2.
+src\app\components\contact\contact.component.html, code is 76, comment is 0, blank is 1.
+src\app\components\contact\contact.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\contact\contact.component.ts, code is 36, comment is 0, blank is 7.
+src\app\components\dashboard\author-list\author-list.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\dashboard\author-list\author-list.component.html, code is 104, comment is 1, blank is 12.
+src\app\components\dashboard\author-list\author-list.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\dashboard\author-list\author-list.component.ts, code is 84, comment is 0, blank is 14.
+src\app\components\dashboard\book-list\book-list.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\dashboard\book-list\book-list.component.html, code is 104, comment is 1, blank is 10.
+src\app\components\dashboard\book-list\book-list.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\dashboard\book-list\book-list.component.ts, code is 115, comment is 0, blank is 18.
+src\app\components\dashboard\category-list\category-list.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\dashboard\category-list\category-list.component.html, code is 58, comment is 1, blank is 5.
+src\app\components\dashboard\category-list\category-list.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\dashboard\category-list\category-list.component.ts, code is 61, comment is 0, blank is 14.
+src\app\components\dashboard\dashboard.component.css, code is 3, comment is 0, blank is 0.
+src\app\components\dashboard\dashboard.component.html, code is 68, comment is 0, blank is 1.
+src\app\components\dashboard\dashboard.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\dashboard\dashboard.component.ts, code is 74, comment is 0, blank is 11.
+src\app\components\dashboard\subcategory-list\subcategory-list.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\dashboard\subcategory-list\subcategory-list.component.html, code is 73, comment is 1, blank is 7.
+src\app\components\dashboard\subcategory-list\subcategory-list.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\dashboard\subcategory-list\subcategory-list.component.ts, code is 80, comment is 0, blank is 16.
+src\app\components\dashboard\user-list\user-list.component.css, code is 3, comment is 0, blank is 0.
+src\app\components\dashboard\user-list\user-list.component.html, code is 113, comment is 1, blank is 10.
+src\app\components\dashboard\user-list\user-list.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\dashboard\user-list\user-list.component.ts, code is 78, comment is 0, blank is 16.
+src\app\components\footer-menu\footer-menu.component.css, code is 7, comment is 0, blank is 0.
+src\app\components\footer-menu\footer-menu.component.html, code is 4, comment is 0, blank is 1.
+src\app\components\footer-menu\footer-menu.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\footer-menu\footer-menu.component.ts, code is 11, comment is 0, blank is 4.
+src\app\components\header-menu\header-menu.component.css, code is 25, comment is 8, blank is 4.
+src\app\components\header-menu\header-menu.component.html, code is 126, comment is 0, blank is 2.
+src\app\components\header-menu\header-menu.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\header-menu\header-menu.component.ts, code is 77, comment is 0, blank is 13.
+src\app\components\home\home.component.css, code is 34, comment is 0, blank is 1.
+src\app\components\home\home.component.html, code is 52, comment is 0, blank is 2.
+src\app\components\home\home.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\home\home.component.ts, code is 45, comment is 0, blank is 7.
+src\app\components\login\login.component.css, code is 74, comment is 0, blank is 10.
+src\app\components\login\login.component.html, code is 43, comment is 0, blank is 1.
+src\app\components\login\login.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\login\login.component.ts, code is 62, comment is 0, blank is 7.
+src\app\components\logout\logout.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\logout\logout.component.html, code is 1, comment is 0, blank is 0.
+src\app\components\logout\logout.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\logout\logout.component.ts, code is 17, comment is 0, blank is 4.
+src\app\components\modals\delete-author-modal\delete-author-modal.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\modals\delete-author-modal\delete-author-modal.component.html, code is 19, comment is 0, blank is 0.
+src\app\components\modals\delete-author-modal\delete-author-modal.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\modals\delete-author-modal\delete-author-modal.component.ts, code is 17, comment is 0, blank is 5.
+src\app\components\modals\delete-book-modal\delete-book-modal.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\modals\delete-book-modal\delete-book-modal.component.html, code is 19, comment is 0, blank is 0.
+src\app\components\modals\delete-book-modal\delete-book-modal.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\modals\delete-book-modal\delete-book-modal.component.ts, code is 17, comment is 0, blank is 5.
+src\app\components\modals\delete-category-modal\delete-category-modal.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\modals\delete-category-modal\delete-category-modal.component.html, code is 19, comment is 0, blank is 0.
+src\app\components\modals\delete-category-modal\delete-category-modal.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\modals\delete-category-modal\delete-category-modal.component.ts, code is 17, comment is 0, blank is 5.
+src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.html, code is 19, comment is 0, blank is 0.
+src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\modals\delete-subcategory-modal\delete-subcategory-modal.component.ts, code is 17, comment is 0, blank is 5.
+src\app\components\modals\delete-user-modal\delete-user-modal.component.css, code is 0, comment is 0, blank is 0.
+src\app\components\modals\delete-user-modal\delete-user-modal.component.html, code is 19, comment is 0, blank is 0.
+src\app\components\modals\delete-user-modal\delete-user-modal.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\modals\delete-user-modal\delete-user-modal.component.ts, code is 17, comment is 0, blank is 4.
+src\app\components\signup\signup.component.css, code is 74, comment is 0, blank is 10.
+src\app\components\signup\signup.component.html, code is 57, comment is 4, blank is 1.
+src\app\components\signup\signup.component.spec.ts, code is 20, comment is 0, blank is 5.
+src\app\components\signup\signup.component.ts, code is 40, comment is 0, blank is 6.
+src\app\filter.pipe.ts, code is 26, comment is 2, blank is 7.
+src\app\models\address.ts, code is 4, comment is 0, blank is 0.
+src\app\models\author.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\author.ts, code is 7, comment is 0, blank is 1.
+src\app\models\book.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\book.ts, code is 19, comment is 0, blank is 1.
+src\app\models\category.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\category.ts, code is 6, comment is 0, blank is 1.
+src\app\models\contact.ts, code is 7, comment is 0, blank is 0.
+src\app\models\feedback.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\feedback.ts, code is 8, comment is 0, blank is 1.
+src\app\models\publisher.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\publisher.ts, code is 4, comment is 0, blank is 0.
+src\app\models\review.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\review.ts, code is 10, comment is 0, blank is 1.
+src\app\models\role.ts, code is 4, comment is 0, blank is 1.
+src\app\models\subcategory.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\subcategory.ts, code is 6, comment is 0, blank is 1.
+src\app\models\userAccount.spec.ts, code is 6, comment is 0, blank is 1.
+src\app\models\userAccount.ts, code is 12, comment is 21, blank is 2.
+src\app\services\auth-guard.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\auth-guard.service.ts, code is 16, comment is 0, blank is 7.
+src\app\services\auth.service.ts, code is 18, comment is 0, blank is 7.
+src\app\services\author.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\author.service.ts, code is 42, comment is 0, blank is 9.
+src\app\services\basic-auth-http-interceptor.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\basic-auth-http-interceptor.service.ts, code is 18, comment is 0, blank is 4.
+src\app\services\book.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\book.service.ts, code is 34, comment is 0, blank is 9.
+src\app\services\category.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\category.service.ts, code is 33, comment is 0, blank is 8.
+src\app\services\email.service.ts, code is 19, comment is 0, blank is 6.
+src\app\services\feedback.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\feedback.service.ts, code is 33, comment is 0, blank is 8.
+src\app\services\globalService.service.ts, code is 40, comment is 0, blank is 7.
+src\app\services\httpclient.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\httpclient.service.ts, code is 38, comment is 0, blank is 7.
+src\app\services\publisher.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\publisher.service.ts, code is 33, comment is 0, blank is 8.
+src\app\services\review.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\review.service.ts, code is 37, comment is 0, blank is 9.
+src\app\services\role.service.ts, code is 21, comment is 0, blank is 7.
+src\app\services\subcategory.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\subcategory.service.ts, code is 37, comment is 0, blank is 9.
+src\app\services\user.service.spec.ts, code is 9, comment is 0, blank is 3.
+src\app\services\user.service.ts, code is 49, comment is 0, blank is 9.
+src\assets\.gitkeep, code is 0, comment is 0, blank is 0.
+src\assets\images\books-header.png, it is a binary file.
+src\assets\images\books-images\1984.jpg, it is a binary file.
+src\assets\images\books-images\bookImagePlaceholder.png, it is a binary file.
+src\assets\images\books-images\bookPlaceholder.jpg, it is a binary file.
+src\assets\images\books-images\harry-potter-philosopher-stone.jpg, it is a binary file.
+src\assets\images\books-images\Harry-Potter-pop-up-book-matthew-reinhart.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterAnd The Half-BloodPrince.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterAndTheChamberOfSecrets.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterAndtheDeathlyHallows.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterandtheGobletofFire.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterAndTheOrderOfThePhoenix.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterAndThePrisonerOfAzkaban.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterAndThePrisonerOfAzkaban2.jpg, it is a binary file.
+src\assets\images\books-images\HarryPotterandtheSorcerersStone.jpg, it is a binary file.
+src\assets\images\books-images\TheHobbit.jpg, it is a binary file.
+src\assets\images\books.jpg, it is a binary file.
+src\assets\images\favicon.png, it is a binary file.
+src\assets\images\hb.jpg, it is a binary file.
+src\assets\images\header-books.jpg, it is a binary file.
+src\assets\images\ibdb-logo.jpg, it is a binary file.
+src\assets\images\library.jpg, it is a binary file.
+src\assets\images\logo.png, it is a binary file.
+src\assets\images\search-icon.png, it is a binary file.
+src\assets\images\search.png, it is a binary file.
+src\environments\environment.prod.ts, code is 3, comment is 0, blank is 0.
+src\environments\environment.ts, code is 3, comment is 11, blank is 2.
+src\favicon.ico, it is a binary file.
+src\index.html, code is 15, comment is 0, blank is 1.
+src\karma.conf.js, code is 29, comment is 3, blank is 1.
+src\main.ts, code is 9, comment is 0, blank is 3.
+src\polyfills.ts, code is 1, comment is 56, blank is 7.
+src\styles.css, code is 2, comment is 1, blank is 1.
+src\test.ts, code is 13, comment is 4, blank is 3.
+src\tsconfig.app.json, code is 10, comment is 0, blank is 1.
+src\tsconfig.spec.json, code is 15, comment is 0, blank is 3.
+src\tslint.json, code is 15, comment is 0, blank is 2.
+tsconfig.json, code is 21, comment is 0, blank is 2.
+tslint.json, code is 68, comment is 0, blank is 7.
+===============================================================================

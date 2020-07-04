@@ -33,7 +33,6 @@ export class UserListComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.userSubscription = this.userService.getUsers().subscribe(data => {
       this.users = data;
-      console.log('USERS: ', this.users);
       this.usersArray = this.users;
     });
 
@@ -62,8 +61,7 @@ export class UserListComponent implements OnInit, OnDestroy {
 
   onDelete(user: UserAccount) {
     this.userService.deleteUser(user).subscribe(data => { 
-      console.log(data, 'was deleted');
-      location.reload(); 
+    location.reload(); 
     });
   }
 

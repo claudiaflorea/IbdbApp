@@ -94,7 +94,6 @@ export class BookListComponent implements OnInit, OnDestroy {
 
   onDelete(book: Book) {
     this.bookService.deleteBook(book).subscribe(data => { 
-      console.log(data, 'was deleted');
       location.reload(); 
     });
   }
@@ -108,7 +107,6 @@ export class BookListComponent implements OnInit, OnDestroy {
 
   insertItem() {
     this.bookService.insertBook(this.book).subscribe(data => {
-      console.log(data);
       this.shouldShow = false;
       location.reload();
     });

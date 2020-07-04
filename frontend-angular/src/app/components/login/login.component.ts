@@ -52,10 +52,7 @@ export class LoginComponent implements OnInit, OnDestroy {
             this.cookieService.set('currentUser', user);
             this.cookieService.set('currentUser', JSON.stringify(user));
             this.cookieValue = JSON.parse(this.cookieService.get('currentUser'));
-            console.log('(((((((((((((((((((  ', this.cookieValue, '  ))))))))))))))))))))');
             this.authService.loggedInUser = this.cookieValue;
-            
-            console.log('LOGGED IN USER :::::::::::: ', this.authService.loggedInUser);
             if(user.role.roleName === 'Admin') {
               this.authService.isAdmin = true;
             }

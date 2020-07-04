@@ -79,7 +79,6 @@ export class HeaderMenuComponent implements OnInit, OnDestroy {
   onLogout() {
     this.authService.loggedIn = false;
     this.authService.isAdmin = false;
-    //this.authService.loggedInUser = null;
     window.localStorage.removeItem('initData');
     this.router.navigateByUrl('/');
   }

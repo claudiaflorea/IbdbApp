@@ -49,17 +49,6 @@ export class BooksPageComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.currentLocation = this.router.url;
     this.lastParameter = Number(this.currentLocation.substr(this.currentLocation.lastIndexOf('/') + 1));
-    console.log('------------> last parameter', this.lastParameter, this.lastParameter.type);
-    /*
-    if((this.lastParameter !== null) || (this.lastParameter !== undefined) || (this.lastParameter !== NaN)) {
-      this.filterBooks(this.lastParameter);
-    } else if((this.lastParameter === null) || (this.lastParameter === undefined) || (this.lastParameter === NaN)) {
-        this.booksSubscription = this.bookService.getBooks().subscribe(
-          data => {
-            this.books = data;
-          }
-        )
-      }  */
     this.filterBooks(this.lastParameter);
     this.router.navigateByUrl(this.router.url);
   }

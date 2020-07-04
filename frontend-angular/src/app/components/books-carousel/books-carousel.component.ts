@@ -44,7 +44,6 @@ export class BooksCarouselComponent implements OnInit {
   }
 
   goToBookPage(book: Book) {
-    console.log(book.bookId);
     this.router.navigate(['/book', book.bookId]);
   }
 

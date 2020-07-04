@@ -65,11 +65,7 @@ export class BookItemsComponent implements OnInit {
     }
 
   ngOnInit() {
-    /*console.log('AVERAGE: ', this.avg);
-    this.lastSegment = this.router.url.substr(this.router.url.lastIndexOf('/')+1);
-    console.log('LAST SEGMENT: ', this.lastSegment);
-    */
-    this.route.params.subscribe(
+     this.route.params.subscribe(
       (params: Params) => {
         params = this.route.snapshot.params;
         this.bookService.getBookById(+params['id']).subscribe( data => {
@@ -95,7 +91,6 @@ export class BookItemsComponent implements OnInit {
   }
 
   onAdd() {
-    console.log('***************** ', this.currentUser);
     if ((this.currentUser === null) || (this.currentUser === undefined)) {
       this.modalService.open(this.logInModal);
      } else {

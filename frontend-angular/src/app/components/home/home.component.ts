@@ -28,26 +28,23 @@ export class HomeComponent implements OnInit, OnDestroy, OnChanges {
     this.booksSubscription = this.bookService.getBooks().subscribe(data => {
       this.books = data;
     });
-
-    console.log('******************** ', this.authService.loggedInUser);
   }
 
   filterBooks() {
-    console.log('BOOKS:::::', this.books);
+    this.result = [];
     for(let b of this.books) {
-      if((b.title.toLowerCase().indexOf(this.searchText) > -1) || (b.isbn.indexOf(this.searchText) > -1) ) {
+      if(b.title.toLowerCase().indexOf(this.searchText) > -1) {
         this.result.push(b);
+        console.log('............ ', this.result);
         this.show = true;
-      } 
+      }
     }
   }
 
   ngOnChanges() {
-  
   }
 
   goToBookPage(book: Book) {
-    console.log(book.bookId);
     this.router.navigate(['/book', book.bookId]);
   }
 

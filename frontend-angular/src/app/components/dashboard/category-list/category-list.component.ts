@@ -43,7 +43,6 @@ export class CategoryListComponent implements OnInit, OnDestroy {
 
   onDelete(category: Category) {
     this.categoryService.deleteCategory(category).subscribe(data => { 
-      console.log(data, 'was deleted');
       location.reload(); 
     });
   }

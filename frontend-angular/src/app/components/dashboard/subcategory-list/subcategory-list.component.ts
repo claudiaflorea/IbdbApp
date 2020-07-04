@@ -60,8 +60,7 @@ export class SubcategoryListComponent implements OnInit, OnDestroy {
 
   onDelete(subcategory: Subcategory) {
     this.subcategoryService.deleteSubcategory(subcategory).subscribe(data => { 
-      console.log(data, 'was deleted');
-      location.reload(); 
+    location.reload(); 
     });
   }
 

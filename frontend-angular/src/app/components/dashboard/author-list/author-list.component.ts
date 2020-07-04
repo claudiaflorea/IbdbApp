@@ -55,8 +55,7 @@ export class AuthorListComponent implements OnInit, OnDestroy {
 
   onDelete(author: Author) {
     this.authorService.deleteAuthor(author).subscribe(data => { 
-      console.log(data, 'was deleted');
-      location.reload(); 
+    location.reload(); 
     });
   }
 
@@ -96,6 +95,4 @@ export class AuthorListComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.authorSubscription.unsubscribe();
   }
-
-
 }
